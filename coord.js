@@ -5,21 +5,20 @@ request1.responseType = "json";
 request1.send();
 
 request1.onload = function () {
-	let mark = request1.response;
-	console.log(mark.obj.id);
-	let X = mark.obj.positionX;
-	let Y = mark.obj.positionY;
+	var marke = request1.response;
+	console.log(marke.obj.id);
+	let X = marke.obj.positionX;
+	let Y = marke.obj.positionY;
 
-	let marke = document.createElement("img");
-	marke.src = "marker.jpg";
-	marke.id = "marker";
-	marke.style.display = "none";
-	document.body.appendChild(marke);
+	let mark = document.createElement("img");
+	mark.src = "marker.jpg";
+	mark.id = "marker";
+	mark.style.display = "none";
+	document.body.appendChild(mark);
 	document
 		.getElementById("checkbox_coord")
 		.addEventListener("change", (e) => {
 			this.checkboxValue = e.target.checked ? "on" : "off";
-			console.log(checkboxValue);
 			if (checkboxValue == "off") {
 				with (document.getElementById("marker")) {
 					style.display = "none";
