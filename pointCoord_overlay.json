@@ -1,0 +1,17 @@
+{
+	"obj": {
+		"id": "UT1.jpg",
+		"positionX": "200",
+		"positionY": "400"
+	},
+	"obj1": {
+		"id": "UT2.jpg",
+		"positionX": "200",
+		"positionY": "400"
+	},
+	"obj2": {
+		"id": "UT3.jpg",
+		"positionX": "200",
+		"positionY": "400"
+	}
+}

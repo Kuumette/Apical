@@ -1,5 +1,5 @@
 // fonction auto refresh
-const refresh = mydata.tempsRefresh;
+const refresh = "1000";
 
 function reloadPage() {
 	var refreshEnabled = document.getElementById("checkbox");
