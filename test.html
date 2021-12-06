@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>Example</title>
+		<link rel="stylesheet" href="style.css" />
+		<script type="text/javascript" src="config.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<label class="switch" for="checkbox">
+				<input type="checkbox" id="checkbox" checked />
+				<div class="slider round"></div>
+			</label>
+			<p>Auto refresh</p>
+
+			<!-- input luminosité & contrast -->
+			<label for="brightness">brightness</label>
+			<input
+				type="range"
+				name="brightness"
+				min="1"
+				max="5"
+				value="1"
+				step="0.10"
+				onchange="brightness(this.value);"
+			/>
+			<p id="lumi_affi"></p>
+			<br />
+			<label for="contrast">contrast</label>
+			<input
+				type="range"
+				name="contrast"
+				min="1"
+				max="5"
+				value="1"
+				step="0.10"
+				onchange="contrast(this.value);"
+			/>
+			<p id="con_affi"></p>
+			<br /><br />
+		</div>
+
+		<script>
+			let mydata = JSON.parse(JSON.stringify(data));
+			let refresh = mydata.tempsRefresh;
+
+			// fonction auto refresh
+			function reloadPage() {
+				var refreshEnabled = document.getElementById("checkbox");
+				if (refreshEnabled.checked) {
+					window.location.reload(1);
+				}
+			}
+			setInterval(reloadPage, refresh);
+
+			// fonction image info
+			function infoImg() {
+				//Creation de l'élement p
+				let date = document.createElement("p");
+				let heure = document.createElement("p");
+				let name = document.createElement("p");
+				// recup les element de type texte dans mon config.js
+				date.textContent = mydata.date;
+				heure.textContent = mydata.heure;
+				name.textContent = "Apicam";
+				// ajoute un id a ma balise p
+				date.id = "date";
+				heure.id = "heure";
+				name.id = "name";
+				// ajoute a mon body les element p
+				document.body.appendChild(date);
+				document.body.appendChild(heure);
+				document.body.appendChild(name);
+			}
+			// fonction qui affiche l'image
+			function picture() {
+				//Creation de l'élement img
+				let img = document.createElement("img");
+				// ajoute depuis mon config.js mon src de ma balise img
+				img.src = mydata.image;
+				// ajoute depuis mon config.js mon alt de ma balise img
+				img.alt = mydata.desc;
+				// ajoute un id a ma balise img
+				img.id = "img1";
+				// ajoute a mon body la balise img
+				document.body.appendChild(img);
+			}
+
+			function brightness(val) {
+				document.getElementById(
+					"img1"
+				).style.filter = `brightness(${val})`;
+				let af = (document.getElementById("lumi_affi").innerHTML = val);
+			}
+			function contrast(val) {
+				document.getElementById(
+					"img1"
+				).style.filter = `contrast(${val})`;
+				let af = (document.getElementById("con_affi").innerHTML = val);
+			}
+
+			// Apelle de mes fonction
+			picture();
+			infoImg();
+		</script>
+	</body>
+</html>
