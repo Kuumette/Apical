@@ -3,6 +3,11 @@
 		<title>Example</title>
 		<link rel="stylesheet" href="style.css" />
 		<script type="text/javascript" src="config.js"></script>
+		<script src="reload.js" defer></script>
+		<script src="infoImg.js" defer></script>
+		<script src="afficheImg.js" defer></script>
+		<script src="lumiContrast.js" defer></script>
+		<script src="coord.js" defer></script>
 	</head>
 	<body>
 		<div class="container">
@@ -11,6 +16,12 @@
 				<div class="slider round"></div>
 			</label>
 			<p>Auto refresh</p>
+
+			<label class="switch" for="checkbox_coord">
+				<input type="checkbox" id="checkbox_coord" />
+				<div class="slider round"></div>
+			</label>
+			<p>coordonnée</p>
 
 			<!-- input luminosité & contrast -->
 			<label for="brightness">brightness</label>
@@ -41,66 +52,6 @@
 
 		<script>
 			let mydata = JSON.parse(JSON.stringify(data));
-			let refresh = mydata.tempsRefresh;
-
-			// fonction auto refresh
-			function reloadPage() {
-				var refreshEnabled = document.getElementById("checkbox");
-				if (refreshEnabled.checked) {
-					window.location.reload(1);
-				}
-			}
-			setInterval(reloadPage, refresh);
-
-			// fonction image info
-			function infoImg() {
-				//Creation de l'élement p
-				let date = document.createElement("p");
-				let heure = document.createElement("p");
-				let name = document.createElement("p");
-				// recup les element de type texte dans mon config.js
-				date.textContent = mydata.date;
-				heure.textContent = mydata.heure;
-				name.textContent = "Apicam";
-				// ajoute un id a ma balise p
-				date.id = "date";
-				heure.id = "heure";
-				name.id = "name";
-				// ajoute a mon body les element p
-				document.body.appendChild(date);
-				document.body.appendChild(heure);
-				document.body.appendChild(name);
-			}
-			// fonction qui affiche l'image
-			function picture() {
-				//Creation de l'élement img
-				let img = document.createElement("img");
-				// ajoute depuis mon config.js mon src de ma balise img
-				img.src = mydata.image;
-				// ajoute depuis mon config.js mon alt de ma balise img
-				img.alt = mydata.desc;
-				// ajoute un id a ma balise img
-				img.id = "img1";
-				// ajoute a mon body la balise img
-				document.body.appendChild(img);
-			}
-
-			function brightness(val) {
-				document.getElementById(
-					"img1"
-				).style.filter = `brightness(${val})`;
-				let af = (document.getElementById("lumi_affi").innerHTML = val);
-			}
-			function contrast(val) {
-				document.getElementById(
-					"img1"
-				).style.filter = `contrast(${val})`;
-				let af = (document.getElementById("con_affi").innerHTML = val);
-			}
-
-			// Apelle de mes fonction
-			picture();
-			infoImg();
 		</script>
 	</body>
 </html>
