@@ -14,7 +14,7 @@ req.onload = function () {
 	mark.id = "marker";
 	mark.style.display = "none";
 	document.body.appendChild(mark);
-	console.log(mark);
+
 	document
 		.getElementById("checkbox_coord")
 		.addEventListener("change", (e) => {

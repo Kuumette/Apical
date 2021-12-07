@@ -6,19 +6,19 @@
 		"heure": "06:28 UT"
 	},
 	"lastSubstractionImage": {
-		"img": "test.png",
+		"img": "test1.jpg",
 		"desc": "last picture",
-		"date": "2013-12-25",
-		"heure": "06:28 UT"
+		"date": "2015-11-20",
+		"heure": "04:28 UT"
 	},
 	"lastAnimation": {
-		"img": "test.png",
+		"img": "video.mp4",
 		"desc": "last picture",
 		"date": "2013-12-25",
 		"heure": "06:28 UT"
 	},
 	"lastSubstractionAnimation": {
-		"img": "test.png",
+		"img": "video2.mp4",
 		"desc": "last picture",
 		"date": "2013-12-25",
 		"heure": "06:28 UT"

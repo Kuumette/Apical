@@ -6,48 +6,74 @@
 		<script src="afficheImg.js" defer></script>
 		<script src="lumiContrast.js" defer></script>
 		<script src="coord.js" defer></script>
+		<script src="fullScreen.js" defer></script>
 	</head>
 	<body>
 		<div class="container">
-			<label class="switch" for="checkbox">
-				<input type="checkbox" id="checkbox" checked />
-				<div class="slider round"></div>
-			</label>
-			<p>Auto refresh</p>
+			<div id="d2">
+				<!-- Toggle auto refresh -->
+				<label class="switch" for="checkbox">
+					<input type="checkbox" id="checkbox" checked />
+					<div class="slider round"></div>
+				</label>
+				<p id="d2">Auto refresh</p>
+				<!-- Fin toggle auto refresh -->
 
-			<label class="switch" for="checkbox_coord">
-				<input type="checkbox" id="checkbox_coord" />
-				<div class="slider round"></div>
-			</label>
-			<p>coordonnée</p>
+				<!-- Toggle overlay -->
+				<label class="switch" for="checkbox_coord">
+					<input type="checkbox" id="checkbox_coord" />
+					<div class="slider round"></div>
+				</label>
+				<p>coordonnée</p>
+				<!-- Fin toggle overlay -->
 
-			<!-- input luminosité & contrast -->
-			<label for="brightness">brightness</label>
-			<input
-				type="range"
-				name="brightness"
-				min="1"
-				max="5"
-				value="1"
-				step="0.10"
-				onchange="brightness(this.value);"
-			/>
-			<p id="lumi_affi"></p>
-			<br />
-			<label for="contrast">contrast</label>
-			<input
-				type="range"
-				name="contrast"
-				min="1"
-				max="5"
-				value="1"
-				step="0.10"
-				onchange="contrast(this.value);"
-			/>
-			<p id="con_affi"></p>
-			<br /><br />
+				<!-- Input luminosité & contrast -->
+				<div>
+					<label for="brightness">brightness</label>
+					<input
+						type="range"
+						name="brightness"
+						min="1"
+						max="5"
+						value="1"
+						step="0.10"
+						onchange="brightness(this.value);"
+					/>
+					<p id="lumi_affi"></p>
+					<br />
+					<label for="contrast">contrast</label>
+					<input
+						type="range"
+						name="contrast"
+						min="1"
+						max="5"
+						value="1"
+						step="0.10"
+						onchange="contrast(this.value);"
+					/>
+					<p id="con_affi"></p>
+					<br /><br />
+				</div>
+				<!-- Fin input luminosité & contrast -->
+
+				<!-- Menu -->
+				<div>
+					<button id="lastImage">last image</button>
+					<button id="lastSubstractionImage">
+						last substraction image
+					</button>
+					<button id="lastAnimation">last Animation</button>
+					<button id="lastSubstractionAnimation">
+						last Substraction Animation
+					</button>
+				</div>
+				<!-- Fin menu -->
+			</div>
+			<!-- Full screen -->
+
+			<!-- Fin full screen -->
 		</div>
-
-		<script></script>
+		<div id="content"></div>
 	</body>
+	<script></script>
 </html>
