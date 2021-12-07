@@ -50,6 +50,7 @@ request.onload = function () {
 		document.body.appendChild(name);
 		img.style.display = "block";
 		video.style.display = "none";
+		video1.style.display = "none";
 		date.style.display = "block";
 		heure.style.display = "block";
 		name.style.display = "block";
@@ -72,6 +73,7 @@ request.onload = function () {
 		document.body.appendChild(name);
 		img.style.display = "block";
 		video.style.display = "none";
+		video1.style.display = "none";
 		date.style.display = "block";
 		heure.style.display = "block";
 		name.style.display = "block";
