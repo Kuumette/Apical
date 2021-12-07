@@ -1,4 +1,4 @@
-var requestURL = "image.json";
+var requestURL = "./config/image.json";
 var request = new XMLHttpRequest();
 request.open("GET", requestURL);
 request.responseType = "json";
@@ -9,7 +9,7 @@ request.onload = function () {
 	//Creation de l'élement img
 	let img = document.createElement("img");
 	// ajoute depuis mon config.js mon src de ma balise img
-	img.src = image.img;
+	img.src = image.lastImage.img;
 	// ajoute depuis mon config.js mon alt de ma balise img
 	img.alt = image.desc;
 	// ajoute un id a ma balise img
@@ -21,8 +21,8 @@ request.onload = function () {
 	let heure = document.createElement("p");
 	let name = document.createElement("p");
 	// recup les element de type texte dans mon config.js
-	date.textContent = image.date;
-	heure.textContent = image.heure;
+	date.textContent = image.lastImage.date;
+	heure.textContent = image.lastImage.heure;
 	name.textContent = "Apicam";
 	// ajoute un id a ma balise p
 	date.id = "date";

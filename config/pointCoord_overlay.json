@@ -1,15 +1,15 @@
 {
-	"obj": {
+	"UT1": {
 		"id": "UT1.jpg",
 		"positionX": "200",
 		"positionY": "400"
 	},
-	"obj1": {
+	"UT2": {
 		"id": "UT2.jpg",
 		"positionX": "200",
 		"positionY": "400"
 	},
-	"obj2": {
+	"UT3": {
 		"id": "UT3.jpg",
 		"positionX": "200",
 		"positionY": "400"

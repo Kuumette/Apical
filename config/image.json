@@ -1,0 +1,26 @@
+{
+	"lastImage": {
+		"img": "test.png",
+		"desc": "last picture",
+		"date": "2013-12-25",
+		"heure": "06:28 UT"
+	},
+	"lastSubstractionImage": {
+		"img": "test.png",
+		"desc": "last picture",
+		"date": "2013-12-25",
+		"heure": "06:28 UT"
+	},
+	"lastAnimation": {
+		"img": "test.png",
+		"desc": "last picture",
+		"date": "2013-12-25",
+		"heure": "06:28 UT"
+	},
+	"lastSubstractionAnimation": {
+		"img": "test.png",
+		"desc": "last picture",
+		"date": "2013-12-25",
+		"heure": "06:28 UT"
+	}
+}
