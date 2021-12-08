@@ -1,13 +1,14 @@
-var requestURL = "./config/image.json";
-var request = new XMLHttpRequest();
+let requestURL = "./config/image.json";
+let request = new XMLHttpRequest();
 request.open("GET", requestURL);
 request.responseType = "json";
 request.send();
 
 request.onload = function () {
-	var parent = document.getElementById("content");
-	var video = document.createElement("video");
-	var video1 = document.createElement("video");
+	//let overlay = document.getElementById("last");
+	let parent = document.querySelector("#content");
+	let video = document.createElement("video");
+	let video1 = document.createElement("video");
 	//Creation de l'élement img
 	let img = document.createElement("img");
 
@@ -17,7 +18,7 @@ request.onload = function () {
 	lastImage = document.getElementById("lastImage");
 	lastSubstractionImage = document.getElementById("lastSubstractionImage");
 	lastAnimation = document.getElementById("lastAnimation");
-	var image = request.response;
+	let image = request.response;
 	img.src = image.lastImage.img;
 	img.alt = image.desc;
 	img.id = "img";
@@ -32,9 +33,11 @@ request.onload = function () {
 	document.body.appendChild(date);
 	document.body.appendChild(heure);
 	document.body.appendChild(name);
+	parent.style.display = "none";
+	//overlay.style.display = "block";
 
 	lastImage.onclick = function () {
-		var image = request.response;
+		let image = request.response;
 		img.src = image.lastImage.img;
 		img.alt = image.desc;
 		img.id = "img";
@@ -54,10 +57,12 @@ request.onload = function () {
 		date.style.display = "block";
 		heure.style.display = "block";
 		name.style.display = "block";
+		parent.style.display = "none";
+		//overlay.style.display = "block";
 	};
 
 	lastSubstractionImage.onclick = function () {
-		var image = request.response;
+		let image = request.response;
 		img.src = image.lastSubstractionImage.img;
 		img.alt = image.lastSubstractionImage.desc;
 		img.id = "img";
@@ -77,6 +82,8 @@ request.onload = function () {
 		date.style.display = "block";
 		heure.style.display = "block";
 		name.style.display = "block";
+		//overlay.style.display = "block";
+		parent.style.display = "none";
 	};
 	lastAnimation.onclick = function () {
 		let v = request.response;
@@ -98,6 +105,8 @@ request.onload = function () {
 		name.style.display = "none";
 		video.style.display = "block";
 		video1.style.display = "none";
+		//overlay.style.display = "none";
+		parent.style.display = "block";
 	};
 	lastSubstractionAnimation.onclick = function () {
 		let v = request.response;
@@ -119,5 +128,7 @@ request.onload = function () {
 		name.style.display = "none";
 		video.style.display = "none";
 		video1.style.display = "block";
+		//overlay.style.display = "none";
+		parent.style.display = "block";
 	};
 };
