@@ -15,25 +15,19 @@
 		<script src="afficheImg.js" defer></script>
 		<script src="lumiContrast.js" defer></script>
 		<script src="coord.js" defer></script>
+		<script src="inactivite.js" defer></script>
 
 		<!-- CSS only -->
 	</head>
-	<body>
-		<div class="container align-self-end" id="disa">
+	<body
+		onkeydown="activite_detectee = true; statut('actif');"
+		onmousemove="activite_detectee = true; statut('actif');"
+	>
+		<div class="container" id="disa">
+			<!-- <p id="statut" style="color: #ff0000">Vous êtes inactif.</p> -->
 			<div id="d2">
-				<!-- Toggle auto refresh -->
-
-				<div class="">
-					<label class="switch" for="checkbox">
-						<input type="checkbox" id="checkbox" checked />
-						<div class="slider round"></div>
-					</label>
-					<p id="d2">Auto refresh</p>
-				</div>
-
-				<!-- Fin toggle auto refresh -->
-
 				<!-- Toggle overlay -->
+
 				<div id="last">
 					<label class="switch" for="checkbox_coord">
 						<input type="checkbox" id="checkbox_coord" />
@@ -43,74 +37,151 @@
 				</div>
 
 				<!-- Fin toggle overlay -->
-			</div>
-			<!-- Full screen -->
-			<!-- Input luminosité & contrast -->
-			<div class="reglage">
-				<div>
-					<label for="brightness">brightness</label>
-					<input
-						type="range"
-						name="brightness"
-						min="1"
-						max="5"
-						value="1"
-						step="0.10"
-						onchange="brightness(this.value);"
-					/>
-					<p id="lumi_affi"></p>
-				</div>
-				<div>
-					<label for="contrast">contrast</label>
-					<input
-						type="range"
-						name="contrast"
-						min="1"
-						max="5"
-						value="1"
-						step="0.10"
-						onchange="contrast(this.value);"
-					/>
-					<p id="con_affi"></p>
-					<br />
+
+				<!-- Input luminosité & contrast -->
+				<div class="reglage" id="reglage">
+					<div>
+						<label for="brightness">brightness</label>
+						<input
+							type="range"
+							name="brightness"
+							min="1"
+							max="5"
+							value="1"
+							step="0.10"
+							onchange="brightness(this.value);"
+						/>
+						<p id="lumi_affi"></p>
+					</div>
+					<div>
+						<label for="contrast">contrast</label>
+						<input
+							type="range"
+							name="contrast"
+							min="1"
+							max="5"
+							value="1"
+							step="0.10"
+							onchange="contrast(this.value);"
+						/>
+						<p id="con_affi"></p>
+						<br />
+					</div>
 				</div>
 			</div>
 			<!-- Fin input luminosité & contrast -->
-			<!-- Menu -->
-			<div id="nav">
-				<nav class="row">
-					<ul class="justify-content-center">
-						<li class="menu-deroulant">
-							<a href="#">Choice of view</a>
-							<ul class="sous-menu">
-								<li>
-									<button id="lastImage">last image</button>
-								</li>
-								<li>
-									<button id="lastSubstractionImage">
-										last substraction image
-									</button>
-								</li>
-								<li>
-									<button id="lastAnimation">
-										last Animation
-									</button>
-								</li>
-								<li>
-									<button id="lastSubstractionAnimation">
-										last Substraction Animation
-									</button>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-			</div>
-			<!-- Fin menu -->
 
 			<!-- Fin full screen -->
 		</div>
 		<div id="content"></div>
+		<div class="container">
+			<!-- Toggle auto refresh -->
+			<div class="d2">
+				<div class="d-flex flex-row-reverse bd-highlight">
+					<div class="p-2 bd-highlight">
+						<label class="switch" for="checkbox">
+							<input type="checkbox" id="checkbox" checked />
+							<div class="slider round"></div>
+						</label>
+						<p id="d2">Auto refresh</p>
+					</div>
+				</div>
+			</div>
+			<!-- Fin toggle auto refresh -->
+			<!-- Menu -->
+			<div class="d2">
+				<div id="nav" class="d-flex justify-content-center">
+					<nav class="row p-2 bd-highlight">
+						<ul class="justify-content-center">
+							<li class="menu-deroulant">
+								<a href="#">Choice of view</a>
+								<ul class="sous-menu">
+									<li>
+										<button id="lastImage">
+											last image
+										</button>
+									</li>
+									<li>
+										<button id="lastSubstractionImage">
+											last substraction image
+										</button>
+									</li>
+									<li>
+										<button id="lastAnimation">
+											last Animation
+										</button>
+									</li>
+									<li>
+										<button id="lastSubstractionAnimation">
+											last Substraction Animation
+										</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- Fin menu -->
+		</div>
 	</body>
-	<script></script>
+	<script>
+		// // On déclare et initialise les variables utilisée
+		// var activite_detectee = false;
+		// var intervalle = 1000;
+		// let disa = document.getElementById("d2");
+		// let lastImage = document.getElementById("lastImage");
+		// let lastSubstractionImage = document.getElementById(
+		// 	"lastSubstractionImage"
+		// );
+		// let lastAnimation = document.getElementById("lastAnimation");
+		// let lastSubstractionAnimation = document.getElementById(
+		// 	"lastSubstractionAnimation"
+		// );
+		// let reglage = document.querySelector(".reglage");
+
+		// // On crée la fonction qui teste toutes les x secondes l'activité du visiteur via activite_detectee
+		// function testerActivite() {
+		// 	// On teste la variable activite_detectee
+		// 	// Si une activité a été détectée [On réinitialise activite_detectee]
+		// 	if (activite_detectee) activite_detectee = false;
+		// 	// Si aucune activité n'a été détectée [on actualise le statut du visiteur]
+		// 	else statut("inactif");
+		// 	// On relance la fonction ce qui crée une boucle
+		// 	setTimeout("testerActivite();", intervalle);
+		// }
+		// // On crée une fonction qui permet de mettre à jour le statut du visiteur
+		// function statut(statut) {
+		// 	// On initialise la variable bloc créée par souci de lisibilité
+		// 	var bloc = document.getElementById("statut");
+		// 	// On supprime l'ancien statut affiché
+		// 	bloc.removeChild(bloc.firstChild);
+		// 	// Suivant le statut, on change la couleur d'écriture
+		// 	if (statut == "actif") {
+		// 		bloc.style.color = "#00ff00";
+		// 		disa.style.display = "block";
+		// 		lastImage.style.display = "block";
+		// 		lastSubstractionImage.style.display = "block";
+		// 		lastAnimation.style.display = "block";
+		// 		lastSubstractionAnimation.style.display = "block";
+		// 		reglage.style.display = "block";
+		// 	}
+		// 	// Vert
+		// 	else if (statut == "inactif") {
+		// 		bloc.style.color = "#ff0000";
+		// 		disa.style.display = "none";
+		// 		lastImage.style.display = "none";
+		// 		lastSubstractionImage.style.display = "none";
+		// 		lastAnimation.style.display = "none";
+		// 		lastSubstractionAnimation.style.display = "none";
+		// 		reglage.style.display = "none";
+		// 	} // Rouge
+		// 	// On affiche le nouveau statut
+		// 	bloc.appendChild(
+		// 		document.createTextNode("Vous êtes " + statut + ".")
+		// 	);
+		// }
+		// // On lance la fonction testerActivite() pour la première fois, au chargement de la page
+		// setTimeout("testerActivite();", intervalle);
+	</script>
 </html>

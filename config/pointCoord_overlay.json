@@ -3,22 +3,22 @@
 		"UT1": {
 			"id": "./ressources/UT1.png",
 			"positionX": "200",
-			"positionY": "400"
+			"positionY": "800"
 		},
 		"UT2": {
 			"id": "./ressources/UT2.png",
 			"positionX": "300",
-			"positionY": "400"
+			"positionY": "700"
 		},
 		"UT3": {
 			"id": "./ressources/UT3.png",
-			"positionX": "500",
-			"positionY": "400"
+			"positionX": "550",
+			"positionY": "850"
 		},
 		"UT4": {
 			"id": "./ressources/UT4.png",
-			"positionX": "500",
-			"positionY": "300"
+			"positionX": "600",
+			"positionY": "1000"
 		}
 	}
 }

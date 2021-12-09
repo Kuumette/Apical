@@ -6,7 +6,7 @@ req.send();
 
 req.onload = function () {
 	let overlay = req.response;
-
+	let parent = document.querySelector("#content");
 	document
 		.getElementById("checkbox_coord")
 		.addEventListener("change", (e) => {
@@ -14,7 +14,7 @@ req.onload = function () {
 			UT1.src = overlay.lastImage.UT1.id;
 			UT1.id = "overlayUT1";
 			UT1.style.display = "none";
-			document.body.appendChild(UT1);
+			parent.appendChild(UT1);
 			console.log(overlay.lastImage.UT1);
 			checkboxValue = e.target.checked ? "on" : "off";
 			if (checkboxValue == "off") {
@@ -40,7 +40,7 @@ req.onload = function () {
 			UT2.src = overlay.lastImage.UT2.id;
 			UT2.id = "overlayUT2";
 			UT2.style.display = "none";
-			document.body.appendChild(UT2);
+			parent.appendChild(UT2);
 			console.log(overlay.lastImage.UT2);
 			checkboxValue = e.target.checked ? "on" : "off";
 			if (checkboxValue == "off") {
@@ -66,7 +66,7 @@ req.onload = function () {
 			UT3.src = overlay.lastImage.UT3.id;
 			UT3.id = "overlayUT3";
 			UT3.style.display = "none";
-			document.body.appendChild(UT3);
+			parent.appendChild(UT3);
 			console.log(overlay.lastImage.UT3);
 			checkboxValue = e.target.checked ? "on" : "off";
 			if (checkboxValue == "off") {
@@ -92,7 +92,7 @@ req.onload = function () {
 			UT4.src = overlay.lastImage.UT4.id;
 			UT4.id = "overlayUT4";
 			UT4.style.display = "none";
-			document.body.appendChild(UT4);
+			parent.appendChild(UT4);
 			console.log(overlay.lastImage.UT4);
 			checkboxValue = e.target.checked ? "on" : "off";
 			if (checkboxValue == "off") {

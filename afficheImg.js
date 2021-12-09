@@ -5,85 +5,103 @@ request.responseType = "json";
 request.send();
 
 request.onload = function () {
-	//let overlay = document.getElementById("last");
+	let overlay = document.getElementById("last");
+	let reglage = document.getElementById("reglage");
+	// recup div content dans mon DOM
 	let parent = document.querySelector("#content");
+	// creation de mais deux element video
 	let video = document.createElement("video");
 	let video1 = document.createElement("video");
 	//Creation de l'élement img
 	let img = document.createElement("img");
-
+	// creation des info image
 	let date = document.createElement("p");
 	let heure = document.createElement("p");
 	let name = document.createElement("p");
+	let br = document.createElement("br");
+	let br1 = document.createElement("br");
+	// recup mais element button dans le DOM
 	lastImage = document.getElementById("lastImage");
 	lastSubstractionImage = document.getElementById("lastSubstractionImage");
 	lastAnimation = document.getElementById("lastAnimation");
+	lastSubstractionAnimation = document.getElementById(
+		"lastSubstractionAnimation"
+	);
+
 	let image = request.response;
-	img.src = image.lastImage.img;
-	img.alt = image.desc;
-	img.id = "img";
-	document.body.appendChild(img);
-	date.textContent = image.lastImage.date;
-	heure.textContent = image.lastImage.heure;
 	name.textContent = "Apicam";
-	// ajoute un id a ma balise p
 	date.id = "date";
 	heure.id = "heure";
 	name.id = "name";
-	document.body.appendChild(date);
-	document.body.appendChild(heure);
-	document.body.appendChild(name);
-	parent.style.display = "none";
-	//overlay.style.display = "block";
+	parent.appendChild(date);
+	parent.appendChild(br1);
+	parent.appendChild(heure);
+	parent.appendChild(br);
+	parent.appendChild(name);
+	img.src = image.lastImage.img;
+	img.alt = image.desc;
+	img.id = "img";
+	parent.appendChild(img);
+	date.textContent = image.lastImage.date;
+	heure.textContent = image.lastImage.heure;
+
+	overlay.style.display = "block";
 
 	lastImage.onclick = function () {
 		let image = request.response;
-		img.src = image.lastImage.img;
-		img.alt = image.desc;
-		img.id = "img";
-		document.body.appendChild(img);
-		date.textContent = image.lastImage.date;
-		heure.textContent = image.lastImage.heure;
 		name.textContent = "Apicam";
 		date.id = "date";
 		heure.id = "heure";
 		name.id = "name";
-		document.body.appendChild(date);
-		document.body.appendChild(heure);
-		document.body.appendChild(name);
+		parent.appendChild(date);
+		parent.appendChild(br1);
+		parent.appendChild(heure);
+		parent.appendChild(br);
+		parent.appendChild(name);
+		img.src = image.lastImage.img;
+		img.alt = image.desc;
+		img.id = "img";
+		parent.appendChild(img);
+		date.textContent = image.lastImage.date;
+		heure.textContent = image.lastImage.heure;
+
 		img.style.display = "block";
 		video.style.display = "none";
 		video1.style.display = "none";
-		date.style.display = "block";
-		heure.style.display = "block";
-		name.style.display = "block";
-		parent.style.display = "none";
-		//overlay.style.display = "block";
+		date.style.display = "inline";
+		heure.style.display = "inline";
+		name.style.display = "inline";
+		reglage.style.display = "block";
+
+		overlay.style.display = "inline-flex";
 	};
 
 	lastSubstractionImage.onclick = function () {
 		let image = request.response;
-		img.src = image.lastSubstractionImage.img;
-		img.alt = image.lastSubstractionImage.desc;
-		img.id = "img";
-		document.body.appendChild(img);
-		date.textContent = image.lastSubstractionImage.date;
-		heure.textContent = image.lastSubstractionImage.heure;
 		name.textContent = "Apicam";
 		date.id = "date";
 		heure.id = "heure";
 		name.id = "name";
-		document.body.appendChild(date);
-		document.body.appendChild(heure);
-		document.body.appendChild(name);
+		parent.appendChild(date);
+		parent.appendChild(br1);
+		parent.appendChild(heure);
+		parent.appendChild(br);
+		parent.appendChild(name);
+		img.src = image.lastSubstractionImage.img;
+		img.alt = image.lastSubstractionImage.desc;
+		img.id = "img";
+		parent.appendChild(img);
+		date.textContent = image.lastSubstractionImage.date;
+		heure.textContent = image.lastSubstractionImage.heure;
+
 		img.style.display = "block";
 		video.style.display = "none";
 		video1.style.display = "none";
-		date.style.display = "block";
-		heure.style.display = "block";
-		name.style.display = "block";
-		//overlay.style.display = "block";
-		parent.style.display = "none";
+		date.style.display = "inline";
+		heure.style.display = "inline";
+		name.style.display = "inline";
+		reglage.style.display = "block";
+		overlay.style.display = "inline-flex";
 	};
 	lastAnimation.onclick = function () {
 		let v = request.response;
@@ -105,8 +123,8 @@ request.onload = function () {
 		name.style.display = "none";
 		video.style.display = "block";
 		video1.style.display = "none";
-		//overlay.style.display = "none";
-		parent.style.display = "block";
+		reglage.style.display = "none";
+		overlay.style.display = "none";
 	};
 	lastSubstractionAnimation.onclick = function () {
 		let v = request.response;
@@ -128,7 +146,7 @@ request.onload = function () {
 		name.style.display = "none";
 		video.style.display = "none";
 		video1.style.display = "block";
-		//overlay.style.display = "none";
-		parent.style.display = "block";
+		reglage.style.display = "none";
+		overlay.style.display = "none";
 	};
 };
