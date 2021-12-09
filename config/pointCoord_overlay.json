@@ -1,22 +1,22 @@
 {
 	"lastImage": {
 		"UT1": {
-			"id": "UT1.png",
+			"id": "./ressources/UT1.png",
 			"positionX": "200",
 			"positionY": "400"
 		},
 		"UT2": {
-			"id": "UT2.png",
+			"id": "./ressources/UT2.png",
 			"positionX": "300",
 			"positionY": "400"
 		},
 		"UT3": {
-			"id": "UT3.png",
+			"id": "./ressources/UT3.png",
 			"positionX": "500",
 			"positionY": "400"
 		},
 		"UT4": {
-			"id": "UT4.png",
+			"id": "./ressources/UT4.png",
 			"positionX": "500",
 			"positionY": "300"
 		}

@@ -1,24 +1,24 @@
 {
 	"lastImage": {
-		"img": "test.png",
+		"img": "./ressources/test.png",
 		"desc": "last picture",
 		"date": "2013-12-25",
 		"heure": "06:28 UT"
 	},
 	"lastSubstractionImage": {
-		"img": "test1.jpg",
+		"img": "./ressources/test1.jpg",
 		"desc": "last picture",
 		"date": "2015-11-20",
 		"heure": "04:28 UT"
 	},
 	"lastAnimation": {
-		"img": "video.mp4",
+		"img": "./ressources/video.mp4",
 		"desc": "last picture",
 		"date": "2013-12-25",
 		"heure": "06:28 UT"
 	},
 	"lastSubstractionAnimation": {
-		"img": "video2.mp4",
+		"img": "./ressources/video2.mp4",
 		"desc": "last picture",
 		"date": "2013-12-25",
 		"heure": "06:28 UT"
