@@ -2,23 +2,23 @@
 	"lastImage": {
 		"UT1": {
 			"id": "./ressources/UT1.png",
-			"positionX": "200",
-			"positionY": "800"
+			"positionX": "-15%",
+			"positionY": "25%"
 		},
 		"UT2": {
 			"id": "./ressources/UT2.png",
-			"positionX": "300",
-			"positionY": "700"
+			"positionX": "-10%",
+			"positionY": "20%"
 		},
 		"UT3": {
 			"id": "./ressources/UT3.png",
-			"positionX": "550",
-			"positionY": "850"
+			"positionX": "-19%",
+			"positionY": "24%"
 		},
 		"UT4": {
 			"id": "./ressources/UT4.png",
-			"positionX": "600",
-			"positionY": "1000"
+			"positionX": "-9%",
+			"positionY": "9%"
 		}
 	}
 }

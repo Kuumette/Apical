@@ -9,6 +9,13 @@
 .reglage {
 	z-index: 2;
 	margin-top: 50px;
+	transition: visibility 2s, opacity 2s linear;
+}
+#last {
+	transition: visibility 2s, opacity 2s linear;
+}
+#droit {
+	transition: visibility 2s, opacity 2s linear;
 }
 p {
 	color: white;
@@ -64,8 +71,10 @@ input:checked + .slider:before {
 }
 
 #img {
-	/* z-index: 1; */
-	width: 800px;
+	max-width: 100%;
+	max-height: 100%;
+
+	margin: auto;
 }
 #img:-webkit-full-screen {
 	width: 100%;

@@ -17,15 +17,15 @@ let d2 = document.querySelector(".d2");
 function toggleFullScreen() {
 	if (!document.fullscreenElement) {
 		document.documentElement.requestFullscreen();
-		disa.style.display = "none";
-		reglage.style.display = "none";
-		d2.style.display = "none";
+		//disa.style.display = "none";
+		//reglage.style.display = "none";
+		//d2.style.display = "none";
 	} else {
 		if (document.exitFullscreen) {
 			document.exitFullscreen();
-			disa.style.display = "block";
-			reglage.style.display = "block";
-			d2.style.display = "block";
+			//disa.style.display = "block";
+			//reglage.style.display = "block";
+			//d2.style.display = "block";
 		}
 	}
 }

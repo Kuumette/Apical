@@ -5,8 +5,7 @@ request.responseType = "json";
 request.send();
 
 request.onload = function () {
-	let overlay = document.getElementById("last");
-	let reglage = document.getElementById("reglage");
+	let display = document.getElementById("d2");
 	// recup div content dans mon DOM
 	let parent = document.querySelector("#content");
 	// creation de mais deux element video
@@ -45,8 +44,6 @@ request.onload = function () {
 	date.textContent = image.lastImage.date;
 	heure.textContent = image.lastImage.heure;
 
-	overlay.style.display = "block";
-
 	lastImage.onclick = function () {
 		let image = request.response;
 		name.textContent = "Apicam";
@@ -71,9 +68,7 @@ request.onload = function () {
 		date.style.display = "inline";
 		heure.style.display = "inline";
 		name.style.display = "inline";
-		reglage.style.display = "block";
-
-		overlay.style.display = "inline-flex";
+		display.style.display = "block";
 	};
 
 	lastSubstractionImage.onclick = function () {
@@ -100,8 +95,7 @@ request.onload = function () {
 		date.style.display = "inline";
 		heure.style.display = "inline";
 		name.style.display = "inline";
-		reglage.style.display = "block";
-		overlay.style.display = "inline-flex";
+		display.style.display = "block";
 	};
 	lastAnimation.onclick = function () {
 		let v = request.response;
@@ -123,8 +117,7 @@ request.onload = function () {
 		name.style.display = "none";
 		video.style.display = "block";
 		video1.style.display = "none";
-		reglage.style.display = "none";
-		overlay.style.display = "none";
+		display.style.display = "none";
 	};
 	lastSubstractionAnimation.onclick = function () {
 		let v = request.response;
@@ -146,7 +139,6 @@ request.onload = function () {
 		name.style.display = "none";
 		video.style.display = "none";
 		video1.style.display = "block";
-		reglage.style.display = "none";
-		overlay.style.display = "none";
+		display.style.display = "none";
 	};
 };

@@ -11,12 +11,12 @@ req.onload = function () {
 		.getElementById("checkbox_coord")
 		.addEventListener("change", (e) => {
 			let UT1 = document.createElement("img");
-			UT1.src = overlay.lastImage.UT1.id;
 			UT1.id = "overlayUT1";
+			UT1.src = overlay.lastImage.UT1.id;
 			UT1.style.display = "none";
 			parent.appendChild(UT1);
-			console.log(overlay.lastImage.UT1);
 			checkboxValue = e.target.checked ? "on" : "off";
+			console.log(overlay.lastImage.UT1.id);
 			if (checkboxValue == "off") {
 				with (document.getElementById("overlayUT1")) {
 					style.display = "none";
@@ -25,11 +25,12 @@ req.onload = function () {
 				with (document.getElementById("overlayUT1")) {
 					let UT1X = overlay.lastImage.UT1.positionX;
 					let UT1Y = overlay.lastImage.UT1.positionY;
-					style.left = UT1Y;
-					style.top = UT1X;
+					style.marginTop = UT1X;
+					style.marginLeft = UT1Y;
 					style.display = "block";
 					style.zIndex = "2";
 					style.position = "absolute";
+					style.color = "red";
 				}
 			}
 		});
@@ -37,12 +38,12 @@ req.onload = function () {
 		.getElementById("checkbox_coord")
 		.addEventListener("change", (e) => {
 			let UT2 = document.createElement("img");
-			UT2.src = overlay.lastImage.UT2.id;
 			UT2.id = "overlayUT2";
+			UT2.src = overlay.lastImage.UT2.id;
 			UT2.style.display = "none";
 			parent.appendChild(UT2);
-			console.log(overlay.lastImage.UT2);
 			checkboxValue = e.target.checked ? "on" : "off";
+			console.log(overlay.lastImage.UT2.id);
 			if (checkboxValue == "off") {
 				with (document.getElementById("overlayUT2")) {
 					style.display = "none";
@@ -51,11 +52,12 @@ req.onload = function () {
 				with (document.getElementById("overlayUT2")) {
 					let UT2X = overlay.lastImage.UT2.positionX;
 					let UT2Y = overlay.lastImage.UT2.positionY;
-					style.left = UT2Y;
-					style.top = UT2X;
+					style.marginTop = UT2X;
+					style.marginLeft = UT2Y;
 					style.display = "block";
 					style.zIndex = "2";
 					style.position = "absolute";
+					style.color = "red";
 				}
 			}
 		});
@@ -63,12 +65,12 @@ req.onload = function () {
 		.getElementById("checkbox_coord")
 		.addEventListener("change", (e) => {
 			let UT3 = document.createElement("img");
-			UT3.src = overlay.lastImage.UT3.id;
 			UT3.id = "overlayUT3";
+			UT3.src = overlay.lastImage.UT3.id;
 			UT3.style.display = "none";
 			parent.appendChild(UT3);
-			console.log(overlay.lastImage.UT3);
 			checkboxValue = e.target.checked ? "on" : "off";
+			console.log(overlay.lastImage.UT3.id);
 			if (checkboxValue == "off") {
 				with (document.getElementById("overlayUT3")) {
 					style.display = "none";
@@ -77,11 +79,12 @@ req.onload = function () {
 				with (document.getElementById("overlayUT3")) {
 					let UT3X = overlay.lastImage.UT3.positionX;
 					let UT3Y = overlay.lastImage.UT3.positionY;
-					style.left = UT3Y;
-					style.top = UT3X;
+					style.marginTop = UT3X;
+					style.marginLeft = UT3Y;
 					style.display = "block";
 					style.zIndex = "2";
 					style.position = "absolute";
+					style.color = "red";
 				}
 			}
 		});
@@ -89,12 +92,12 @@ req.onload = function () {
 		.getElementById("checkbox_coord")
 		.addEventListener("change", (e) => {
 			let UT4 = document.createElement("img");
-			UT4.src = overlay.lastImage.UT4.id;
 			UT4.id = "overlayUT4";
+			UT4.src = overlay.lastImage.UT4.id;
 			UT4.style.display = "none";
 			parent.appendChild(UT4);
-			console.log(overlay.lastImage.UT4);
 			checkboxValue = e.target.checked ? "on" : "off";
+			console.log(overlay.lastImage.UT4.id);
 			if (checkboxValue == "off") {
 				with (document.getElementById("overlayUT4")) {
 					style.display = "none";
@@ -103,11 +106,12 @@ req.onload = function () {
 				with (document.getElementById("overlayUT4")) {
 					let UT4X = overlay.lastImage.UT4.positionX;
 					let UT4Y = overlay.lastImage.UT4.positionY;
-					style.left = UT4Y;
-					style.top = UT4X;
+					style.marginTop = UT4X;
+					style.marginLeft = UT4Y;
 					style.display = "block";
 					style.zIndex = "2";
 					style.position = "absolute";
+					style.color = "red";
 				}
 			}
 		});
