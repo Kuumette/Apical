@@ -3,13 +3,13 @@ let temps,
 
 let display = document.getElementById("reglage");
 let overlay = document.getElementById("last");
-let display1 = document.getElementById("droit");
+let display1 = document.getElementById("nav");
 
 function resetTemps() {
 	document.querySelector(".delai").style.display = "none";
 	clearInterval(temps);
 	secondes = 0;
-	temps = setInterval(startTemps, 600000);
+	temps = setInterval(startTemps, 6000000);
 	display.style.opacity = "1";
 	overlay.style.opacity = "1";
 	display1.style.opacity = "1";
