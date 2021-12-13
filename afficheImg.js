@@ -6,8 +6,9 @@ request.send();
 
 request.onload = function () {
 	// recup des element que j'ai besoin dans le DOM
-	let display = document.getElementById("d2");
+
 	let parent = document.querySelector("#content");
+	let nav = document.querySelector("#nav");
 	// creation de mais deux element video
 	let video = document.createElement("video");
 	let video1 = document.createElement("video");
@@ -56,10 +57,9 @@ request.onload = function () {
 		img.style.display = "block";
 		video.style.display = "none";
 		video1.style.display = "none";
-		date.style.display = "inline";
-		heure.style.display = "inline";
-		name.style.display = "inline";
-		display.style.display = "block";
+		date.style.display = "block";
+		heure.style.display = "block";
+		name.style.display = "block";
 	};
 
 	lastSubstractionImage.onclick = function () {
@@ -74,10 +74,9 @@ request.onload = function () {
 		img.style.display = "block";
 		video.style.display = "none";
 		video1.style.display = "none";
-		date.style.display = "inline";
-		heure.style.display = "inline";
-		name.style.display = "inline";
-		display.style.display = "block";
+		date.style.display = "block";
+		heure.style.display = "block";
+		name.style.display = "block";
 	};
 	lastAnimation.onclick = function () {
 		let v = request.response;
@@ -98,8 +97,8 @@ request.onload = function () {
 		heure.style.display = "none";
 		name.style.display = "none";
 		video.style.display = "block";
+		nav.style.display = "block";
 		video1.style.display = "none";
-		display.style.display = "none";
 	};
 	lastSubstractionAnimation.onclick = function () {
 		let v = request.response;
@@ -121,6 +120,6 @@ request.onload = function () {
 		name.style.display = "none";
 		video.style.display = "none";
 		video1.style.display = "block";
-		display.style.display = "none";
+		nav.style.display = "block";
 	};
 };

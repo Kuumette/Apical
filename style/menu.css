@@ -27,7 +27,7 @@ nav ul {
 }
 
 nav > ul > li {
-	background-color: rgba(255, 255, 255, 0.555);
+	background-color: rgba(255, 255, 255, 0);
 	position: relative;
 	height: 100%;
 	flex: 1;
@@ -41,7 +41,7 @@ nav > ul > li > a {
 
 li a {
 	text-decoration: none;
-	color: black;
+	color: rgb(255, 255, 255);
 }
 
 .menu-deroulant > a:after {
@@ -54,7 +54,7 @@ li a {
 	margin-top: -228px;
 	width: 100%;
 	text-align: left;
-	background-color: rgba(255, 255, 255, 0.555);
+	background-color: rgba(255, 255, 255, 0.048);
 	border-radius: 2px;
 	overflow: hidden;
 	max-height: 0;
@@ -68,7 +68,7 @@ li a {
 	display: flex;
 }
 nav > ul > li:hover > a {
-	color: #000000;
+	color: #ffffff;
 }
 .sous-menu > li:hover {
 	background-color: rgba(255, 255, 255, 0);
@@ -116,7 +116,7 @@ button {
 	background-color: #7b38d800;
 	border-radius: 10px;
 	border: 4px double #cccccc00;
-	color: #000000;
+	color: #ffffff;
 	text-align: center;
 	font-size: 15px;
 	padding: 10px;
@@ -129,6 +129,7 @@ button {
 	/* margin: 5px; */
 }
 button:hover {
-	background-color: rgb(92, 92, 92);
+	background-color: rgb(255, 255, 255);
+	color: black;
 }
 /* fin menu */
