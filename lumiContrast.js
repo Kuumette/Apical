@@ -25,4 +25,4 @@ rangeInputs.forEach((input) => {
 	input.addEventListener("input", handleInputChange);
 });
 
-numberInput.addEventListener("input", handleInputChange);
+//numberInput.addEventListener("input", handleInputChange);

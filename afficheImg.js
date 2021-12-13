@@ -5,13 +5,13 @@ request.responseType = "json";
 request.send();
 
 request.onload = function () {
+	// recup des element que j'ai besoin dans le DOM
 	let display = document.getElementById("d2");
-	// recup div content dans mon DOM
 	let parent = document.querySelector("#content");
 	// creation de mais deux element video
 	let video = document.createElement("video");
 	let video1 = document.createElement("video");
-	//Creation de l'élement img
+	// Creation de l'élement img
 	let img = document.createElement("img");
 	// creation des info image
 	let date = document.createElement("p");
@@ -46,15 +46,6 @@ request.onload = function () {
 
 	lastImage.onclick = function () {
 		let image = request.response;
-		name.textContent = "Apicam";
-		date.id = "date";
-		heure.id = "heure";
-		name.id = "name";
-		parent.appendChild(date);
-		parent.appendChild(br1);
-		parent.appendChild(heure);
-		parent.appendChild(br);
-		parent.appendChild(name);
 		img.src = image.lastImage.img;
 		img.alt = image.desc;
 		img.id = "img";
@@ -73,15 +64,6 @@ request.onload = function () {
 
 	lastSubstractionImage.onclick = function () {
 		let image = request.response;
-		name.textContent = "Apicam";
-		date.id = "date";
-		heure.id = "heure";
-		name.id = "name";
-		parent.appendChild(date);
-		parent.appendChild(br1);
-		parent.appendChild(heure);
-		parent.appendChild(br);
-		parent.appendChild(name);
 		img.src = image.lastSubstractionImage.img;
 		img.alt = image.lastSubstractionImage.desc;
 		img.id = "img";
