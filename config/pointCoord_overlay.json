@@ -1,22 +1,22 @@
 {
 	"UT1": {
 		"id": "UT1",
-		"positionX": "-15%",
-		"positionY": "25%"
+		"positionX": "10%",
+		"positionY": "10%"
 	},
 	"UT2": {
 		"id": "UT2",
-		"positionX": "-10%",
-		"positionY": "20%"
+		"positionX": "11%",
+		"positionY": "12%"
 	},
 	"UT3": {
 		"id": "UT3",
-		"positionX": "-19%",
-		"positionY": "24%"
+		"positionX": "9%",
+		"positionY": "8%"
 	},
 	"UT4": {
 		"id": "UT4",
-		"positionX": "-9%",
-		"positionY": "9%"
+		"positionX": "5%",
+		"positionY": "4%"
 	}
 }

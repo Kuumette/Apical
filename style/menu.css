@@ -6,15 +6,7 @@
 	padding: 0px;
 	font-family: Montserrat, sans-serif;
 }
-nav {
-	z-index: 3;
-	display: block;
-	width: 18%;
-	font-size: 18px;
-	position: absolute;
-	top: 90%;
-	right: 20%;
-}
+
 #droit {
 	z-index: 3;
 	display: inline;

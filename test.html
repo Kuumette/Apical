@@ -29,15 +29,28 @@
 			<div id="d2">
 				<!-- Toggle overlay -->
 
-				<div id="last">
+				<div id="last" class="d-flex flex-row-reverse bd-highlight">
+					<p>coordonnée</p>
 					<label class="switch" for="checkbox_coord">
 						<input type="checkbox" id="checkbox_coord" />
 						<div class="slider round"></div>
 					</label>
-					<p>coordonnée</p>
 				</div>
 
 				<!-- Fin toggle overlay -->
+				<!-- Toggle auto refresh -->
+
+				<div class="d-flex flex-row-reverse bd-highlight" id="auto">
+					<div class="p-2 bd-highlight">
+						<label class="switch" for="checkbox">
+							<input type="checkbox" id="checkbox" checked />
+							<div class="slider round"></div>
+						</label>
+						<p id="d2">Auto refresh</p>
+					</div>
+				</div>
+
+				<!-- Fin toggle auto refresh -->
 
 				<!-- Input luminosité & contrast -->
 				<div class="reglage" id="reglage">
@@ -46,7 +59,7 @@
 						<input
 							type="range"
 							name="brightness"
-							min="1"
+							min="0"
 							max="5"
 							value="1"
 							step="0.10"
@@ -59,7 +72,7 @@
 						<input
 							type="range"
 							name="contrast"
-							min="1"
+							min="0"
 							max="5"
 							value="1"
 							step="0.10"
@@ -69,34 +82,11 @@
 						<br />
 					</div>
 				</div>
-			</div>
-			<!-- Fin input luminosité & contrast -->
-		</div>
+				<!-- Menu -->
 
-		<div id="content">
-			<p id="over"></p>
-		</div>
-
-		<div class="container">
-			<!-- Toggle auto refresh -->
-
-			<div class="d2">
-				<div class="d-flex flex-row-reverse bd-highlight">
-					<div class="p-2 bd-highlight">
-						<label class="switch" for="checkbox">
-							<input type="checkbox" id="checkbox" checked />
-							<div class="slider round"></div>
-						</label>
-						<p id="d2">Auto refresh</p>
-					</div>
-				</div>
-			</div>
-			<!-- Fin toggle auto refresh -->
-			<!-- Menu -->
-			<div class="d2">
-				<div id="nav" class="d-flex justify-content-center">
-					<nav class="row p-2 bd-highlight">
-						<ul class="justify-content-center">
+				<div id="nav">
+					<nav>
+						<ul>
 							<li class="menu-deroulant">
 								<a href="#">Choice of view</a>
 								<ul class="sous-menu">
@@ -125,9 +115,16 @@
 						</ul>
 					</nav>
 				</div>
-			</div>
 
-			<!-- Fin menu -->
+				<!-- Fin menu -->
+			</div>
+			<!-- Fin input luminosité & contrast -->
 		</div>
+
+		<div id="content" class="d-flex justify-content-center">
+			<p id="over"></p>
+		</div>
+
+		<div class="container"></div>
 	</body>
 </html>
