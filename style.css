@@ -11,7 +11,7 @@
 	width: 30%;
 	font-size: 18px;
 	position: absolute;
-	top: 77%;
+	top: 87%;
 	right: 50%;
 	z-index: 2;
 	margin-top: 50px;
@@ -87,6 +87,7 @@ input:checked + .slider:before {
 	max-width: 150%;
 	text-align: center !important;
 	margin-left: -20%;
+	margin-top: %;
 	display: flex;
 }
 #img:-webkit-full-screen {
@@ -156,7 +157,7 @@ nav {
 	width: 18%;
 	font-size: 18px;
 	position: absolute;
-	top: 80%;
+	top: 90%;
 	right: 20%;
 }
 #droit {
