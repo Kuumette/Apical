@@ -85,8 +85,8 @@ request.onload = function () {
 		video.setAttribute("controls", " ");
 		video.setAttribute("preload", "auto");
 		video.setAttribute("data-setup", "{}");
-		video.setAttribute("width", "800");
-		video.setAttribute("height", "420");
+		video.setAttribute("width", "900");
+		video.setAttribute("height", "520");
 
 		var source = document.createElement("source");
 		source.setAttribute("src", v.lastAnimation.img);
@@ -107,8 +107,8 @@ request.onload = function () {
 		video1.setAttribute("controls", " ");
 		video1.setAttribute("preload", "auto");
 		video1.setAttribute("data-setup", "{}");
-		video1.setAttribute("width", "800");
-		video1.setAttribute("height", "420");
+		video1.setAttribute("width", "900");
+		video1.setAttribute("height", "520");
 
 		var sourcea = document.createElement("source");
 		sourcea.setAttribute("src", v.lastSubstractionAnimation.img);

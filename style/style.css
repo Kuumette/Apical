@@ -1,0 +1,131 @@
+.switch {
+	display: inline-block;
+	height: 34px;
+	position: relative;
+	width: 60px;
+	margin-right: 20px;
+}
+
+.reglage {
+	display: block;
+	width: 30%;
+	font-size: 18px;
+	position: absolute;
+	top: 87%;
+	right: 50%;
+	z-index: 2;
+	margin-top: 50px;
+	transition: visibility 2s, opacity 2s linear;
+}
+#last {
+	margin-top: 2%;
+	transition: visibility 2s, opacity 2s linear;
+}
+#nav {
+	transition: visibility 2s, opacity 2s linear;
+}
+p {
+	color: white;
+	display: inline;
+}
+.container {
+	width: 40%;
+}
+#content {
+	width: 100%;
+}
+
+#view {
+	color: white;
+}
+label {
+	color: white;
+}
+
+#img {
+	max-width: 150%;
+	text-align: center !important;
+	margin-left: -20%;
+	margin-top: -5%;
+	display: flex;
+}
+#img:-webkit-full-screen {
+	width: 100%;
+	height: 100%;
+}
+body {
+	background-color: black;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+}
+#date {
+	z-index: 1;
+	position: absolute;
+	text-align: left;
+	/* margin: 0 auto; */
+	margin-right: -25%;
+
+	margin-top: 3%;
+	color: white;
+	width: 70%;
+}
+#heure {
+	z-index: 1;
+	position: absolute;
+	text-align: left;
+	/* margin: 0 auto; */
+	margin-right: -25%;
+
+	margin-top: 3%;
+	color: white;
+	width: 70%;
+}
+#name {
+	z-index: 1;
+	position: absolute;
+	text-align: left;
+	margin-right: -25%;
+
+	margin-top: 3%;
+
+	color: white;
+	width: 70%;
+}
+#overlayUT4,
+#overlayUT3,
+#overlayUT2,
+#overlayUT1 {
+	font-size: 1.3em;
+	color: green;
+	font-weight: bold;
+}
+
+/* Pour télephones */
+@media (min-width: 576px) {
+}
+/* Pour tablettes */
+@media (min-width: 768px) {
+}
+/* Pour ordinateurs portables */
+@media (min-width: 992px) {
+	nav {
+		width: 18%;
+	}
+}
+/* Pour les grands écrans */
+@media (min-width: 1200px) {
+	nav {
+		width: 18%;
+	}
+}
+/* Pour les plus grands écrans */
+@media (min-width: 2000px) {
+	nav {
+		width: 12%;
+	}
+	#content {
+		margin-top: 10%;
+	}
+}
