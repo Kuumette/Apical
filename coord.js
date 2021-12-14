@@ -25,8 +25,8 @@ req.onload = function () {
 				with (document.getElementById("overlayUT1")) {
 					let UT1X = overlay.UT1.positionX;
 					let UT1Y = overlay.UT1.positionY;
-					style.marginTop = UT1X;
-					style.marginLeft = UT1Y;
+					style.marginTop = UT1Y;
+					style.marginLeft = UT1X;
 					style.display = "block";
 					style.zIndex = "2";
 					style.position = "absolute";
@@ -52,8 +52,8 @@ req.onload = function () {
 				with (document.getElementById("overlayUT2")) {
 					let UT2X = overlay.UT2.positionX;
 					let UT2Y = overlay.UT2.positionY;
-					style.marginTop = UT2X;
-					style.marginLeft = UT2Y;
+					style.marginTop = UT2Y;
+					style.marginLeft = UT2X;
 					style.display = "block";
 					style.zIndex = "2";
 					style.position = "absolute";
@@ -79,8 +79,8 @@ req.onload = function () {
 				with (document.getElementById("overlayUT3")) {
 					let UT3X = overlay.UT3.positionX;
 					let UT3Y = overlay.UT3.positionY;
-					style.marginTop = UT3X;
-					style.marginLeft = UT3Y;
+					style.marginTop = UT3Y;
+					style.marginLeft = UT3X;
 					style.display = "block";
 					style.zIndex = "2";
 					style.position = "absolute";
@@ -106,8 +106,8 @@ req.onload = function () {
 				with (document.getElementById("overlayUT4")) {
 					let UT4X = overlay.UT4.positionX;
 					let UT4Y = overlay.UT4.positionY;
-					style.marginTop = UT4X;
-					style.marginLeft = UT4Y;
+					style.marginTop = UT4Y;
+					style.marginLeft = UT4X;
 					style.display = "block";
 					style.zIndex = "2";
 					style.position = "absolute";
