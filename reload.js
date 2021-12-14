@@ -1,16 +1,17 @@
-var rURL = "./config/configReload.json";
-var r = new XMLHttpRequest();
+let rURL = "./config/configReload.json";
+let r = new XMLHttpRequest();
 r.open("GET", rURL);
 r.responseType = "json";
 r.send();
 
 r.onload = function () {
-	var reload = r.response;
+	let reload = r.response;
 	// fonction auto refresh
 	const refresh = reload.reload.timer;
 
 	function reloadPage() {
-		var refreshEnabled = document.getElementById("checkbox");
+		let refreshEnabled = document.getElementById("checkbox");
+		let content = document.getElementById("content");
 		if (refreshEnabled.checked) {
 			window.location.reload(1);
 		}

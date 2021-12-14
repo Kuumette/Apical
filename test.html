@@ -30,11 +30,13 @@
 				<!-- Toggle overlay -->
 
 				<div id="last" class="d-flex flex-row-reverse bd-highlight">
-					<p>TCS data</p>
-					<label class="switch" for="checkbox_coord">
-						<input type="checkbox" id="checkbox_coord" />
-						<div class="slider round"></div>
-					</label>
+					<div class="bd-highlight">
+						<label class="switch" for="checkbox_coord">
+							<input type="checkbox" id="checkbox_coord" />
+							<div class="slider round"></div>
+						</label>
+						<p>TCS data</p>
+					</div>
 				</div>
 
 				<!-- Fin toggle overlay -->
@@ -68,7 +70,7 @@
 						<p id="lumi_affi"></p>
 					</div>
 					<div>
-						<label for="contrast">contrast</label>
+						<label for="contrast" id="contrast">contrast</label>
 						<input
 							type="range"
 							name="contrast"
@@ -121,10 +123,6 @@
 			<!-- Fin input luminosité & contrast -->
 		</div>
 
-		<div id="content" class="d-flex justify-content-center">
-			<p id="over"></p>
-		</div>
-
-		<div class="container"></div>
+		<div id="content" class="d-flex justify-content-center"></div>
 	</body>
 </html>

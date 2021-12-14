@@ -41,7 +41,7 @@ nav > ul > li > a {
 
 li a {
 	text-decoration: none;
-	color: rgb(255, 255, 255);
+	color: #f0f0f0;
 }
 
 .menu-deroulant > a:after {
@@ -68,14 +68,14 @@ li a {
 	display: flex;
 }
 nav > ul > li:hover > a {
-	color: #ffffff;
+	color: #f0f0f0;
 }
 .sous-menu > li:hover {
 	background-color: rgba(255, 255, 255, 0);
 }
 
 .sous-menu > li:hover > a {
-	color: white;
+	color: #f0f0f0;
 }
 @keyframes rotationFleche {
 	0% {
@@ -116,7 +116,7 @@ button {
 	background-color: #7b38d800;
 	border-radius: 10px;
 	border: 4px double #cccccc00;
-	color: #ffffff;
+	color: #f0f0f0;
 	text-align: center;
 	font-size: 15px;
 	padding: 10px;
@@ -129,7 +129,7 @@ button {
 	/* margin: 5px; */
 }
 button:hover {
-	background-color: rgb(255, 255, 255);
+	background-color: #f0f0f0;
 	color: black;
 }
 /* fin menu */

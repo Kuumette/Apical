@@ -9,6 +9,7 @@ request.onload = function () {
 
 	let parent = document.querySelector("#content");
 	let nav = document.querySelector("#nav");
+	let reglage = document.querySelector("#reglage");
 	// creation de mais deux element video
 	let video = document.createElement("video");
 	let video1 = document.createElement("video");
@@ -53,13 +54,13 @@ request.onload = function () {
 		parent.appendChild(img);
 		date.textContent = image.lastImage.date;
 		heure.textContent = image.lastImage.heure;
-
+		date.style.opacity = "1";
+		heure.style.opacity = "1";
+		name.style.opacity = "1";
 		img.style.display = "block";
 		video.style.display = "none";
 		video1.style.display = "none";
-		date.style.display = "block";
-		heure.style.display = "block";
-		name.style.display = "block";
+		reglage.style.display = "block";
 	};
 
 	lastSubstractionImage.onclick = function () {
@@ -70,13 +71,14 @@ request.onload = function () {
 		parent.appendChild(img);
 		date.textContent = image.lastSubstractionImage.date;
 		heure.textContent = image.lastSubstractionImage.heure;
-
+		date.style.opacity = "1";
+		heure.style.opacity = "1";
+		name.style.opacity = "1";
 		img.style.display = "block";
 		video.style.display = "none";
 		video1.style.display = "none";
-		date.style.display = "block";
-		heure.style.display = "block";
-		name.style.display = "block";
+
+		reglage.style.display = "block";
 	};
 	lastAnimation.onclick = function () {
 		let v = request.response;
@@ -93,12 +95,13 @@ request.onload = function () {
 		video.appendChild(source);
 		parent.appendChild(video);
 		img.style.display = "none";
-		date.style.display = "none";
-		heure.style.display = "none";
-		name.style.display = "none";
+		date.style.opacity = "0";
+		heure.style.opacity = "0";
+		name.style.opacity = "0";
 		video.style.display = "block";
 		nav.style.display = "block";
 		video1.style.display = "none";
+		reglage.style.display = "none";
 	};
 	lastSubstractionAnimation.onclick = function () {
 		let v = request.response;
@@ -115,10 +118,11 @@ request.onload = function () {
 		video1.appendChild(sourcea);
 		parent.appendChild(video1);
 		img.style.display = "none";
-		date.style.display = "none";
-		heure.style.display = "none";
-		name.style.display = "none";
 		video.style.display = "none";
+		date.style.opacity = "0";
+		heure.style.opacity = "0";
+		name.style.opacity = "0";
+		reglage.style.display = "none";
 		video1.style.display = "block";
 		nav.style.display = "block";
 	};
