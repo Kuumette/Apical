@@ -8,13 +8,17 @@ r.onload = function () {
 	let reload = r.response;
 	// fonction auto refresh
 	const refresh = reload.reload.timer;
-
 	function reloadPage() {
 		let refreshEnabled = document.getElementById("checkbox");
 		let content = document.getElementById("content");
 		if (refreshEnabled.checked) {
-			window.location.reload(1);
+			$("#content").fadeOut("slow", function () {
+				$(this).load("/test.html", function () {
+					$(this).fadeIn("slow");
+				});
+			});
 		}
 	}
 	setInterval(reloadPage, refresh);
 };
+//window.location.reload(1);
