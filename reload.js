@@ -17,7 +17,7 @@ r.onload = function () {
 			// 		$(this).fadeIn("slow");
 			// 	});
 			// });
-			//window.location.reload(1);
+			window.location.reload(1);
 		}
 	}
 	setInterval(reloadPage, 2000);
