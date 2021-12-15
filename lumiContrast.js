@@ -1,10 +1,8 @@
 function brightness(val) {
 	document.getElementById("img").style.filter = `brightness(${val})`;
-	let af = (document.getElementById("lumi_affi").innerHTML = val);
 }
 function contrast(val) {
 	document.getElementById("img").style.filter = `contrast(${val})`;
-	let af = (document.getElementById("con_affi").innerHTML = val);
 }
 // const rangeInputs = document.querySelectorAll('input[type="range"]');
 // const numberInput = document.querySelector('input[type="number"]');
@@ -26,6 +24,9 @@ function contrast(val) {
 // });
 
 //numberInput.addEventListener("input", handleInputChange);
-function updateTextInput(val) {
-	document.getElementById("textInput").value = val;
+function updateTextInputBrightness(val) {
+	document.getElementById("textInputBrightness").value = val;
+}
+function updateTextInputContrast(val) {
+	document.getElementById("textInputContrast").value = val;
 }
