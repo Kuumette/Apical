@@ -10,15 +10,15 @@ r.onload = function () {
 	const refresh = reload.reload.timer;
 	function reloadPage() {
 		let refreshEnabled = document.getElementById("checkbox");
-		let content = document.getElementById("content");
+		let container = document.getElementById("content");
 		if (refreshEnabled.checked) {
-			// $("#content").fadeOut("slow", function () {
-			// 	$(this).load("/test.html", function () {
-			// 		$(this).fadeIn("slow");
-			// 	});
-			// });
-			window.location.reload(1);
+			$("#content").fadeOut("slow", function () {
+				$(this).load("./Apical/test.html", function () {
+					$(this).fadeIn("slow");
+				});
+			});
+			//window.location.reload(1);
 		}
 	}
-	setInterval(reloadPage, refresh);
+	setInterval(reloadPage, 2000);
 };

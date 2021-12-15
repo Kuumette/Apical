@@ -25,4 +25,7 @@ rangeInputs.forEach((input) => {
 	input.addEventListener("input", handleInputChange);
 });
 
-//numberInput.addEventListener("input", handleInputChange);
+numberInput.addEventListener("input", handleInputChange);
+function updateTextInput(val) {
+	document.getElementById("textInput").value = val;
+}

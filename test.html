@@ -18,7 +18,7 @@
 		<script src="./afficheImg.js" defer></script>
 		<script src="./lumiContrast.js" defer></script>
 		<script src="./coord.js" defer></script>
-		<!-- <script src="https://code.jquery.com/jquery-3.5.1.js" defer></script> -->
+		<script src="https://code.jquery.com/jquery-3.5.1.js" defer></script>
 
 		<!-- CSS only -->
 	</head>
@@ -58,20 +58,32 @@
 				<!-- Input luminosité & contrast -->
 				<div class="reglage" id="reglage">
 					<div>
-						<label for="brightness">Brightness</label>
-						<input
-							type="range"
-							name="brightness"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							onchange="brightness(this.value);"
-						/>
-						<p id="lumi_affi"></p>
+						<form>
+							<span> Brightness</span>
+							<input
+								type="range"
+								name="amountRange"
+								min="0"
+								max="5"
+								value="1"
+								step="0.10"
+								oninput="this.form.amountInput.value=this.value"
+								onchange="brightness(this.value);"
+							/>
+							<input
+								type="number"
+								name="amountInput"
+								min="0"
+								max="5"
+								value="1"
+								step="0.10"
+								oninput="this.form.amountRange.value=this.value"
+								onchange="brightness(this.value);"
+							/>
+						</form>
 					</div>
 					<div>
-						<label for="contrast" id="contrast">Contrast</label>
+						<!-- <label for="contrast" id="contrast">Contrast</label>
 						<input
 							type="range"
 							name="contrast"
@@ -82,7 +94,30 @@
 							onchange="contrast(this.value);"
 						/>
 						<p id="con_affi"></p>
-						<br />
+						<br /> -->
+						<form>
+							<span id="const"> Contrast</span>
+							<input
+								type="range"
+								name="amountRange"
+								min="0"
+								max="5"
+								value="1"
+								step="0.10"
+								oninput="this.form.amountInput.value=this.value"
+								onchange="contrast(this.value);"
+							/>
+							<input
+								type="number"
+								name="amountInput"
+								min="0"
+								max="5"
+								value="1"
+								step="0.10"
+								oninput="this.form.amountRange.value=this.value"
+								onchange="contrast(this.value);"
+							/>
+						</form>
 					</div>
 				</div>
 				<!-- Menu -->
@@ -123,7 +158,8 @@
 			</div>
 			<!-- Fin input luminosité & contrast -->
 		</div>
-
-		<div id="content" class="d-flex justify-content-center"></div>
+		
+			<div id="content" class="d-flex justify-content-center"></div
+		
 	</body>
 </html>
