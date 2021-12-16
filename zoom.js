@@ -1,6 +1,7 @@
 let zoomer = (function () {
 	document.querySelector("#content").addEventListener(
 		"mousemove",
+
 		function (e) {
 			let original = document.querySelector("#img"),
 				magnified = document.querySelector("#img-2"),

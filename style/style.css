@@ -23,7 +23,17 @@
 	margin-top: 50px;
 	transition: visibility 2s, opacity 2s linear;
 }
-
+#zoom {
+	display: block;
+	width: 10%;
+	font-size: 18px;
+	position: fixed;
+	top: 0%;
+	/* left: -1.4%; */
+	/* z-index: 2; */
+	margin-top: 50px;
+	transition: visibility 2s, opacity 2s linear;
+}
 span {
 	color: #f0f0f0;
 }

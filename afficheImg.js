@@ -91,6 +91,7 @@ request.onload = function () {
 		video.setAttribute("data-setup", "{}");
 		video.setAttribute("width", "1000");
 		video.setAttribute("height", "620");
+		video.setAttribute("autoplay", "true");
 
 		var source = document.createElement("source");
 		source.setAttribute("src", v.lastAnimation.img);
@@ -115,6 +116,7 @@ request.onload = function () {
 		video1.setAttribute("data-setup", "{}");
 		video1.setAttribute("width", "1000");
 		video1.setAttribute("height", "620");
+		video1.setAttribute("autoplay", "true");
 
 		var sourcea = document.createElement("source");
 		sourcea.setAttribute("src", v.lastSubstractionAnimation.img);
