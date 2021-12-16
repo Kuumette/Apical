@@ -1,1 +1,37 @@
+body {
+	overflow: scroll;
+}
+#content {
+	height: auto;
+	position: relative;
+}
 
+#img {
+	width: 100%;
+	height: auto;
+}
+
+#content:hover,
+#content:active {
+	cursor: zoom-in;
+	display: block;
+}
+
+#content:hover #img-2,
+#content:active #img-2 {
+	opacity: 1;
+}
+#img-2 {
+	width: 240px;
+	height: 240px;
+	background: url("../ressources/test.png") no-repeat rgb(0, 0, 0);
+	box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+	pointer-events: none;
+	position: absolute;
+	opacity: 0;
+	border: 4px solid rgb(0, 0, 0);
+	z-index: 99;
+	border-radius: 100%;
+	display: block;
+	transition: opacity 0.2s;
+}
