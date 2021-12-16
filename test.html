@@ -15,10 +15,12 @@
 		<link rel="stylesheet" href="./style/style.css" />
 		<link rel="stylesheet" href="./style/range.css" />
 		<link rel="stylesheet" href="./style/menu.css" />
+		<link rel="stylesheet" href="./style/zoom.css" />
 		<script src="./reload.js" defer></script>
 		<script src="./afficheImg.js" defer></script>
 		<script src="./lumiContrast.js" defer></script>
 		<script src="./coord.js" defer></script>
+		<script src="./zoom.js" defer></script>
 		<script src="https://code.jquery.com/jquery-3.5.1.js" defer></script>
 
 		<!-- CSS only -->
@@ -46,7 +48,7 @@
 					<!-- Toggle auto refresh -->
 
 					<div class="d-flex flex-row-reverse bd-highlight" id="auto">
-						<div class="p-2 bd-highlight">
+						<div class="bd-highlight">
 							<label class="switch" for="checkbox">
 								<input type="checkbox" id="checkbox" checked />
 								<div class="slider round"></div>
@@ -56,7 +58,19 @@
 					</div>
 
 					<!-- Fin toggle auto refresh -->
-
+					<!-- <div class="d-flex flex-row-reverse bd-highlight" id="zoom">
+						<div class="bd-highlight">
+							<label class="switch" for="checkbox_zoom">
+								<input
+									type="checkbox"
+									id="checkbox_zoom"
+									checked
+								/>
+								<div class="slider round"></div>
+							</label>
+							<p id="d2">activate zoom</p>
+						</div>
+					</div> -->
 					<!-- Input luminosité & contrast -->
 					<div class="reglage" id="reglage">
 						<div>
