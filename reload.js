@@ -20,5 +20,5 @@ r.onload = function () {
 			//window.location.reload(1);
 		}
 	}
-	setInterval(reloadPage, 120000);
+	setInterval(reloadPage, 1200);
 };
