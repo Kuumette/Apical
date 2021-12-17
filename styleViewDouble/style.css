@@ -51,14 +51,14 @@ span {
 	margin-top: 50px;
 	transition: visibility 2s, opacity 2s linear;
 }
-#nav {
+#nav1 {
 	width: 50%;
 	font-size: 18px;
 	z-index: 2;
 	display: flex;
 	position: relative;
 	margin-left: 20%;
-	margin-top: -5%;
+	margin-top: 0%;
 	align-self: flex-end;
 	transition: visibility 2s, opacity 2s linear;
 }
@@ -87,11 +87,15 @@ label {
 #img {
 	max-width: 80%;
 	margin-left: 10%;
-	margin-top: 5%;
+	margin-top: 0%;
 	border-radius: 50%;
 }
+.row {
+	margin-right: 0;
+}
 .video-js {
-	margin-top: -10%;
+	margin-top: 10%;
+	margin-left: 8%;
 }
 #img:-webkit-full-screen {
 	width: 100%;

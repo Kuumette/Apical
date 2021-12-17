@@ -101,10 +101,6 @@ nav > ul > li:hover > a {
 	animation: apparitionSousMenu 1s forwards;
 }
 
-#nav {
-	margin-top: 10%;
-}
-
 button {
 	display: inline-block;
 	background-color: #7b38d800;
@@ -126,4 +122,3 @@ button:hover {
 	background-color: #f0f0f0;
 	color: black;
 }
-/* fin menu */

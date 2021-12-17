@@ -26,8 +26,8 @@ let zoomer = (function () {
 			style.backgroundPositionX = xperc - 82 + "%";
 			style.backgroundPositionY = yperc - -10 + "%";
 
-			style.left = x - 180 + "px";
-			style.top = y - 180 + "px";
+			style.left = x - 115 + "px";
+			style.top = y - 115 + "px";
 		},
 		false
 	);

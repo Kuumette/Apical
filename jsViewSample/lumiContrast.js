@@ -1,8 +1,10 @@
 function brightness(val) {
 	document.getElementById("img").style.filter = `brightness(${val})`;
+	document.querySelector("#img-2").style.filter = `brightness(${val})`;
 }
 function contrast(val) {
 	document.getElementById("img").style.filter = `contrast(${val})`;
+	document.querySelector("#img-2").style.filter = `contrast(${val})`;
 }
 // const rangeInputs = document.querySelectorAll('input[type="range"]');
 // const numberInput = document.querySelector('input[type="number"]');

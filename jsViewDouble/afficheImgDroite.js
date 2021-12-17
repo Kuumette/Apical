@@ -8,7 +8,7 @@ re.onload = function () {
 	// recup des element que j'ai besoin dans le DOM
 
 	let parent = document.querySelector("#partieDroite");
-	let nav = document.querySelector("#nav");
+	let nav = document.querySelector("#nav1");
 	let reglage = document.querySelector("#reglage");
 	let zoom = document.querySelector("#img-2");
 	// creation de mais deux element video
@@ -42,7 +42,7 @@ re.onload = function () {
 	parent.appendChild(heure);
 	parent.appendChild(br);
 	parent.appendChild(name);
-	img.src = image.lastImage.img;
+	img.src = image.lastSubstractionImage.img;
 	img.alt = image.desc;
 	img.id = "img";
 	parent.appendChild(img);
@@ -91,7 +91,7 @@ re.onload = function () {
 		video.setAttribute("controls", " ");
 		video.setAttribute("preload", "auto");
 		video.setAttribute("data-setup", "{}");
-		video.setAttribute("width", "1000");
+		video.setAttribute("width", "700");
 		video.setAttribute("height", "620");
 		video.setAttribute("autoplay", "true");
 
@@ -109,6 +109,7 @@ re.onload = function () {
 		video1.style.display = "none";
 		reglage.style.display = "none";
 		zoom.style.display = "none";
+		nav.style.marginTop = "20%";
 	};
 
 	lastSubstractionAnimationDroite.onclick = function () {
@@ -117,7 +118,7 @@ re.onload = function () {
 		video1.setAttribute("controls", " ");
 		video1.setAttribute("preload", "auto");
 		video1.setAttribute("data-setup", "{}");
-		video1.setAttribute("width", "1000");
+		video1.setAttribute("width", "700");
 		video1.setAttribute("height", "620");
 		video1.setAttribute("autoplay", "true");
 
@@ -127,13 +128,13 @@ re.onload = function () {
 		video1.appendChild(sourcea);
 		parent.appendChild(video1);
 		video1.style.display = "block";
+		date.style.opacity = "0";
+		heure.style.opacity = "0";
+		name.style.opacity = "0";
 		nav.style.display = "block";
 		video.style.display = "none";
 		img.style.display = "none";
 		reglage.style.display = "none";
-		date.style.opacity = "0";
-		heure.style.opacity = "0";
-		name.style.opacity = "0";
 		zoom.style.display = "none";
 	};
 };
