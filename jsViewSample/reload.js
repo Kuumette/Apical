@@ -1,4 +1,4 @@
-let rURL = "./config/configReload.json";
+let rURL = "../config/configReload.json";
 let r = new XMLHttpRequest();
 r.open("GET", rURL);
 r.responseType = "json";
@@ -12,13 +12,13 @@ r.onload = function () {
 		let refreshEnabled = document.getElementById("checkbox");
 		let container = document.getElementById("content");
 		if (refreshEnabled.checked) {
-			$("#content").fadeOut("slow", function () {
-				$(this).load("./Apical/test.html", function () {
-					$(this).fadeIn("slow");
-				});
-			});
-			//window.location.reload(1);
+			// $("#content").fadeOut("slow", function () {
+			// 	$(this).load("./Apical/test.html", function () {
+			// 		$(this).fadeIn("slow");
+			// 	});
+			// });
+			window.location.reload(1);
 		}
 	}
-	setInterval(reloadPage, 1200);
+	setInterval(reloadPage, refresh);
 };

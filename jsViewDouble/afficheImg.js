@@ -1,4 +1,4 @@
-let requestURL = "./config/image.json";
+let requestURL = "../config/image.json";
 let request = new XMLHttpRequest();
 request.open("GET", requestURL);
 request.responseType = "json";
@@ -7,7 +7,7 @@ request.send();
 request.onload = function () {
 	// recup des element que j'ai besoin dans le DOM
 
-	let parent = document.querySelector("#content");
+	let parent = document.querySelector("#partieGauche");
 	let nav = document.querySelector("#nav");
 	let reglage = document.querySelector("#reglage");
 	let zoom = document.querySelector("#img-2");
@@ -23,11 +23,13 @@ request.onload = function () {
 	let br = document.createElement("br");
 	let br1 = document.createElement("br");
 	// recup mais element button dans le DOM
-	lastImage = document.getElementById("lastImage");
-	lastSubstractionImage = document.getElementById("lastSubstractionImage");
-	lastAnimation = document.getElementById("lastAnimation");
-	lastSubstractionAnimation = document.getElementById(
-		"lastSubstractionAnimation"
+	lastImageGauche = document.getElementById("lastImageGauche");
+	lastSubstractionImageGauche = document.getElementById(
+		"lastSubstractionImageGauche"
+	);
+	lastAnimationGauche = document.getElementById("lastAnimationGauche");
+	lastSubstractionAnimationGauche = document.getElementById(
+		"lastSubstractionAnimationGauche"
 	);
 
 	let image = request.response;
@@ -47,7 +49,7 @@ request.onload = function () {
 	date.textContent = image.lastImage.date;
 	heure.textContent = image.lastImage.heure;
 
-	lastImage.onclick = function () {
+	lastImageGauche.onclick = function () {
 		let image = request.response;
 		img.src = image.lastImage.img;
 		img.alt = image.desc;
@@ -65,7 +67,7 @@ request.onload = function () {
 		zoom.style.display = "block";
 	};
 
-	lastSubstractionImage.onclick = function () {
+	lastSubstractionImageGauche.onclick = function () {
 		let image = request.response;
 		img.src = image.lastSubstractionImage.img;
 		img.alt = image.lastSubstractionImage.desc;
@@ -83,7 +85,7 @@ request.onload = function () {
 
 		reglage.style.display = "block";
 	};
-	lastAnimation.onclick = function () {
+	lastAnimationGauche.onclick = function () {
 		let v = request.response;
 		video.setAttribute("class", "video-js");
 		video.setAttribute("controls", " ");
@@ -109,7 +111,7 @@ request.onload = function () {
 		zoom.style.display = "none";
 	};
 
-	lastSubstractionAnimation.onclick = function () {
+	lastSubstractionAnimationGauche.onclick = function () {
 		let v = request.response;
 		video1.setAttribute("class", "video-js");
 		video1.setAttribute("controls", " ");

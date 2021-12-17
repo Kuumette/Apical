@@ -32,9 +32,9 @@ nav > ul > li {
 	height: 100%;
 	flex: 1;
 }
-nav > ul > li > a {
+nav > ul > li > button {
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -51,7 +51,7 @@ li a {
 	display: inline-block;
 }
 .sous-menu {
-	margin-top: -228px;
+	margin-top: -300px;
 	width: 100%;
 	text-align: left;
 	background-color: rgba(255, 255, 255, 0.048);
@@ -67,6 +67,7 @@ li a {
 	align-items: center;
 	display: flex;
 }
+
 nav > ul > li:hover > a {
 	color: #f0f0f0;
 }
@@ -77,6 +78,7 @@ nav > ul > li:hover > a {
 .sous-menu > li:hover > a {
 	color: #f0f0f0;
 }
+
 @keyframes rotationFleche {
 	0% {
 		transform: rotate(0deg);
@@ -105,6 +107,7 @@ nav > ul > li:hover > a {
 .menu-deroulant:hover > .sous-menu {
 	animation: apparitionSousMenu 1s forwards;
 }
+
 #nav {
 	margin-top: 10%;
 	/* display: flex;
