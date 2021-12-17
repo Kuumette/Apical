@@ -108,6 +108,7 @@ request.onload = function () {
 		reglage.style.display = "none";
 		zoom.style.display = "none";
 	};
+
 	lastSubstractionAnimation.onclick = function () {
 		let v = request.response;
 		video1.setAttribute("class", "video-js");
