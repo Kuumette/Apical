@@ -126,14 +126,14 @@ re.onload = function () {
 		sourcea.setAttribute("type", "video/mp4");
 		video1.appendChild(sourcea);
 		parent.appendChild(video1);
-		img.style.display = "none";
+		video1.style.display = "block";
+		nav.style.display = "block";
 		video.style.display = "none";
+		img.style.display = "none";
+		reglage.style.display = "none";
 		date.style.opacity = "0";
 		heure.style.opacity = "0";
 		name.style.opacity = "0";
-		reglage.style.display = "none";
-		video1.style.display = "block";
-		nav.style.display = "block";
 		zoom.style.display = "none";
 	};
 };
