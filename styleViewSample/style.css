@@ -71,13 +71,11 @@ label {
 
 #img {
 	border-radius: 50%;
-	border: solid 1px red;
 }
 #overlay {
 	border-radius: 50%;
 	z-index: 4;
 	position: absolute;
-	border: solid 1px red;
 }
 .video-js {
 	margin-top: -10%;
