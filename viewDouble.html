@@ -12,15 +12,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./styleViewDouble/menu.css" />
 		<link rel="stylesheet" href="./styleViewDouble/style.css" />
+		<link rel="stylesheet" href="./styleViewDouble/toggle.css" />
 		<script src="./jsViewDouble/view1X1.js" defer></script>
 		<script src="./jsViewDouble/afficheImg.js" defer></script>
 		<script src="./jsViewDouble/afficheImgDroite.js" defer></script>
+		<script src="./jsViewDouble/coord.js" defer></script>
 
 		<title>Document</title>
 	</head>
 	<body>
 		<article class="row">
 			<div class="col-md-6">
+				<!-- Toggle overlay -->
+
+				<div id="last" class="d-flex flex-row-reverse bd-highlight">
+					<div class="bd-highlight">
+						<label class="switch" for="checkbox_coord">
+							<input type="checkbox" id="checkbox_coord" />
+							<div class="slider round"></div>
+						</label>
+						<p>TCS data</p>
+					</div>
+				</div>
+
+				<!-- Fin toggle overlay -->
+				<div id="gauche"></div>
 				<div id="partieGauche"></div>
 				<div id="nav1" class="d-flex flex-row-reverse bd-highlight">
 					<nav>
@@ -103,5 +119,6 @@
 				</div>
 			</div>
 		</article>
+		<script></script>
 	</body>
 </html>

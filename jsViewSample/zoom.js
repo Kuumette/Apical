@@ -23,11 +23,11 @@ let zoomer = (function () {
 				yperc += 0.15 * yperc;
 			}
 
-			style.backgroundPositionX = xperc - 82 + "%";
-			style.backgroundPositionY = yperc - -10 + "%";
+			style.backgroundPositionX = xperc - 80 + "%";
+			style.backgroundPositionY = yperc - -13 + "%";
 
-			style.left = x - 115 + "px";
-			style.top = y - 115 + "px";
+			style.left = x - 150 + "px";
+			style.top = y - 120 + "px";
 		},
 		false
 	);
