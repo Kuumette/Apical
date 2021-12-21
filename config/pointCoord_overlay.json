@@ -19,5 +19,5 @@
 		"positionX": "-20%",
 		"positionY": "25%"
 	},
-	"img": "../ressources/overlay.png"
+	"img": "./ressources/overlay.png"
 }

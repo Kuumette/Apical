@@ -1,5 +1,6 @@
-let requestURL = "../config/image.json";
-let request = new XMLHttpRequest();
+var requestURL = "https://kuumette.github.io/Api/image.json";
+var request = new XMLHttpRequest();
+
 request.open("GET", requestURL);
 request.responseType = "json";
 request.send();

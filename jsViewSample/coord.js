@@ -1,4 +1,4 @@
-var reqURL = "../config/pointCoord_overlay.json";
+var reqURL = "https://kuumette.github.io/Api/pointCoord_overlay.json";
 var req = new XMLHttpRequest();
 req.open("GET", reqURL);
 req.responseType = "json";
@@ -18,11 +18,11 @@ req.onload = function () {
 			checkboxValue = e.target.checked ? "on" : "off";
 
 			if (checkboxValue == "off") {
-				console.log(checkboxValue);
+				//console.log(checkboxValue);
 
 				UT1.style.display = "none";
 			} else if (checkboxValue == "on") {
-				console.log(checkboxValue);
+				//console.log(checkboxValue);
 				UT1.style.display = "block";
 			}
 		});

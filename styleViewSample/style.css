@@ -3,10 +3,10 @@
 	width: 50%;
 	font-size: 18px;
 	position: fixed;
-	top: 85%;
+
 	left: 0%;
 	z-index: 2;
-	margin-top: 50px;
+	margin-top: 3%;
 	transition: visibility 2s, opacity 2s linear;
 }
 #contrast {
@@ -17,6 +17,7 @@
 	width: 106.5%;
 	font-size: 18px;
 	position: fixed;
+	z-index: 98;
 	transition: visibility 2s, opacity 2s linear;
 }
 
@@ -70,7 +71,7 @@ label {
 }
 
 #img {
-	border-radius: 50%;
+	border-radius: 0%;
 }
 #overlay {
 	border-radius: 50%;
@@ -116,22 +117,67 @@ body {
 p {
 	color: #f0f0f0;
 }
-@media only screen and (max-width: 899px) and (min-width: 600px) {
+@media only screen and (max-width: 699px) and (min-width: 500px) {
 	#img {
-		margin-top: 10%;
-		max-width: 70%;
+		margin-top: 0%;
+		max-width: 100%;
 	}
 	#date {
 		margin-top: 7%;
-		margin-left: -20%;
+		margin-left: -30%;
 	}
 	#heure {
 		margin-top: 10%;
-		margin-left: -20%;
+		margin-left: -30%;
 	}
 	#name {
 		margin-top: 13%;
-		margin-left: -20%;
+		margin-left: -30%;
+	}
+	nav {
+		width: 32%;
+		top: 75%;
+		left: 65%;
+	}
+	#last {
+		left: -10%;
+		margin-top: 5.5%;
+	}
+	#auto {
+		left: -3%;
+		margin-top: 1%;
+	}
+	#const {
+		margin-left: 5.8%;
+	}
+	#brightness {
+		margin-left: 2%;
+	}
+	#overlay {
+		max-width: 100%;
+		margin-left: 0%;
+		margin-top: 0%;
+	}
+	.reglage {
+		top: 70%;
+	}
+}
+@media only screen and (max-width: 899px) and (min-width: 700px) {
+	#img {
+		margin-top: 0%;
+		max-width: 95%;
+	}
+	#date {
+		margin-top: 7%;
+		margin-left: -30%;
+	}
+	#heure {
+		margin-top: 10%;
+		margin-left: -30%;
+	}
+	#name {
+		margin-top: 13%;
+		margin-left: -30%;
 	}
 	nav {
 		width: 32%;
@@ -139,99 +185,117 @@ p {
 		left: 68%;
 	}
 	#last {
-		left: -14%;
+		left: -10%;
 		margin-top: 5.5%;
 	}
 	#auto {
-		left: -2.5%;
+		left: -3%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 4.1%;
+		margin-left: 5.8%;
+	}
+	#brightness {
+		margin-left: 2%;
 	}
 	#overlay {
-		max-width: 70%;
-		margin-left: 15%;
-		margin-top: 10%;
+		max-width: 95%;
+		margin-left: 2.5%;
+		margin-top: 0%;
+	}
+	.reglage {
+		top: 88%;
 	}
 }
 /* Pour ordinateurs portables */
 @media only screen and (max-width: 1100px) and (min-width: 899px) {
 	#img {
-		margin-top: 3%;
-		max-width: 70%;
+		margin-top: 0%;
+		max-width: 78%;
 	}
 	#date {
-		margin-top: 8%;
+		margin-top: 6%;
 		margin-left: -20%;
 	}
 	#heure {
-		margin-top: 10%;
+		margin-top: 8%;
 		margin-left: -20%;
 	}
 	#name {
-		margin-top: 12%;
+		margin-top: 10%;
 		margin-left: -20%;
 	}
 	nav {
 		width: 28%;
 		top: 90%;
-		left: 68%;
+		left: 65%;
 	}
 	#last {
-		left: -13.5%;
+		left: -18.5%;
 		margin-top: 5%;
-	}
-	#auto {
-		left: -2.5%;
-		margin-top: 1%;
-	}
-	#const {
-		margin-left: 4.1%;
-	}
-	#overlay {
-		max-width: 70%;
-		margin-left: 15%;
-		margin-top: 3%;
-	}
-}
-@media only screen and (max-width: 1300px) and (min-width: 1099px) {
-	#img {
-		margin-top: 3%;
-		max-width: 60%;
-	}
-	#date {
-		margin-top: 8%;
-		margin-left: -20%;
-	}
-	#heure {
-		margin-top: 10%;
-		margin-left: -20%;
-	}
-	#name {
-		margin-top: 12%;
-		margin-left: -20%;
-	}
-	nav {
-		width: 23.5%;
-		top: 90%;
-		left: 68%;
-	}
-	#last {
-		left: -21.5%;
-		margin-top: 4%;
 	}
 	#auto {
 		left: -11%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 2.8%;
+		margin-left: 26.8%;
+	}
+	#brightness {
+		margin-left: 23.5%;
 	}
 	#overlay {
-		max-width: 60%;
-		margin-left: 20%;
+		max-width: 78%;
+		margin-left: 11%;
+		margin-top: 0%;
+	}
+	.reglage {
+		top: 88%;
+	}
+}
+@media only screen and (max-width: 1300px) and (min-width: 1099px) {
+	#img {
+		margin-top: -1%;
+		max-width: 66%;
+	}
+	#date {
 		margin-top: 3%;
+		margin-left: -10%;
+	}
+	#heure {
+		margin-top: 5%;
+		margin-left: -10%;
+	}
+	#name {
+		margin-top: 7%;
+		margin-left: -10%;
+	}
+	nav {
+		width: 23.5%;
+		top: 90%;
+		left: 60%;
+	}
+	#last {
+		left: -25.5%;
+		margin-top: 4%;
+	}
+	#auto {
+		left: -18%;
+		margin-top: 1%;
+	}
+	#const {
+		margin-left: 36.8%;
+	}
+	#brightness {
+		margin-left: 34%;
+	}
+	#overlay {
+		max-width: 66%;
+		margin-left: 17%;
+		margin-top: -1%;
+	}
+	.reglage {
+		top: 86%;
 	}
 }
 /* Pour les grands écrans */
@@ -239,40 +303,46 @@ p {
 	#img {
 		margin-top: 0%;
 		margin-left: 5%;
-		max-width: 60%;
+		max-width: 55%;
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: -20%;
+		margin-left: -0%;
 	}
 	#heure {
 		margin-top: 4%;
-		margin-left: -20%;
+		margin-left: -0%;
 	}
 	#name {
 		margin-top: 6%;
-		margin-left: -20%;
+		margin-left: -0%;
 	}
 	nav {
 		width: 20.5%;
 		top: 90%;
-		left: 68%;
+		left: 62%;
 	}
 	#last {
-		left: -13%;
-		margin-top: 5%;
+		left: -27.8%;
+		margin-top: 3%;
 	}
 	#auto {
-		left: -2.5%;
+		left: -20%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 2.5%;
+		margin-left: 46.8%;
+	}
+	#brightness {
+		margin-left: 45%;
 	}
 	#overlay {
-		max-width: 60%;
-		margin-left: 22.5%;
+		max-width: 55%;
+		margin-left: 25%;
 		margin-top: 0%;
+	}
+	.reglage {
+		top: 84%;
 	}
 }
 
@@ -283,36 +353,42 @@ p {
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: -20%;
+		margin-left: -0%;
 	}
 	#heure {
 		margin-top: 3.5%;
-		margin-left: -20%;
+		margin-left: -0%;
 	}
 	#name {
 		margin-top: 5%;
-		margin-left: -20%;
+		margin-left: -0%;
 	}
 	nav {
 		width: 18.5%;
 		top: 90%;
-		left: 68%;
+		left: 60%;
 	}
 	#last {
-		left: -18%;
+		left: -30%;
 		top: 7%;
 	}
 	#auto {
-		left: -8%;
+		left: -22%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 2.1%;
+		margin-left: 46.8%;
+	}
+	#brightness {
+		margin-left: 45%;
 	}
 	#overlay {
 		max-width: 50%;
 		margin-left: 25%;
 		margin-top: 0%;
+	}
+	.reglage {
+		top: 85%;
 	}
 }
 @media only screen and (max-width: 1900px) and (min-width: 1699px) {
@@ -322,36 +398,42 @@ p {
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: -20%;
+		margin-left: 5%;
 	}
 	#heure {
 		margin-top: 3.5%;
-		margin-left: -20%;
+		margin-left: 5%;
 	}
 	#name {
 		margin-top: 5%;
-		margin-left: -20%;
+		margin-left: 5%;
 	}
 	nav {
 		width: 16%;
 		top: 90%;
-		left: 68%;
+		left: 58%;
 	}
 	#last {
-		left: -13%;
+		left: -35%;
 		margin-top: 3%;
 	}
 	#auto {
-		left: -3%;
+		left: -27%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 1.8%;
+		margin-left: 56.8%;
+	}
+	#brightness {
+		margin-left: 55%;
 	}
 	#overlay {
 		max-width: 45%;
 		margin-left: 27.5%;
 		margin-top: 0%;
+	}
+	.reglage {
+		top: 85%;
 	}
 }
 @media only screen and (max-width: 2200px) and (min-width: 1899px) {
@@ -361,36 +443,42 @@ p {
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: -20%;
+		margin-left: 5%;
 	}
 	#heure {
 		margin-top: 3.5%;
-		margin-left: -20%;
+		margin-left: 5%;
 	}
 	#name {
 		margin-top: 5%;
-		margin-left: -20%;
+		margin-left: 5%;
 	}
 	nav {
 		width: 16%;
 		top: 90%;
-		left: 68%;
+		left: 60%;
 	}
 	#last {
-		left: -13%;
+		left: -35%;
 		margin-top: 3%;
 	}
 	#auto {
-		left: -3%;
+		left: -27%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 1.8%;
+		margin-left: 56.8%;
+	}
+	#brightness {
+		margin-left: 55%;
 	}
 	#overlay {
 		max-width: 45%;
 		margin-left: 27.5%;
 		margin-top: 0%;
+	}
+	.reglage {
+		top: 85%;
 	}
 }
 @media only screen and (max-width: 5000px) and (min-width: 2199px) {
@@ -400,27 +488,27 @@ p {
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: -20%;
+		margin-left: 10%;
 	}
 	#heure {
 		margin-top: 3.5%;
-		margin-left: -20%;
+		margin-left: 10%;
 	}
 	#name {
 		margin-top: 5%;
-		margin-left: -20%;
+		margin-left: 10%;
 	}
 	nav {
 		width: 16%;
-		top: 90%;
-		left: 68%;
+		top: 94%;
+		left: 58%;
 	}
 	#last {
-		left: -13%;
+		left: -38%;
 		margin-top: 3%;
 	}
 	#auto {
-		left: -3%;
+		left: -29.8%;
 		margin-top: 1%;
 	}
 	#const {
@@ -430,5 +518,14 @@ p {
 		max-width: 40%;
 		margin-left: 30%;
 		margin-top: 0%;
+	}
+	#const {
+		margin-left: 58.8%;
+	}
+	#brightness {
+		margin-left: 57.3%;
+	}
+	.reglage {
+		top: 85%;
 	}
 }

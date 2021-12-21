@@ -1,7 +1,7 @@
 input[type="range"] {
 	-webkit-appearance: none;
 	margin-right: 15px;
-	width: 200px;
+	width: 100px;
 	height: 7px;
 	background: #f0f0f0;
 	border-radius: 5px;
@@ -82,4 +82,5 @@ input[type="number"] {
 	border-radius: 15px;
 	text-align: center;
 	color: #f0f0f0;
+	width: 50px;
 }
