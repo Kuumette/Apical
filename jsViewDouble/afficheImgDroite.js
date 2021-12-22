@@ -46,8 +46,8 @@ re.onload = function () {
 	img.alt = image.desc;
 	img.id = "img";
 	parent.appendChild(img);
-	date.textContent = image.lastImage.date;
-	heure.textContent = image.lastImage.heure;
+	date.textContent = image.lastSubstractionImage.date;
+	heure.textContent = image.lastSubstractionImage.heure;
 
 	lastImageDroite.onclick = function () {
 		let image = re.response;

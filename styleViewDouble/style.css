@@ -3,8 +3,19 @@
 	width: 50%;
 	font-size: 18px;
 	position: fixed;
-	top: 85%;
+	top: 78%;
 	left: 0%;
+	z-index: 2;
+	margin-top: 50px;
+	transition: visibility 2s, opacity 2s linear;
+}
+.reglageDroite {
+	display: block;
+	width: 50%;
+	font-size: 18px;
+	position: fixed;
+	top: 78%;
+	left: 50%;
 	z-index: 2;
 	margin-top: 50px;
 	transition: visibility 2s, opacity 2s linear;
@@ -14,15 +25,17 @@
 }
 #last {
 	display: block;
-	width: 45.5%;
+	width: 47.5%;
 	font-size: 18px;
 	position: fixed;
 	top: 0%;
+
 	/* left: -1.4%; */
 	/* z-index: 2; */
 	margin-top: 50px;
 	transition: visibility 2s, opacity 2s linear;
 }
+
 #zoom {
 	display: block;
 	width: 10%;
@@ -43,12 +56,22 @@ span {
 
 #auto {
 	display: block;
-	width: 97.5%;
+	width: 46.5%;
 	font-size: 18px;
 	position: fixed;
 	left: 0%;
 	z-index: 2;
-	margin-top: 50px;
+	margin-top: 0.5%;
+	transition: visibility 2s, opacity 2s linear;
+}
+#auto_droite {
+	display: block;
+	width: 50%;
+	font-size: 18px;
+	position: fixed;
+	left: 47%;
+	z-index: 2;
+	margin-top: 0.5%;
 	transition: visibility 2s, opacity 2s linear;
 }
 #nav1 {

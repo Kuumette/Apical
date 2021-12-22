@@ -7,11 +7,11 @@ req.send();
 req.onload = function () {
 	let overlay = req.response;
 	let parent = document.querySelector("#gauche");
-	let UT1 = document.createElement("img");
-	UT1.src = overlay.img;
-	UT1.id = "overlay";
-	parent.appendChild(UT1);
-	UT1.style.display = "none";
+	let gauche = document.createElement("img");
+	gauche.src = overlay.img;
+	gauche.id = "overlay";
+	parent.appendChild(gauche);
+	gauche.style.display = "none";
 	document
 		.getElementById("checkbox_coord")
 		.addEventListener("change", (e) => {
@@ -20,10 +20,31 @@ req.onload = function () {
 			if (checkboxValue == "off") {
 				console.log(checkboxValue);
 
-				UT1.style.display = "none";
+				gauche.style.display = "none";
 			} else if (checkboxValue == "on") {
 				console.log(checkboxValue);
-				UT1.style.display = "block";
+				gauche.style.display = "block";
+			}
+		});
+
+	let parentDroite = document.querySelector("#droite");
+	let droite = document.createElement("img");
+	droite.src = overlay.img;
+	droite.id = "overlay";
+	parentDroite.appendChild(droite);
+	droite.style.display = "none";
+	document
+		.getElementById("checkbox_coord_droite")
+		.addEventListener("change", (e) => {
+			checkboxValue = e.target.checked ? "on" : "off";
+
+			if (checkboxValue == "off") {
+				console.log(checkboxValue);
+
+				droite.style.display = "none";
+			} else if (checkboxValue == "on") {
+				console.log(checkboxValue);
+				droite.style.display = "block";
 			}
 		});
 };
