@@ -20,29 +20,37 @@
 		<script src="./jsViewDouble/coord.js" defer></script>
 		<script src="./jsViewDouble/reload.js" defer></script>
 		<script src="./jsViewDouble/lumiContrast.js" defer></script>
+		<script src="./jsViewDouble/inactivite.js" defer></script>
+		<script src="./jsViewDouble/fullScreen.js" defer></script>
 		<script src="https://code.jquery.com/jquery-3.5.1.js" defer></script>
 
 		<title>Document</title>
 	</head>
 	<body>
+		<p class="delai">
+			<span class="secondes" id="temps"></span>
+		</p>
 		<article class="row">
-			<div class="col-md-6">
+			<div class="col-xl-6">
 				<!-- Toggle auto refresh -->
-
-				<div class="d-flex flex-row-reverse bd-highlight" id="auto">
-					<div class="bd-highlight">
-						<label class="switch" for="checkbox_gauche">
-							<input
-								type="checkbox"
-								id="checkbox_gauche"
-								checked
-							/>
-							<div class="slider round"></div>
-						</label>
-						<p id="d2">Auto refresh</p>
+				<div id="d2">
+					<div
+						class="d-flex flex-row-reverse bd-highlight"
+						id="autoGauche"
+					>
+						<div class="bd-highlight">
+							<label class="switch" for="checkbox_gauche">
+								<input
+									type="checkbox"
+									id="checkbox_gauche"
+									checked
+								/>
+								<div class="slider round"></div>
+							</label>
+							<p id="d2">Auto refresh</p>
+						</div>
 					</div>
 				</div>
-
 				<!-- Fin toggle auto refresh -->
 				<!-- Toggle overlay -->
 
@@ -60,7 +68,7 @@
 				<div id="gauche"></div>
 				<div id="partieGauche"></div>
 				<!-- Input luminosité & contrast -->
-				<div class="reglage" id="reglage">
+				<div class="reglage" id="reglageGauche">
 					<div>
 						<form>
 							<span id="brightness"> Brightness</span>
@@ -153,7 +161,7 @@
 					</nav>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-xl-6">
 				<!-- Toggle auto refresh -->
 
 				<div
@@ -176,7 +184,10 @@
 				<!-- Fin toggle auto refresh -->
 				<!-- Toggle overlay -->
 
-				<div id="last" class="d-flex flex-row-reverse bd-highlight">
+				<div
+					id="lastDroite"
+					class="d-flex flex-row-reverse bd-highlight"
+				>
 					<div class="bd-highlight">
 						<label class="switch" for="checkbox_coord_droite">
 							<input type="checkbox" id="checkbox_coord_droite" />
@@ -244,7 +255,10 @@
 						</form>
 					</div>
 				</div>
-				<div id="nav1" class="d-flex flex-row-reverse bd-highlight">
+				<div
+					id="navDroite"
+					class="d-flex flex-row-reverse bd-highlight"
+				>
 					<nav>
 						<ul>
 							<li class="menu-deroulant">
