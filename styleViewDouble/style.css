@@ -100,6 +100,7 @@ p {
 }
 #content {
 	width: auto;
+	position: relative;
 }
 
 #view {
@@ -124,7 +125,7 @@ label {
 	margin-right: 0;
 }
 .video-js {
-	margin-top: 10%;
+	margin-top: 0%;
 	margin-left: 8%;
 }
 #img:-webkit-full-screen {

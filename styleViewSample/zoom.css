@@ -1,19 +1,4 @@
-/* #content {
-	height: auto;
-	position: relative;
-}
-
-#img {
-	width: 100%;
-	height: auto;
-}
-
-#content:hover,
-#content:active {
-	display: block;
-	/* cursor: zoom-in; */
-}
-
+/* 
 #content:hover #img-2,
 #content:active #img-2 {
 	opacity: 1;
@@ -31,4 +16,4 @@
 	border-radius: 100%;
 	display: block;
 	transition: opacity 0.2s;
-} */
+}  */

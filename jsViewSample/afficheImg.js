@@ -45,6 +45,7 @@ request.onload = function () {
 	img.alt = image.desc;
 	img.id = "img";
 	parent.appendChild(img);
+
 	date.textContent = image.lastImage.date;
 	heure.textContent = image.lastImage.heure;
 

@@ -20,7 +20,6 @@
 		<script src="./jsViewSample/afficheImg.js" defer></script>
 		<script src="./jsViewSample/lumiContrast.js" defer></script>
 		<script src="./jsViewSample/coord.js" defer></script>
-		<script src="./jsViewSample/zoom.js" defer></script>
 		<script src="./jsViewSample/view2X1.js" defer></script>
 		<script src="https://code.jquery.com/jquery-3.5.1.js" defer></script>
 		<script src="./jsViewSample/fullScreen.js" defer></script>
@@ -162,9 +161,14 @@
 			</div>
 			<div id="center"></div>
 
-			<div id="content" class="d-flex justify-content-center col-10">
-				<div id="img-2"></div>
-			</div>
+			<div
+				id="content"
+				class="d-flex justify-content-center col-10"
+			></div>
 		</div>
+		<script src="./jsViewSample/wheelzoom.js">
+			wheelzoom(document.querySelectorAll("#img"));
+		</script>
+		<script></script>
 	</body>
 </html>
