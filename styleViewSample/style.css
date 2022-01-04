@@ -42,10 +42,7 @@ span {
 	width: 50%;
 	font-size: 18px;
 	position: absolute;
-	top: 70%;
-	left: 85%;
 	z-index: 2;
-	margin-top: 50px;
 	transition: visibility 2s, opacity 2s linear;
 }
 nav {
@@ -201,7 +198,7 @@ p {
 	}
 	#overlay {
 		max-width: 95%;
-		margin-left: 2.5%;
+		margin-left: 0%;
 		margin-top: 0%;
 	}
 	.reglage {
@@ -247,7 +244,7 @@ p {
 	}
 	#overlay {
 		max-width: 78%;
-		margin-left: 11%;
+		margin-left: 0%;
 		margin-top: 0%;
 	}
 	.reglage {
@@ -292,7 +289,7 @@ p {
 	}
 	#overlay {
 		max-width: 66%;
-		margin-left: 17%;
+		margin-left: 0%;
 		margin-top: -1%;
 	}
 	.reglage {
@@ -339,7 +336,7 @@ p {
 	}
 	#overlay {
 		max-width: 55%;
-		margin-left: 25%;
+		margin-left: 5%;
 		margin-top: 0%;
 	}
 	.reglage {
@@ -385,7 +382,7 @@ p {
 	}
 	#overlay {
 		max-width: 50%;
-		margin-left: 25%;
+		margin-left: 0%;
 		margin-top: 0%;
 	}
 	.reglage {
@@ -430,7 +427,7 @@ p {
 	}
 	#overlay {
 		max-width: 45%;
-		margin-left: 27.5%;
+		margin-left: 0%;
 		margin-top: 0%;
 	}
 	.reglage {
@@ -475,7 +472,7 @@ p {
 	}
 	#overlay {
 		max-width: 45%;
-		margin-left: 27.5%;
+		margin-left: 0%;
 		margin-top: 0%;
 	}
 	.reglage {

@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="./styleViewSample/range.css" />
 		<link rel="stylesheet" href="./styleViewSample/menu.css" />
 		<link rel="stylesheet" href="./styleViewSample/zoom.css" />
+
 		<script src="./jsViewSample/reload.js" defer></script>
 		<script src="./jsViewSample/afficheImg.js" defer></script>
 		<script src="./jsViewSample/lumiContrast.js" defer></script>
@@ -159,16 +160,30 @@
 				</div>
 				<!-- Fin input luminosité & contrast -->
 			</div>
-			<div id="center"></div>
 
-			<div
-				id="content"
-				class="d-flex justify-content-center col-10"
-			></div>
+			<div id="content" class="d-flex justify-content-center col-10">
+				<div id="center"></div>
+			</div>
 		</div>
-		<script src="./jsViewSample/wheelzoom.js">
-			wheelzoom(document.querySelectorAll("#img"));
+		<script src="https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js"></script>
+		<script>
+			var area = document.querySelector("#content");
+
+			panzoom(area, {
+				maxZoom: 3,
+				minZoom: 1,
+				zoomDoubleClickSpeed: 3,
+				// desactive les touche du clavier
+				filterKey: function (/* e, dx, dy, dz */) {
+					// ne laissez pas panzoom gérer cet événement :
+					return true;
+				},
+				beforeMouseDown: function (e) {
+					// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
+					var shouldIgnore = !e.altKey;
+					return shouldIgnore;
+				},
+			});
 		</script>
-		<script></script>
 	</body>
 </html>
