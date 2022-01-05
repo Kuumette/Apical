@@ -65,17 +65,16 @@
 					<!-- Input luminosité & contrast -->
 					<div class="reglage" id="reglage">
 						<div>
-							<form>
+							<form id="brightnessForm">
 								<span id="brightness"> Brightness</span>
 								<input
 									type="range"
 									name="amountRange"
 									min="0"
 									max="5"
-									value="1"
 									step="0.10"
 									oninput="this.form.amountInput.value=this.value"
-									onchange="brightness(this.value);"
+									onchange="brightness_and_contrast(this.value, contrastForm.amountInput.value)"
 								/>
 								<input
 									id="textInputBrightness"
@@ -83,25 +82,24 @@
 									name="amountInput"
 									min="0"
 									max="5"
-									value="1"
 									step="0.10"
 									oninput="this.form.amountRange.value=this.value"
-									onchange="brightness(this.value);"
+									onchange="brightness_and_contrast(this.value, contrastForm.amountInput.value)"
 								/>
 							</form>
 						</div>
+
 						<div>
-							<form>
+							<form id="contrastForm">
 								<span id="const"> Contrast</span>
 								<input
 									type="range"
 									name="amountRange"
 									min="0"
 									max="5"
-									value="1"
 									step="0.10"
 									oninput="this.form.amountInput.value=this.value"
-									onchange="contrast(this.value);"
+									onchange="brightness_and_contrast(brightnessForm.amountInput.value, this.value)"
 								/>
 								<input
 									id="textInputContrast"
@@ -109,10 +107,9 @@
 									name="amountInput"
 									min="0"
 									max="5"
-									value="1"
 									step="0.10"
 									oninput="this.form.amountRange.value=this.value"
-									onchange="contrast(this.value);"
+									onchange="brightness_and_contrast(brightnessForm.amountInput.value, this.value)"
 								/>
 							</form>
 						</div>
@@ -161,29 +158,37 @@
 				<!-- Fin input luminosité & contrast -->
 			</div>
 
-			<div id="content" class="d-flex justify-content-center col-10">
-				<div id="center"></div>
-			</div>
+			<div id="center"></div>
+			<div
+				id="content"
+				class="d-flex justify-content-center col-10"
+			></div>
 		</div>
 		<script src="https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js"></script>
 		<script>
 			var area = document.querySelector("#content");
 
 			panzoom(area, {
-				maxZoom: 3,
+				maxZoom: 10,
 				minZoom: 1,
-				zoomDoubleClickSpeed: 3,
+				zoomDoubleClickSpeed: 2,
 				// desactive les touche du clavier
 				filterKey: function (/* e, dx, dy, dz */) {
 					// ne laissez pas panzoom gérer cet événement :
 					return true;
 				},
-				beforeMouseDown: function (e) {
-					// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
-					var shouldIgnore = !e.altKey;
-					return shouldIgnore;
-				},
+				// beforeMouseDown: function (e) {
+				// 	// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
+				// 	var shouldIgnore = !e.altKey;
+				// 	return shouldIgnore;
+				// },
+				// beforeWheel: function (e) {
+				// 	// autoriser le zoom de roue uniquement si altKey est enfoncé. Sinon - ignore
+				// 	var shouldIgnore = !e.altKey;
+				// 	return shouldIgnore;
+				// },
 			});
+			console.log(contrast(this.value));
 		</script>
 	</body>
 </html>

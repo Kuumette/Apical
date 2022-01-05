@@ -313,11 +313,16 @@
 					// ne laissez pas panzoom gérer cet événement :
 					return true;
 				},
-				beforeMouseDown: function (e) {
-					// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
-					var shouldIgnore = !e.altKey;
-					return shouldIgnore;
-				},
+				// beforeMouseDown: function (e) {
+				// 	// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
+				// 	var shouldIgnore = !e.altKey;
+				// 	return shouldIgnore;
+				// },
+				// beforeWheel: function (e) {
+				// 	// autoriser le zoom de roue uniquement si altKey est enfoncé. Sinon - ignore
+				// 	var shouldIgnore = !e.altKey;
+				// 	return shouldIgnore;
+				// },
 			});
 
 			var areaGauche = document.querySelector("#partieGauche");
@@ -331,11 +336,16 @@
 					// ne laissez pas panzoom gérer cet événement :
 					return true;
 				},
-				beforeMouseDown: function (e) {
-					// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
-					var shouldIgnore = !e.altKey;
-					return shouldIgnore;
-				},
+				// beforeMouseDown: function (e) {
+				// 	// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
+				// 	var shouldIgnore = !e.altKey;
+				// 	return shouldIgnore;
+				// },
+				// beforeWheel: function (e) {
+				// 	// autoriser le zoom de roue uniquement si altKey est enfoncé. Sinon - ignore
+				// 	var shouldIgnore = !e.altKey;
+				// 	return shouldIgnore;
+				// },
 			});
 		</script>
 	</body>

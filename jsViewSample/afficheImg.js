@@ -1,4 +1,4 @@
-var requestURL = "https://kuumette.github.io/Api/image.json";
+var requestURL = "../config/image.json";
 var request = new XMLHttpRequest();
 
 request.open("GET", requestURL);

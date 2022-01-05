@@ -74,6 +74,7 @@ label {
 
 #img {
 	border-radius: 0%;
+	border: 1px solid red;
 }
 #overlay {
 	border-radius: 50%;
@@ -473,6 +474,7 @@ p {
 	}
 	#brightness {
 		margin-left: 55%;
+		margin-top: 10%;
 	}
 	#overlay {
 		max-width: 45%;

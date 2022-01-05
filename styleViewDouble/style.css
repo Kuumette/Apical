@@ -1,7 +1,6 @@
 * {
 	font-size: 1.5vh;
 }
-
 .reglage {
 	display: block;
 	font-size: 18px;
@@ -33,7 +32,6 @@
 	z-index: 51;
 	transition: visibility 2s, opacity 2s linear;
 }
-
 #zoom {
 	display: block;
 	width: 10%;
@@ -51,7 +49,6 @@ span {
 #const {
 	margin-left: 1.8%;
 }
-
 #autoGauche {
 	display: block;
 	font-size: 18px;
@@ -94,7 +91,6 @@ span {
 nav {
 	width: 12%;
 }
-
 p {
 	color: #f0f0f0;
 	display: inline;
@@ -106,14 +102,12 @@ p {
 	width: auto;
 	position: relative;
 }
-
 #view {
 	color: #f0f0f0;
 }
 label {
 	color: #f0f0f0;
 }
-
 #img {
 	border-radius: 50%;
 }
