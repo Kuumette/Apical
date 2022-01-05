@@ -65,8 +65,9 @@
 				</div>
 
 				<!-- Fin toggle overlay -->
-				<div id="gauche"></div>
-				<div id="partieGauche"></div>
+				<div id="partieGauche">
+					<div id="gauche"></div>
+				</div>
 				<!-- Input luminosité & contrast -->
 				<div class="reglage" id="reglageGauche">
 					<div>
@@ -198,8 +199,9 @@
 				</div>
 
 				<!-- Fin toggle overlay -->
-				<div id="droite"></div>
-				<div id="partieDroite"></div>
+				<div id="partieDroite">
+					<div id="droite"></div>
+				</div>
 				<!-- Input luminosité & contrast -->
 				<div class="reglageDroite" id="reglageDroite">
 					<div>
@@ -298,6 +300,43 @@
 				</div>
 			</div>
 		</article>
-		<script></script>
+		<script src="https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js"></script>
+		<script>
+			var area = document.querySelector("#partieDroite");
+
+			panzoom(area, {
+				maxZoom: 3,
+				minZoom: 1,
+				zoomDoubleClickSpeed: 3,
+				// desactive les touche du clavier
+				filterKey: function (/* e, dx, dy, dz */) {
+					// ne laissez pas panzoom gérer cet événement :
+					return true;
+				},
+				beforeMouseDown: function (e) {
+					// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
+					var shouldIgnore = !e.altKey;
+					return shouldIgnore;
+				},
+			});
+
+			var areaGauche = document.querySelector("#partieGauche");
+
+			panzoom(areaGauche, {
+				maxZoom: 3,
+				minZoom: 1,
+				zoomDoubleClickSpeed: 3,
+				// desactive les touche du clavier
+				filterKey: function (/* e, dx, dy, dz */) {
+					// ne laissez pas panzoom gérer cet événement :
+					return true;
+				},
+				beforeMouseDown: function (e) {
+					// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
+					var shouldIgnore = !e.altKey;
+					return shouldIgnore;
+				},
+			});
+		</script>
 	</body>
 </html>
