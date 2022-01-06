@@ -8,6 +8,16 @@
 	z-index: 2;
 	transition: visibility 2s, opacity 2s linear;
 }
+#footerGauche {
+	width: 50%;
+	margin-top: 42.3%;
+	position: absolute;
+	z-index: 5;
+}
+#footerDroite {
+	margin-left: 50%;
+	margin-top: -2%;
+}
 .reglageDroite {
 	display: block;
 	font-size: 18px;
@@ -109,6 +119,9 @@ label {
 	color: #f0f0f0;
 }
 #img {
+	border-radius: 50%;
+}
+#img2 {
 	border-radius: 50%;
 }
 #overlay {
@@ -213,7 +226,8 @@ p {
 		top: -5%;
 		left: 0%;
 	}
-	#img {
+	#img,
+	#img2 {
 		max-width: 99%;
 		margin-left: 0%;
 		margin-top: -15%;
@@ -277,7 +291,8 @@ p {
 		top: -5%;
 		left: 0%;
 	}
-	#img {
+	#img,
+	#img2 {
 		max-width: 99%;
 		margin-left: 0%;
 		margin-top: -15%;
@@ -342,7 +357,8 @@ p {
 		top: -5%;
 		left: 0%;
 	}
-	#img {
+	#img,
+	#img2 {
 		max-width: 80%;
 		margin-left: 10%;
 		margin-top: -10%;
@@ -406,7 +422,8 @@ p {
 		top: -5%;
 		left: 0%;
 	}
-	#img {
+	#img,
+	#img2 {
 		max-width: 100%;
 		margin-left: 0%;
 		margin-top: -13%;
@@ -471,7 +488,8 @@ p {
 		top: -5%;
 		left: 0%;
 	}
-	#img {
+	#img,
+	#img2 {
 		max-width: 100%;
 		margin-left: 0%;
 		margin-top: -15%;
@@ -536,7 +554,8 @@ p {
 		top: -5%;
 		left: 0%;
 	}
-	#img {
+	#img,
+	#img2 {
 		max-width: 90%;
 		margin-left: 5%;
 		margin-top: -13%;
@@ -571,12 +590,12 @@ p {
 	#nav1 {
 		width: 50%;
 		margin-left: 20%;
-		margin-top: -10%;
+		margin-top: -5%;
 	}
 	#navDroite {
 		width: 50%;
 		margin-left: 20%;
-		margin-top: -10%;
+		margin-top: -5%;
 	}
 	#date {
 		margin-top: -2%;
@@ -592,15 +611,16 @@ p {
 	}
 	.reglage {
 		width: 50%;
-		top: -5%;
+		top: -0%;
 		left: 0%;
 	}
 	.reglageDroite {
 		width: 50%;
-		top: -5%;
+		top: -0%;
 		left: 0%;
 	}
-	#img {
+	#img,
+	#img2 {
 		max-width: 85%;
 		margin-left: 5%;
 		margin-top: -10%;
@@ -635,12 +655,12 @@ p {
 	#nav1 {
 		width: 50%;
 		margin-left: 20%;
-		margin-top: -10%;
+		margin-top: -5%;
 	}
 	#navDroite {
 		width: 50%;
 		margin-left: 20%;
-		margin-top: -10%;
+		margin-top: -5%;
 	}
 	#date {
 		margin-top: -2%;
@@ -661,10 +681,11 @@ p {
 	}
 	.reglageDroite {
 		width: 50%;
-		top: -5%;
+		top: -0%;
 		left: 0%;
 	}
-	#img {
+	#img,
+	#img2 {
 		max-width: 90%;
 		margin-left: 5%;
 		margin-top: -10%;
@@ -728,11 +749,13 @@ p {
 		top: -5%;
 		left: 0%;
 	}
-	#img {
+	#img,
+	#img2 {
 		max-width: 99%;
 		margin-left: 0%;
 		margin-top: -10%;
 	}
+
 	#overlay {
 		max-width: 99%;
 		margin-top: -6.5%;

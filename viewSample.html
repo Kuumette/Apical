@@ -34,7 +34,7 @@
 				<p class="delai">
 					<span class="secondes" id="temps"></span>
 				</p>
-				<div id="d2">
+				<article id="d2">
 					<!-- Toggle overlay -->
 
 					<div id="last" class="d-flex flex-row-reverse bd-highlight">
@@ -61,109 +61,108 @@
 					</div>
 
 					<!-- Fin toggle auto refresh -->
-
-					<!-- Input luminosité & contrast -->
-					<div class="reglage" id="reglage">
-						<div>
-							<form id="brightnessForm">
-								<span id="brightness"> Brightness</span>
-								<input
-									type="range"
-									name="amountRange"
-									min="0"
-									max="5"
-									step="0.10"
-									oninput="this.form.amountInput.value=this.value"
-									onchange="brightness_and_contrast(this.value, contrastForm.amountInput.value)"
-								/>
-								<input
-									id="textInputBrightness"
-									type="number"
-									name="amountInput"
-									min="0"
-									max="5"
-									step="0.10"
-									oninput="this.form.amountRange.value=this.value"
-									onchange="brightness_and_contrast(this.value, contrastForm.amountInput.value)"
-								/>
-							</form>
-						</div>
-
-						<div>
-							<form id="contrastForm">
-								<span id="const"> Contrast</span>
-								<input
-									type="range"
-									name="amountRange"
-									min="0"
-									max="5"
-									step="0.10"
-									oninput="this.form.amountInput.value=this.value"
-									onchange="brightness_and_contrast(brightnessForm.amountInput.value, this.value)"
-								/>
-								<input
-									id="textInputContrast"
-									type="number"
-									name="amountInput"
-									min="0"
-									max="5"
-									step="0.10"
-									oninput="this.form.amountRange.value=this.value"
-									onchange="brightness_and_contrast(brightnessForm.amountInput.value, this.value)"
-								/>
-							</form>
-						</div>
-					</div>
-					<!-- Menu -->
-
-					<div id="nav">
-						<nav>
-							<ul>
-								<li class="menu-deroulant">
-									<a href="#">Choice of view</a>
-									<ul class="sous-menu">
-										<li>
-											<button id="lastImage">
-												Last image
-											</button>
-										</li>
-										<li>
-											<button id="lastSubstractionImage">
-												Last substraction image
-											</button>
-										</li>
-										<li>
-											<button id="lastAnimation">
-												Last Animation
-											</button>
-										</li>
-										<li>
-											<button
-												id="lastSubstractionAnimation"
-											>
-												Last Substraction Animation
-											</button>
-										</li>
-										<li>
-											<button id="2X1">View 2X1</button>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
-					</div>
-
-					<!-- Fin menu -->
-				</div>
-				<!-- Fin input luminosité & contrast -->
+				</article>
 			</div>
 
-			<div id="center"></div>
-			<div
-				id="content"
-				class="d-flex justify-content-center col-10"
-			></div>
+			<div id="content" class="d-flex justify-content-center col-10">
+				<div id="center"></div>
+			</div>
 		</div>
+		<footer>
+			<!-- Input luminosité & contrast -->
+			<div class="reglage" id="reglage">
+				<div>
+					<form id="brightnessForm">
+						<span id="brightness"> Brightness</span>
+						<input
+							type="range"
+							name="amountRange"
+							min="0"
+							max="5"
+							value="1"
+							step="0.10"
+							oninput="this.form.amountInput.value=this.value"
+							onchange="brightness_and_contrast(this.value, contrastForm.amountInput.value)"
+						/>
+						<input
+							id="textInputBrightness"
+							type="number"
+							name="amountInput"
+							min="0"
+							max="5"
+							step="0.10"
+							value="1"
+							oninput="this.form.amountRange.value=this.value"
+							onchange="brightness_and_contrast(this.value, contrastForm.amountInput.value)"
+						/>
+					</form>
+				</div>
+
+				<div>
+					<form id="contrastForm">
+						<span id="const"> Contrast</span>
+						<input
+							type="range"
+							name="amountRange"
+							min="0"
+							max="5"
+							value="1"
+							step="0.10"
+							oninput="this.form.amountInput.value=this.value"
+							onchange="brightness_and_contrast(brightnessForm.amountInput.value, this.value)"
+						/>
+						<input
+							id="textInputContrast"
+							type="number"
+							name="amountInput"
+							min="0"
+							max="5"
+							value="1"
+							step="0.10"
+							oninput="this.form.amountRange.value=this.value"
+							onchange="brightness_and_contrast(brightnessForm.amountInput.value, this.value)"
+						/>
+					</form>
+				</div>
+			</div>
+			<!-- Fin input luminosité & contrast -->
+			<!-- Menu -->
+
+			<div id="nav">
+				<nav>
+					<ul>
+						<li class="menu-deroulant">
+							<a href="#">Choice of view</a>
+							<ul class="sous-menu">
+								<li>
+									<button id="lastImage">Last image</button>
+								</li>
+								<li>
+									<button id="lastSubstractionImage">
+										Last substraction image
+									</button>
+								</li>
+								<li>
+									<button id="lastAnimation">
+										Last Animation
+									</button>
+								</li>
+								<li>
+									<button id="lastSubstractionAnimation">
+										Last Substraction Animation
+									</button>
+								</li>
+								<li>
+									<button id="2X1">View 2X1</button>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- Fin menu -->
+		</footer>
 		<script src="https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js"></script>
 		<script>
 			var area = document.querySelector("#content");

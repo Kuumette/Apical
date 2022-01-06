@@ -44,7 +44,7 @@ re.onload = function () {
 	parent.appendChild(name);
 	img.src = image.lastSubstractionImage.img;
 	img.alt = image.desc;
-	img.id = "img";
+	img.id = "img2";
 	parent.appendChild(img);
 	date.textContent = image.lastSubstractionImage.date;
 	heure.textContent = image.lastSubstractionImage.heure;
