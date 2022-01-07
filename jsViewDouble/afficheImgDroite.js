@@ -8,6 +8,7 @@ re.onload = function () {
 	// recup des element que j'ai besoin dans le DOM
 
 	let parent = document.querySelector("#partieDroite");
+	let infoImgDroite = document.querySelector("#infoImgDroite");
 	let nav = document.querySelector("#nav1");
 	let reglage = document.querySelector("#reglage");
 	let zoom = document.querySelector("#img-2");
@@ -37,11 +38,11 @@ re.onload = function () {
 	date.id = "date";
 	heure.id = "heure";
 	name.id = "name";
-	parent.appendChild(date);
-	parent.appendChild(br1);
-	parent.appendChild(heure);
-	parent.appendChild(br);
-	parent.appendChild(name);
+	infoImgDroite.appendChild(date);
+	infoImgDroite.appendChild(br1);
+	infoImgDroite.appendChild(heure);
+	infoImgDroite.appendChild(br);
+	infoImgDroite.appendChild(name);
 	img.src = image.lastSubstractionImage.img;
 	img.alt = image.desc;
 	img.id = "img2";

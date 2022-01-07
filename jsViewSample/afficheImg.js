@@ -9,6 +9,7 @@ request.onload = function () {
 	// recup des element que j'ai besoin dans le DOM
 
 	let parent = document.querySelector("#content");
+	let infoImg = document.querySelector("#infoImg");
 	let nav = document.querySelector("#nav");
 	let reglage = document.querySelector("#reglage");
 	let zoom = document.querySelector("#img-2");
@@ -36,11 +37,11 @@ request.onload = function () {
 	date.id = "date";
 	heure.id = "heure";
 	name.id = "name";
-	parent.appendChild(date);
-	parent.appendChild(br1);
-	parent.appendChild(heure);
-	parent.appendChild(br);
-	parent.appendChild(name);
+	infoImg.appendChild(date);
+	//infoImg.appendChild(br1);
+	infoImg.appendChild(heure);
+	//infoImg.appendChild(br);
+	infoImg.appendChild(name);
 	img.src = image.lastImage.img;
 	img.alt = image.desc;
 	img.id = "img";

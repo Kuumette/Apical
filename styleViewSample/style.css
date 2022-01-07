@@ -1,7 +1,10 @@
 * {
 	font-size: 1.5vh;
 }
-
+#infoImg {
+	position: relative;
+	z-index: 8;
+}
 .reglage {
 	display: block;
 	width: 50%;
@@ -74,7 +77,6 @@ label {
 
 #img {
 	border-radius: 0%;
-	border: 1px solid red;
 }
 #overlay {
 	border-radius: 50%;
@@ -164,6 +166,9 @@ p {
 	.reglage {
 		top: 70%;
 	}
+	#infoImg {
+		left: 38%;
+	}
 }
 @media only screen and (max-width: 899px) and (min-width: 700px) {
 	#img {
@@ -208,6 +213,9 @@ p {
 	}
 	.reglage {
 		top: 88%;
+	}
+	#infoImg {
+		left: 38%;
 	}
 }
 /* Pour ordinateurs portables */
@@ -255,6 +263,9 @@ p {
 	.reglage {
 		top: 88%;
 	}
+	#infoImg {
+		left: 38%;
+	}
 }
 @media only screen and (max-width: 1300px) and (min-width: 1099px) {
 	#img {
@@ -299,6 +310,9 @@ p {
 	}
 	.reglage {
 		top: 86%;
+	}
+	#infoImg {
+		left: 32%;
 	}
 }
 /* Pour les grands écrans */
@@ -347,6 +361,9 @@ p {
 	.reglage {
 		top: 84%;
 	}
+	#infoImg {
+		left: 28%;
+	}
 }
 
 @media only screen and (max-width: 1700px) and (min-width: 1499px) {
@@ -393,6 +410,9 @@ p {
 	.reglage {
 		top: 85%;
 	}
+	#infoImg {
+		left: 28%;
+	}
 }
 @media only screen and (max-width: 1900px) and (min-width: 1699px) {
 	#img {
@@ -437,6 +457,9 @@ p {
 	}
 	.reglage {
 		top: 85%;
+	}
+	#infoImg {
+		left: 25%;
 	}
 }
 @media only screen and (max-width: 2200px) and (min-width: 1899px) {
@@ -483,6 +506,9 @@ p {
 	}
 	.reglage {
 		top: 85%;
+	}
+	#infoImg {
+		left: 25%;
 	}
 }
 @media only screen and (max-width: 5000px) and (min-width: 2199px) {
@@ -531,5 +557,8 @@ p {
 	}
 	.reglage {
 		top: 85%;
+	}
+	#infoImg {
+		left: 23%;
 	}
 }
