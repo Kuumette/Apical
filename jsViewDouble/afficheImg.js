@@ -1,4 +1,4 @@
-let requestURL = "../config/image.json";
+let requestURL = "http://127.0.0.1:5502/config/image.json";
 let request = new XMLHttpRequest();
 request.open("GET", requestURL);
 request.responseType = "json";

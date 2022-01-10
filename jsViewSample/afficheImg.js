@@ -10,6 +10,7 @@ request.onload = function () {
 
 	let parent = document.querySelector("#content");
 	let infoImg = document.querySelector("#infoImg");
+	let overlay = document.querySelector("#overlay");
 	let nav = document.querySelector("#nav");
 	let reglage = document.querySelector("#reglage");
 	let zoom = document.querySelector("#img-2");
@@ -136,5 +137,6 @@ request.onload = function () {
 		video1.style.display = "block";
 		nav.style.display = "block";
 		zoom.style.display = "none";
+		overlay.style.opacity = "0";
 	};
 };

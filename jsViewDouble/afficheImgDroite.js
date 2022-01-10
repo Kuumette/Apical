@@ -1,4 +1,4 @@
-let reURL = "../config/image.json";
+let reURL = "http://127.0.0.1:5502/config/image.json";
 let re = new XMLHttpRequest();
 re.open("GET", reURL);
 re.responseType = "json";
