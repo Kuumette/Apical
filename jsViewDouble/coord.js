@@ -1,4 +1,4 @@
-var reqURL = "../config/pointCoord_overlay.json";
+var reqURL = "http://192.168.1.102/config/pointCoord_overlay.json";
 var req = new XMLHttpRequest();
 req.open("GET", reqURL);
 req.responseType = "json";

@@ -1,4 +1,4 @@
-let rURL = "https://kuumette.github.io/Api/configReload.json";
+let rURL = "http://192.168.1.102/config/configReload.json";
 let r = new XMLHttpRequest();
 r.open("GET", rURL);
 r.responseType = "json";

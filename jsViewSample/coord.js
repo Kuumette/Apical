@@ -1,4 +1,4 @@
-var reqURL = "https://kuumette.github.io/Api/pointCoord_overlay.json";
+var reqURL = "http://127.0.0.1:5502/config/pointCoord_overlay.json";
 var req = new XMLHttpRequest();
 req.open("GET", reqURL);
 req.responseType = "json";

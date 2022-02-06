@@ -10,7 +10,7 @@ request.onload = function () {
 	let parent = document.querySelector("#partieGauche");
 	let infoImgGauche = document.querySelector("#infoImgGauche");
 	let nav = document.querySelector("#nav1");
-	let reglage = document.querySelector("#reglage");
+	let reglageGauche = document.querySelector("#reglageGauche");
 	//let zoom = document.querySelector("#img-2");
 	// creation de mais deux element video
 	let video = document.createElement("video");
@@ -64,7 +64,7 @@ request.onload = function () {
 		img.style.display = "block";
 		video.style.display = "none";
 		video1.style.display = "none";
-		reglage.style.display = "block";
+		reglageGauche.style.display = "block";
 		zoom.style.display = "block";
 	};
 
@@ -84,7 +84,7 @@ request.onload = function () {
 		video1.style.display = "none";
 		zoom.style.display = "none";
 
-		reglage.style.display = "block";
+		reglageGauche.style.display = "block";
 	};
 	lastAnimationGauche.onclick = function () {
 		let v = request.response;
@@ -108,7 +108,7 @@ request.onload = function () {
 		video.style.display = "block";
 		nav.style.display = "block";
 		video1.style.display = "none";
-		reglage.style.display = "none";
+		reglageGauche.style.display = "none";
 		zoom.style.display = "none";
 	};
 
@@ -131,7 +131,7 @@ request.onload = function () {
 		nav.style.display = "block";
 		video.style.display = "none";
 		img.style.display = "none";
-		reglage.style.display = "none";
+		reglageGauche.style.display = "none";
 		date.style.opacity = "0";
 		heure.style.opacity = "0";
 		name.style.opacity = "0";

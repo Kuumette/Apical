@@ -10,7 +10,7 @@ re.onload = function () {
 	let parent = document.querySelector("#partieDroite");
 	let infoImgDroite = document.querySelector("#infoImgDroite");
 	let nav = document.querySelector("#nav1");
-	let reglage = document.querySelector("#reglage");
+	let reglageDroite = document.querySelector("#reglageDroite");
 	let zoom = document.querySelector("#img-2");
 	// creation de mais deux element video
 	let video = document.createElement("video");
@@ -64,7 +64,7 @@ re.onload = function () {
 		img.style.display = "block";
 		video.style.display = "none";
 		video1.style.display = "none";
-		reglage.style.display = "block";
+		reglageDroite.style.display = "block";
 		zoom.style.display = "block";
 	};
 
@@ -82,9 +82,8 @@ re.onload = function () {
 		img.style.display = "block";
 		video.style.display = "none";
 		video1.style.display = "none";
+		reglageDroite.style.display = "block";
 		zoom.style.display = "none";
-
-		reglage.style.display = "block";
 	};
 	lastAnimationDroite.onclick = function () {
 		let v = re.response;
@@ -108,7 +107,7 @@ re.onload = function () {
 		video.style.display = "block";
 		nav.style.display = "block";
 		video1.style.display = "none";
-		reglage.style.display = "none";
+		reglageDroite.style.display = "none";
 		zoom.style.display = "none";
 		nav.style.marginTop = "20%";
 	};
@@ -135,7 +134,7 @@ re.onload = function () {
 		nav.style.display = "block";
 		video.style.display = "none";
 		img.style.display = "none";
-		reglage.style.display = "none";
+		reglageDroite.style.display = "none";
 		zoom.style.display = "none";
 	};
 };
