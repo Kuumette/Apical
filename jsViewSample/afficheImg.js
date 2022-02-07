@@ -1,4 +1,5 @@
-var requestURL = "../config/image.json";
+var requestURL =
+	"https://live.neos360.com/eso/paranal/apicam/config/image.json";
 var request = new XMLHttpRequest();
 
 request.open("GET", requestURL);
@@ -83,9 +84,8 @@ request.onload = function () {
 		img.style.display = "block";
 		video.style.display = "none";
 		video1.style.display = "none";
-		zoom.style.display = "none";
-
 		reglage.style.display = "block";
+		zoom.style.display = "none";
 	};
 	lastAnimation.onclick = function () {
 		let v = request.response;

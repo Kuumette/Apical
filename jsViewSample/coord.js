@@ -1,4 +1,5 @@
-var reqURL = "https://kuumette.github.io/Api/pointCoord_overlay.json";
+var reqURL =
+	"https://live.neos360.com/eso/paranal/apicam/config/pointCoord_overlay.json";
 var req = new XMLHttpRequest();
 req.open("GET", reqURL);
 req.responseType = "json";

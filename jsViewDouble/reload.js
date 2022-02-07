@@ -1,4 +1,5 @@
-let rURL = "https://kuumette.github.io/Api/configReload.json";
+let rURL =
+	"https://live.neos360.com/eso/paranal/apicam/config/configReload.json";
 let r = new XMLHttpRequest();
 r.open("GET", rURL);
 r.responseType = "json";
