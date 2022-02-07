@@ -14,11 +14,8 @@ function resetTemps() {
 	document.querySelector(".delai").style.display = "none";
 	clearInterval(temps);
 	secondes = 0;
-<<<<<<< HEAD
-	temps = setInterval(startTemps, 600000);
-=======
+
 	temps = setInterval(startTemps, 15000);
->>>>>>> af520c1ff49dbc6656a858a7eb992c964f011543
 	display.style.opacity = "1";
 	overlay.style.opacity = "1";
 	display1.style.opacity = "1";
