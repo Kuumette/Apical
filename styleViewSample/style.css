@@ -506,36 +506,36 @@ p {
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: 5%;
+		margin-left: -5%;
 	}
 	#heure {
 		margin-top: 3.5%;
-		margin-left: 5%;
+		margin-left: -5%;
 	}
 	#name {
 		margin-top: 5%;
-		margin-left: 5%;
+		margin-left: -5%;
 	}
 	nav {
 		width: 16%;
 		top: 90%;
-		left: 60%;
+		left: 70%;
 	}
 	#last {
 		width: 103.7%;
-		left: -35%;
+		left: -25%;
 		margin-top: 3%;
 	}
 	#auto {
 		width: 95%;
-		left: -27%;
+		left: -17%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 56.4%;
+		margin-left: 36.6%;
 	}
 	#brightness {
-		margin-left: 55%;
+		margin-left: 35%;
 		margin-top: 10%;
 	}
 	#overlay {
