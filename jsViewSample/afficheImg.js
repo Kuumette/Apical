@@ -1,4 +1,5 @@
-var requestURL = "../config/image.json";
+var requestURL =
+	"https://live.neos360.com/eso/paranal/apicam/config/image.json";
 var request = new XMLHttpRequest();
 
 request.open("GET", requestURL);
