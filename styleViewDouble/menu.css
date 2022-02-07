@@ -43,7 +43,7 @@ li a {
 	display: inline-block;
 }
 .sous-menu {
-	margin-top: -300px;
+	margin-top: -305px;
 	width: 100%;
 
 	text-align: left;
@@ -86,15 +86,15 @@ nav > ul > li:hover > a {
 @keyframes apparitionSousMenu {
 	0% {
 		box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
-		border-bottom: 3px solid #646464;
+		border-bottom: 3px solid #64646400;
 	}
 	30% {
 		box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
 	}
 	100% {
 		max-height: 50em;
-		border-bottom: 3px solid #6d6d6d;
-		box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+		border-bottom: 3px solid #6d6d6d00;
+		box-shadow: 0px 3px 3px 1px rgba(255, 255, 255, 0);
 	}
 }
 .menu-deroulant:hover > .sous-menu {

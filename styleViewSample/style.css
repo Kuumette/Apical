@@ -227,43 +227,43 @@ p {
 @media only screen and (max-width: 1100px) and (min-width: 899px) {
 	#img {
 		margin-top: 0%;
-		max-width: 78%;
+		max-width: 90%;
 	}
 	#date {
 		margin-top: 6%;
-		margin-left: -20%;
+		margin-left: -35%;
 	}
 	#heure {
 		margin-top: 8.5%;
-		margin-left: -20%;
+		margin-left: -35%;
 	}
 	#name {
 		margin-top: 11%;
-		margin-left: -20%;
+		margin-left: -35%;
 	}
 	nav {
 		width: 28%;
 		top: 90%;
-		left: 65%;
+		left: 70%;
 	}
 	#last {
 		width: 117.2%;
-		left: -35%;
+		left: -25%;
 		margin-top: 4%;
 	}
 	#auto {
 		width: 108%;
-		left: -27%;
+		left: -17.3%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 26.8%;
+		margin-left: 10.8%;
 	}
 	#brightness {
-		margin-left: 23.5%;
+		margin-left: 8%;
 	}
 	#overlay {
-		max-width: 78%;
+		max-width: 90%;
 		margin-left: 0%;
 		margin-top: 0%;
 	}
@@ -273,49 +273,52 @@ p {
 	#infoImg {
 		left: 30%;
 	}
+	.video-js {
+		width: 100%;
+	}
 }
 @media only screen and (max-width: 1300px) and (min-width: 1099px) {
 	#img {
-		margin-top: -1%;
-		max-width: 66%;
+		margin-top: 0%;
+		max-width: 95%;
 	}
 	#date {
 		margin-top: 3%;
-		margin-left: -10%;
+		margin-left: -30%;
 	}
 	#heure {
 		margin-top: 5.5%;
-		margin-left: -10%;
+		margin-left: -30%;
 	}
 	#name {
 		margin-top: 8%;
-		margin-left: -10%;
+		margin-left: -30%;
 	}
 	nav {
 		width: 23.5%;
 		top: 90%;
-		left: 60%;
+		left: 75%;
 	}
 	#last {
 		width: 117%;
-		left: -35%;
+		left: -22%;
 		margin-top: 3.5%;
 	}
 	#auto {
 		width: 108%;
-		left: -27%;
+		left: -14.5%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 36.8%;
+		margin-left: 13%;
 	}
 	#brightness {
-		margin-left: 34%;
+		margin-left: 10%;
 	}
 	#overlay {
-		max-width: 66%;
+		max-width: 95%;
 		margin-left: 0%;
-		margin-top: -1%;
+		margin-top: 0%;
 	}
 	.reglage {
 		top: 86%;
@@ -323,49 +326,52 @@ p {
 	#infoImg {
 		left: 28%;
 	}
+	.video-js {
+		width: 100%;
+	}
 }
 /* Pour les grands écrans */
 @media only screen and (max-width: 1500px) and (min-width: 1299px) {
 	#img {
 		margin-top: 0%;
 		margin-left: 5%;
-		max-width: 55%;
+		max-width: 90%;
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: -0%;
+		margin-left: -30%;
 	}
 	#heure {
 		margin-top: 4%;
-		margin-left: -0%;
+		margin-left: -30%;
 	}
 	#name {
 		margin-top: 6%;
-		margin-left: -0%;
+		margin-left: -30%;
 	}
 	nav {
 		width: 20.5%;
 		top: 90%;
-		left: 62%;
+		left: 78%;
 	}
 	#last {
 		width: 110.9%;
-		left: -35%;
+		left: -15%;
 		margin-top: 3.5%;
 	}
 	#auto {
 		width: 102%;
-		left: -27%;
+		left: -7.5%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 46.8%;
+		margin-left: 12.8%;
 	}
 	#brightness {
-		margin-left: 45%;
+		margin-left: 10%;
 	}
 	#overlay {
-		max-width: 55%;
+		max-width: 90%;
 		margin-left: 5%;
 		margin-top: 0%;
 	}
@@ -375,50 +381,53 @@ p {
 	#infoImg {
 		left: 28%;
 	}
+	.video-js {
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width: 1700px) and (min-width: 1499px) {
 	#img {
-		margin-top: 0%;
-		max-width: 50%;
+		margin-top: 2%;
+		max-width: 75%;
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: -0%;
+		margin-left: -20%;
 	}
 	#heure {
 		margin-top: 4%;
-		margin-left: -0%;
+		margin-left: -20%;
 	}
 	#name {
 		margin-top: 6%;
-		margin-left: -0%;
+		margin-left: -20%;
 	}
 	nav {
 		width: 18.5%;
 		top: 90%;
-		left: 60%;
+		left: 70%;
 	}
 	#last {
 		width: 110.8%;
-		left: -35%;
+		left: -25%;
 		margin-top: 3%;
 	}
 	#auto {
 		width: 102%;
-		left: -27%;
+		left: -17.5%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 46.8%;
+		margin-left: 30.8%;
 	}
 	#brightness {
-		margin-left: 45%;
+		margin-left: 28.3%;
 	}
 	#overlay {
-		max-width: 50%;
+		max-width: 75%;
 		margin-left: 0%;
-		margin-top: 0%;
+		margin-top: 2%;
 	}
 	.reglage {
 		top: 85%;
@@ -426,49 +435,52 @@ p {
 	#infoImg {
 		left: 28%;
 	}
+	.video-js {
+		width: 80%;
+	}
 }
 @media only screen and (max-width: 1900px) and (min-width: 1699px) {
 	#img {
-		margin-top: 0%;
-		max-width: 45%;
+		margin-top: 2%;
+		max-width: 65%;
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: 5%;
+		margin-left: -10%;
 	}
 	#heure {
 		margin-top: 3.5%;
-		margin-left: 5%;
+		margin-left: -10%;
 	}
 	#name {
 		margin-top: 5%;
-		margin-left: 5%;
+		margin-left: -10%;
 	}
 	nav {
 		width: 16%;
 		top: 90%;
-		left: 58%;
+		left: 65%;
 	}
 	#last {
 		width: 103.7%;
-		left: -35%;
+		left: -24.8%;
 		margin-top: 3%;
 	}
 	#auto {
 		width: 95%;
-		left: -27%;
+		left: -17%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 56.8%;
+		margin-left: 40.5%;
 	}
 	#brightness {
-		margin-left: 55%;
+		margin-left: 38.5%;
 	}
 	#overlay {
-		max-width: 45%;
+		max-width: 65%;
 		margin-left: 0%;
-		margin-top: 0%;
+		margin-top: 2%;
 	}
 	.reglage {
 		top: 85%;
@@ -476,11 +488,14 @@ p {
 	#infoImg {
 		left: 25%;
 	}
+	.video-js {
+		width: 75%;
+	}
 }
 @media only screen and (max-width: 2200px) and (min-width: 1899px) {
 	#img {
-		margin-top: 0%;
-		max-width: 45%;
+		margin-top: 2%;
+		max-width: 55%;
 	}
 	#date {
 		margin-top: 2%;
@@ -517,9 +532,9 @@ p {
 		margin-top: 10%;
 	}
 	#overlay {
-		max-width: 45%;
+		max-width: 55%;
 		margin-left: 0%;
-		margin-top: 0%;
+		margin-top: 2%;
 	}
 	.reglage {
 		top: 85%;
@@ -527,11 +542,14 @@ p {
 	#infoImg {
 		left: 25%;
 	}
+	.video-js {
+		width: 60%;
+	}
 }
 @media only screen and (max-width: 5000px) and (min-width: 2199px) {
 	#img {
 		margin-top: 0%;
-		max-width: 40%;
+		max-width: 50%;
 	}
 	#date {
 		margin-top: 2%;
@@ -564,8 +582,8 @@ p {
 		margin-left: 1.8%;
 	}
 	#overlay {
-		max-width: 40%;
-		margin-left: 30%;
+		max-width: 50%;
+		margin-left: 0%;
 		margin-top: 0%;
 	}
 	#const {
@@ -579,5 +597,8 @@ p {
 	}
 	#infoImg {
 		left: 23%;
+	}
+	.video-js {
+		width: 60%;
 	}
 }

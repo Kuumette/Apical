@@ -50,7 +50,6 @@ li a {
 	display: inline-block;
 }
 .sous-menu {
-	margin-top: -132%;
 	width: 113%;
 	text-align: left;
 	background-color: rgba(255, 255, 255, 0.048);
@@ -92,14 +91,14 @@ nav > ul > li:hover > a {
 @keyframes apparitionSousMenu {
 	0% {
 		box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
-		border-bottom: 3px solid #646464;
+		border-bottom: 3px solid #64646400;
 	}
 	30% {
-		box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+		box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
 	}
 	100% {
 		max-height: 50em;
-		border-bottom: 3px solid #6d6d6d;
+		border-bottom: 3px solid #ffffff00;
 		box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
 	}
 }
@@ -135,3 +134,51 @@ button:hover {
 	color: black;
 }
 /* fin menu */
+@media only screen and (max-width: 699px) and (min-width: 500px) {
+	.sous-menu {
+		margin-top: -128%;
+	}
+}
+@media only screen and (max-width: 899px) and (min-width: 700px) {
+	.sous-menu {
+		margin-top: -128%;
+	}
+}
+/* Pour ordinateurs portables */
+@media only screen and (max-width: 1100px) and (min-width: 899px) {
+	.sous-menu {
+		margin-top: -128%;
+	}
+}
+@media only screen and (max-width: 1300px) and (min-width: 1099px) {
+	.sous-menu {
+		margin-top: -128%;
+	}
+}
+/* Pour les grands écrans */
+@media only screen and (max-width: 1500px) and (min-width: 1299px) {
+	.sous-menu {
+		margin-top: -128%;
+	}
+}
+
+@media only screen and (max-width: 1700px) and (min-width: 1499px) {
+	.sous-menu {
+		margin-top: -128%;
+	}
+}
+@media only screen and (max-width: 1900px) and (min-width: 1699px) {
+	.sous-menu {
+		margin-top: -128%;
+	}
+}
+@media only screen and (max-width: 2200px) and (min-width: 1899px) {
+	.sous-menu {
+		margin-top: -128%;
+	}
+}
+@media only screen and (max-width: 5000px) and (min-width: 2199px) {
+	.sous-menu {
+		margin-top: -126%;
+	}
+}

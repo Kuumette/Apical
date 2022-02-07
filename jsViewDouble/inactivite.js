@@ -15,7 +15,7 @@ function resetTemps() {
 	clearInterval(temps);
 	secondes = 0;
 
-	temps = setInterval(startTemps, 15000);
+	temps = setInterval(startTemps, 5000);
 	display.style.opacity = "1";
 	overlay.style.opacity = "1";
 	display1.style.opacity = "1";

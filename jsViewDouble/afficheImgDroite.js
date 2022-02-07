@@ -1,4 +1,4 @@
-let reURL = "https://live.neos360.com/eso/paranal/apicam/config/image.json";
+let reURL = "../config/image.json";
 let re = new XMLHttpRequest();
 re.open("GET", reURL);
 re.responseType = "json";
@@ -91,8 +91,8 @@ re.onload = function () {
 		video.setAttribute("controls", " ");
 		video.setAttribute("preload", "auto");
 		video.setAttribute("data-setup", "{}");
-		video.setAttribute("width", "700");
-		video.setAttribute("height", "620");
+		video.setAttribute("width", "100%");
+		video.setAttribute("height", "100%");
 		video.setAttribute("autoplay", "true");
 
 		var source = document.createElement("source");
@@ -118,8 +118,8 @@ re.onload = function () {
 		video1.setAttribute("controls", " ");
 		video1.setAttribute("preload", "auto");
 		video1.setAttribute("data-setup", "{}");
-		video1.setAttribute("width", "700");
-		video1.setAttribute("height", "620");
+		video1.setAttribute("width", "100%");
+		video1.setAttribute("height", "100%");
 		video1.setAttribute("autoplay", "true");
 
 		var sourcea = document.createElement("source");
