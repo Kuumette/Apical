@@ -13,11 +13,10 @@ r.onload = function () {
 		let refreshEnabled = document.getElementById("checkbox");
 		let container = document.getElementById("content");
 		if (refreshEnabled.checked) {
-			$("#content").fadeOut("slow", function () {
-				$(this).load("./Apical/test.html", function () {
-					$(this).fadeIn("slow");
-				});
+			$("#content").ready(function () {
+				location.reload();
 			});
+
 			//window.location.reload(1);
 		}
 	}

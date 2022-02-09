@@ -13,10 +13,8 @@ r.onload = function () {
 		let refreshEnabled = document.getElementById("checkbox_gauche");
 
 		if (refreshEnabled.checked) {
-			$("#partieGauche").fadeOut("slow", function () {
-				$(this).load("./Apical/viewDouble.html", function () {
-					$(this).fadeIn("slow");
-				});
+			$("#partieGauche").ready(function () {
+				location.reload();
 			});
 			//window.location.reload(1);
 		}
@@ -27,10 +25,8 @@ r.onload = function () {
 		let refreshEnabled = document.getElementById("checkbox_droite");
 
 		if (refreshEnabled.checked) {
-			$("#partieDroite").fadeOut("slow", function () {
-				$(this).load("./Apical/viewDouble.html", function () {
-					$(this).fadeIn("slow");
-				});
+			$("#partieDroite").ready(function () {
+				location.reload();
 			});
 			//window.location.reload(1);
 		}

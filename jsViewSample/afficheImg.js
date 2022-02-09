@@ -94,6 +94,7 @@ request.onload = function () {
 		video.setAttribute("preload", "auto");
 		video.setAttribute("data-setup", "{}");
 		video.setAttribute("autoplay", "true");
+		video.setAttribute("loop", "true");
 
 		var source = document.createElement("source");
 		source.setAttribute("src", v.lastAnimation.img);
@@ -118,6 +119,7 @@ request.onload = function () {
 		video1.setAttribute("preload", "auto");
 		video1.setAttribute("data-setup", "{}");
 		video1.setAttribute("autoplay", "true");
+		video1.setAttribute("loop", "true");
 
 		var sourcea = document.createElement("source");
 		sourcea.setAttribute("src", v.lastSubstractionAnimation.img);
