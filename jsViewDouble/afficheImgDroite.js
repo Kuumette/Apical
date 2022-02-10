@@ -1,4 +1,4 @@
-let reURL = "https://live.neos360.com/eso/paranal/apicam/config/image.json";
+let reURL = "https://live.neos360.com/eso/paranal/apicam/image.json";
 let re = new XMLHttpRequest();
 re.open("GET", reURL);
 re.responseType = "json";
