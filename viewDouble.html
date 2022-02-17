@@ -1,366 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-5.1.3-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/dual_view/menu.css" />
+    <link rel="stylesheet" href="./assets/css/dual_view/style.css" />
+    <link rel="stylesheet" href="./assets/css/dual_view/toggle.css" />
+    <link rel="stylesheet" href="./assets/css/dual_view/range.css" />
+    <title>Apical | SplitScren</title>
+  </head>
+  <body>
+    <p class="delai">
+      <span class="secondes" id="temps"></span>
+    </p>
+    <section class="row">
+      <section class="col-xl-6 side" id="leftSide">
+        <!-- Toggle auto refresh -->
+        <section id="d2">
+          <div class="d-flex flex-row-reverse bd-highlight" id="autoGauche">
+            <div class="bd-highlight">
+              <label class="switch" for="checkbox-leftSide">
+                <input type="checkbox" id="checkbox-leftSide" />
+                <div class="slider round"></div>
+              </label>
+              <p id="d2">Auto refresh</p>
+            </div>
+          </div>
+        </section>
+        <!-- Fin toggle auto refresh -->
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			http-equiv="Cache-Control"
-			content="no-cache, no-store, must-revalidate"
-		/>
-		<meta http-equiv="Pragma" content="no-cache" />
-		<meta http-equiv="Expires" content="0" />
-		<link
-			rel="stylesheet"
-			href="bootstrap-5.1.3-dist/css/bootstrap.min.css"
-		/>
-		<link rel="stylesheet" href="./styleViewDouble/menu.css" />
-		<link rel="stylesheet" href="./styleViewDouble/style.css" />
-		<link rel="stylesheet" href="./styleViewDouble/toggle.css" />
-		<link rel="stylesheet" href="./styleViewDouble/range.css" />
+        <!-- Toggle overlay -->
+        <div id="last" class="d-flex flex-row-reverse bd-highlight">
+          <div class="bd-highlight">
+            <label class="switch" for="checkbox_coord-leftSide">
+              <input type="checkbox" id="checkbox_coord-leftSide" />
+              <div class="slider round"></div>
+            </label>
+            <p>TCS - Overlay</p>
+          </div>
+        </div>
+        <!-- Fin toggle overlay -->
+        <div id="infoImg" class="leftInfo"></div>
+        <div id="content" class="left"></div>
+        <div id="leftNav" class="d-flex flex-row-reverse bd-highlight nav">
+          <nav>
+            <ul>
+              <li class="menu-deroulant">
+                <a href="#">Choice of view</a>
+                <ul class="sous-menu">
+                  <li>
+                    <button id="lastImage" data-type="lastImage">
+                      Last image
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      id="lastSubstractionImage"
+                      data-type="lastSubstractionImage"
+                    >
+                      Last substraction image
+                    </button>
+                  </li>
+                  <li>
+                    <button id="lastAnimation" data-type="lastAnimation">
+                      Last Animation
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      id="lastSubstractionAnimation"
+                      data-type="lastSubstractionAnimation"
+                    >
+                      Last Substraction Animation
+                    </button>
+                  </li>
+                  <li>
+                    <button id="viewSample">View 1X1</button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section class="col-xl-6 side" id="rightSide">
+        <!-- Toggle auto refresh -->
+        <div class="d-flex flex-row-reverse bd-highlight" id="auto_droite">
+          <div class="bd-highlight">
+            <label class="switch" for="checkbox-rightSide">
+              <input type="checkbox" id="checkbox-rightSide" />
+              <div class="slider round"></div>
+            </label>
+            <p id="d2">Auto refresh</p>
+          </div>
+        </div>
+        <!-- Fin toggle auto refresh -->
+        <!-- Toggle overlay -->
+        <div id="lastDroite" class="d-flex flex-row-reverse bd-highlight">
+          <div class="bd-highlight">
+            <label class="switch" for="checkbox_coord-rightSide">
+              <input type="checkbox" id="checkbox_coord-rightSide" />
+              <div class="slider round"></div>
+            </label>
+            <p>TCS - Overlay</p>
+          </div>
+        </div>
+        <!-- Fin toggle overlay -->
+        <div id="infoImg" class="rightInfo"></div>
+        <div id="content" class="right"></div>
 
-		<script src="./jsViewDouble/view1X1.js" defer></script>
-		<script src="./jsViewDouble/afficheImg.js" defer></script>
-		<script src="./jsViewDouble/afficheImgDroite.js" defer></script>
-		<script src="./jsViewDouble/coord.js" defer></script>
-		<script src="./jsViewDouble/reload.js" defer></script>
-		<script src="./jsViewDouble/lumiContrast.js" defer></script>
-		<script src="./jsViewDouble/inactivite.js" defer></script>
-		<script src="./jsViewDouble/fullScreen.js" defer></script>
-		<script src="./jquery-3.5.1.js" defer></script>
+        <div id="rightNav" class="d-flex flex-row-reverse bd-highlight nav">
+          <nav>
+            <ul>
+              <li class="menu-deroulant">
+                <a href="#">Choice of view</a>
+                <ul class="sous-menu">
+                  <li>
+                    <button id="lastImage" data-type="lastImage">
+                      Last image
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      id="lastSubstractionImage"
+                      data-type="lastSubstractionImage"
+                    >
+                      Last substraction image
+                    </button>
+                  </li>
+                  <li>
+                    <button id="lastAnimation" data-type="lastAnimation">
+                      Last Animation
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      id="lastSubstractionAnimation"
+                      data-type="lastSubstractionAnimation"
+                    >
+                      Last Substraction Animation
+                    </button>
+                  </li>
+                  <li>
+                    <button id="viewSample">View 1X1</button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </section>
+    <footer id="footerGauche">
+      <!-- Input luminosité & contrast -->
+      <div class="reglage" id="reglageGauche">
+        <div>
+          <div id="brightnessFormGauche">
+            <span id="brightness"> Brightness</span>
+            <input
+              type="range"
+              name="amountRange"
+              class="rangeBrightness"
+              id="leftSide"
+              min="0"
+              max="5"
+              step="0.10"
+            />
+            <input
+              type="number"
+              class="rangeBrightness"
+              id="leftSide"
+              min="0"
+              max="5"
+              step="0.10"
+            />
+          </div>
+        </div>
+        <div>
+          <div id="contrastFormGauche">
+            <span id="const"> Contrast</span>
+            <input
+              type="range"
+              name="amountRange"
+              class="rangeContrast"
+              id="leftSide"
+              min="0"
+              max="5"
+              step="0.10"
+            />
+            <input
+              type="number"
+              class="rangeContrast"
+              id="leftSide"
+              min="0"
+              max="5"
+              step="0.10"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer id="footerDroite">
+      <!-- Input luminosité & contrast -->
+      <div class="reglage" id="reglageDroite">
+        <div>
+          <div id="brightnessFormDroite">
+            <span id="brightness"> Brightness</span>
+            <input
+              type="range"
+              name="amountRange"
+              class="rangeBrightness"
+              id="rightSide"
+              min="0"
+              max="5"
+              step="0.10"
+            />
+            <input
+              type="number"
+              class="rangeBrightness"
+              id="rightSide"
+              min="0"
+              max="5"
+              step="0.10"
+            />
+          </div>
+        </div>
+        <div>
+          <div id="contrastFormDroite">
+            <span id="const"> Contrast</span>
+            <input
+              type="range"
+              name="amountRange"
+              class="rangeContrast"
+              id="rightSide"
+              min="0"
+              max="5"
+              step="0.10"
+            />
+            <input
+              type="number"
+              class="rangeContrast"
+              id="rightSide"
+              min="0"
+              max="5"
+              step="0.10"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
 
-		<title>Document</title>
-	</head>
-	<body>
-		<p class="delai">
-			<span class="secondes" id="temps"></span>
-		</p>
-		<article class="row">
-			<div class="col-xl-6">
-				<!-- Toggle auto refresh -->
-				<div id="d2">
-					<div
-						class="d-flex flex-row-reverse bd-highlight"
-						id="autoGauche"
-					>
-						<div class="bd-highlight">
-							<label class="switch" for="checkbox_gauche">
-								<input
-									type="checkbox"
-									id="checkbox_gauche"
-									checked
-								/>
-								<div class="slider round"></div>
-							</label>
-							<p id="d2">Auto refresh</p>
-						</div>
-					</div>
-				</div>
-				<!-- Fin toggle auto refresh -->
-				<!-- Toggle overlay -->
+    <!-- **** SCRIPTS **** -->
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/Components/loadView.js"></script>
+    <script src="./assets/js/Components/loadCoords.js"></script>
+    <script src="./assets/js/lumiContrast.js"></script>
+    <script src="./assets/js/reload.js"></script>
+    <script src="./assets/js/dual_view/view1X1.js"></script>
+    <script src="./assets/js/dual_view/fullScreen.js"></script>
+    <!-- <script src="./assets/js/dual_view/inactivite.js"></script> -->
+    <script src="./assets/js/panzoom.min.js"></script>
+    <script src="./assets/js/dual_view/index.js"></script>
 
-				<div id="last" class="d-flex flex-row-reverse bd-highlight">
-					<div class="bd-highlight">
-						<label class="switch" for="checkbox_coord">
-							<input type="checkbox" id="checkbox_coord" />
-							<div class="slider round"></div>
-						</label>
-						<p>TCS - Overlay</p>
-					</div>
-				</div>
+    <script>
+      var rightSide = document.querySelector(".right");
 
-				<!-- Fin toggle overlay -->
-				<div id="infoImgGauche"></div>
-				<div id="partieGauche">
-					<div id="gauche"></div>
-				</div>
+      panzoom(rightSide, {
+        maxZoom: 3,
+        minZoom: 1,
+        zoomDoubleClickSpeed: 3,
+        // desactive les touche du clavier
+        filterKey: function (/* e, dx, dy, dz */) {
+          // ne laissez pas panzoom gérer cet événement :
+          return true;
+        },
+        // beforeMouseDown: function (e) {
+        // 	// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
+        // 	var shouldIgnore = !e.altKey;
+        // 	return shouldIgnore;
+        // },
+        // beforeWheel: function (e) {
+        // 	// autoriser le zoom de roue uniquement si altKey est enfoncé. Sinon - ignore
+        // 	var shouldIgnore = !e.altKey;
+        // 	return shouldIgnore;
+        // },
+      });
 
-				<div id="nav1" class="d-flex flex-row-reverse bd-highlight">
-					<nav>
-						<ul>
-							<li class="menu-deroulant">
-								<a href="#">Choice of view</a>
-								<ul class="sous-menu">
-									<li>
-										<button id="lastImageGauche">
-											Last image
-										</button>
-									</li>
-									<li>
-										<button
-											id="lastSubstractionImageGauche"
-										>
-											Last substraction image
-										</button>
-									</li>
-									<li>
-										<button id="lastAnimationGauche">
-											Last Animation
-										</button>
-									</li>
-									<li>
-										<button
-											id="lastSubstractionAnimationGauche"
-										>
-											Last Substraction Animation
-										</button>
-									</li>
-									<li>
-										<button id="1X11">View 1X1</button>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<div class="col-xl-6">
-				<!-- Toggle auto refresh -->
+      var leftSide = document.querySelector(".left");
 
-				<div
-					class="d-flex flex-row-reverse bd-highlight"
-					id="auto_droite"
-				>
-					<div class="bd-highlight">
-						<label class="switch" for="checkbox_droite">
-							<input
-								type="checkbox"
-								id="checkbox_droite"
-								checked
-							/>
-							<div class="slider round"></div>
-						</label>
-						<p id="d2">Auto refresh</p>
-					</div>
-				</div>
-
-				<!-- Fin toggle auto refresh -->
-				<!-- Toggle overlay -->
-
-				<div
-					id="lastDroite"
-					class="d-flex flex-row-reverse bd-highlight"
-				>
-					<div class="bd-highlight">
-						<label class="switch" for="checkbox_coord_droite">
-							<input type="checkbox" id="checkbox_coord_droite" />
-							<div class="slider round"></div>
-						</label>
-						<p>TCS - Overlay</p>
-					</div>
-				</div>
-
-				<!-- Fin toggle overlay -->
-				<div id="infoImgDroite"></div>
-				<div id="partieDroite">
-					<div id="droite"></div>
-				</div>
-
-				<div
-					id="navDroite"
-					class="d-flex flex-row-reverse bd-highlight"
-				>
-					<nav>
-						<ul>
-							<li class="menu-deroulant">
-								<a href="#">Choice of view</a>
-								<ul class="sous-menu">
-									<li>
-										<button id="lastImageDroite">
-											Last image
-										</button>
-									</li>
-									<li>
-										<button
-											id="lastSubstractionImageDroite"
-										>
-											Last substraction image
-										</button>
-									</li>
-									<li>
-										<button id="lastAnimationDroite">
-											Last Animation
-										</button>
-									</li>
-									<li>
-										<button
-											id="lastSubstractionAnimationDroite"
-										>
-											Last Substraction Animation
-										</button>
-									</li>
-									<li>
-										<button id="1X1">View 1X1</button>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</article>
-		<footer id="footerGauche">
-			<!-- Input luminosité & contrast -->
-			<div class="reglage" id="reglageGauche">
-				<div>
-					<form id="brightnessFormGauche">
-						<span id="brightness"> Brightness</span>
-						<input
-							type="range"
-							name="amountRange"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							oninput="this.form.amountInput.value=this.value"
-							onchange="brightness_and_contrast_Gauche(this.value, contrastFormGauche.amountInput.value)"
-						/>
-						<input
-							id="textInputBrightness"
-							type="number"
-							name="amountInput"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							oninput="this.form.amountRange.value=this.value"
-							onchange="brightness_and_contrast_Gauche(this.value, contrastFormGauche.amountInput.value)"
-						/>
-					</form>
-				</div>
-				<div>
-					<form id="contrastFormGauche">
-						<span id="const"> Contrast</span>
-						<input
-							type="range"
-							name="amountRange"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							oninput="this.form.amountInput.value=this.value"
-							onchange="brightness_and_contrast_Gauche(brightnessFormGauche.amountInput.value, this.value)"
-						/>
-						<input
-							id="textInputContrast"
-							type="number"
-							name="amountInput"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							oninput="this.form.amountRange.value=this.value"
-							onchange="brightness_and_contrast_Gauche(brightnessFormGauche.amountInput.value, this.value)"
-						/>
-					</form>
-				</div>
-			</div>
-		</footer>
-		<footer id="footerDroite">
-			<!-- Input luminosité & contrast -->
-			<div class="reglageDroite" id="reglageDroite">
-				<div>
-					<form id="brightnessFormDroite">
-						<span id="brightness"> Brightness</span>
-						<input
-							type="range"
-							name="amountRange"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							oninput="this.form.amountInput.value=this.value"
-							onchange="brightness_and_contrast_Droite(this.value, contrastFormDroite.amountInput.value)"
-						/>
-						<input
-							id="textInputBrightness"
-							type="number"
-							name="amountInput"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							oninput="this.form.amountRange.value=this.value"
-							onchange="brightness_and_contrast_Droite(this.value, contrastFormDroite.amountInput.value)"
-						/>
-					</form>
-				</div>
-				<div>
-					<form id="contrastFormDroite">
-						<span id="const"> Contrast</span>
-						<input
-							type="range"
-							name="amountRange"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							oninput="this.form.amountInput.value=this.value"
-							onchange="brightness_and_contrast_Droite(brightnessFormDroite.amountInput.value, this.value)"
-						/>
-						<input
-							id="textInputContrast"
-							type="number"
-							name="amountInput"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							oninput="this.form.amountRange.value=this.value"
-							onchange="brightness_and_contrast_Droite(brightnessFormDroite.amountInput.value, this.value)"
-						/>
-					</form>
-				</div>
-			</div>
-		</footer>
-		<script src="./panzoom.min.js"></script>
-		<script>
-			var area = document.querySelector("#partieDroite");
-
-			panzoom(area, {
-				maxZoom: 3,
-				minZoom: 1,
-				zoomDoubleClickSpeed: 3,
-				// desactive les touche du clavier
-				filterKey: function (/* e, dx, dy, dz */) {
-					// ne laissez pas panzoom gérer cet événement :
-					return true;
-				},
-				// beforeMouseDown: function (e) {
-				// 	// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
-				// 	var shouldIgnore = !e.altKey;
-				// 	return shouldIgnore;
-				// },
-				// beforeWheel: function (e) {
-				// 	// autoriser le zoom de roue uniquement si altKey est enfoncé. Sinon - ignore
-				// 	var shouldIgnore = !e.altKey;
-				// 	return shouldIgnore;
-				// },
-			});
-
-			var areaGauche = document.querySelector("#partieGauche");
-
-			panzoom(areaGauche, {
-				maxZoom: 3,
-				minZoom: 1,
-				zoomDoubleClickSpeed: 3,
-				// desactive les touche du clavier
-				filterKey: function (/* e, dx, dy, dz */) {
-					// ne laissez pas panzoom gérer cet événement :
-					return true;
-				},
-				// beforeMouseDown: function (e) {
-				// 	// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
-				// 	var shouldIgnore = !e.altKey;
-				// 	return shouldIgnore;
-				// },
-				// beforeWheel: function (e) {
-				// 	// autoriser le zoom de roue uniquement si altKey est enfoncé. Sinon - ignore
-				// 	var shouldIgnore = !e.altKey;
-				// 	return shouldIgnore;
-				// },
-			});
-		</script>
-	</body>
+      panzoom(leftSide, {
+        maxZoom: 3,
+        minZoom: 1,
+        zoomDoubleClickSpeed: 3,
+        // desactive les touche du clavier
+        filterKey: function (/* e, dx, dy, dz */) {
+          // ne laissez pas panzoom gérer cet événement :
+          return true;
+        },
+        // beforeMouseDown: function (e) {
+        // 	// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
+        // 	var shouldIgnore = !e.altKey;
+        // 	return shouldIgnore;
+        // },
+        // beforeWheel: function (e) {
+        // 	// autoriser le zoom de roue uniquement si altKey est enfoncé. Sinon - ignore
+        // 	var shouldIgnore = !e.altKey;
+        // 	return shouldIgnore;
+        // },
+      });
+    </script>
+  </body>
 </html>

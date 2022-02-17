@@ -1,189 +1,178 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Apical</title>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-		<link
-			rel="stylesheet"
-			href="bootstrap-5.1.3-dist/css/bootstrap.min.css"
-		/>
-		<link rel="stylesheet" href="./styleViewSample/style.css" />
-		<link rel="stylesheet" href="./styleViewSample/toggle.css" />
-		<link rel="stylesheet" href="./styleViewSample/range.css" />
-		<link rel="stylesheet" href="./styleViewSample/menu.css" />
+    <!-- **** CSS **** -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-5.1.3-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/single_view/style.css" />
+    <link rel="stylesheet" href="./assets/css/single_view/toggle.css" />
+    <link rel="stylesheet" href="./assets/css/single_view/range.css" />
+    <link rel="stylesheet" href="./assets/css/single_view/menu.css" />
 
-		<script src="./jsViewSample/reload.js" defer></script>
-		<script src="./jsViewSample/afficheImg.js" defer></script>
-		<script src="./jsViewSample/lumiContrast.js" defer></script>
-		<script src="./jsViewSample/coord.js" defer></script>
-		<script src="./jsViewSample/view2X1.js" defer></script>
-		<script src="./jquery-3.5.1.js" defer></script>
-		<script src="./jsViewSample/fullScreen.js" defer></script>
-		<script src="./jsViewSample/inactivite.js" defer></script>
+    <!-- **** TITLE **** -->
+    <title>Apical | Home</title>
+  </head>
+  <body>
+    <main id="main">
+      <!-- Start header for HTML -->
+      <header class="container" id="disa">
+        <p class="delai">
+          <span class="secondes" id="temps"></span>
+        </p>
+        <section id="d2">
+          <!-- Toggle overlay -->
+          <div id="last" class="d-flex flex-row-reverse bd-highlight">
+            <div class="bd-highlight">
+              <label class="switch" for="checkbox_coord-main">
+                <input type="checkbox" id="checkbox_coord-main" />
+                <div class="slider round"></div>
+              </label>
+              <p>TCS - Overlay</p>
+            </div>
+          </div>
+          <!-- Fin toggle overlay -->
 
-		<!-- CSS only -->
-	</head>
-	<body>
-		<div>
-			<div class="container" id="disa">
-				<p class="delai">
-					<span class="secondes" id="temps"></span>
-				</p>
-				<article id="d2">
-					<!-- Toggle overlay -->
+          <!-- Toggle auto refresh -->
+          <div class="d-flex flex-row-reverse bd-highlight" id="auto">
+            <div class="bd-highlight">
+              <label class="switch" for="checkbox-main">
+                <input type="checkbox" id="checkbox-main" />
+                <div class="slider round"></div>
+              </label>
+              <p id="d2">Auto refresh</p>
+            </div>
+          </div>
+          <!-- Fin toggle auto refresh -->
+        </section>
+      </header>
+      <div id="infoImg"></div>
+      <div id="content" class="d-flex justify-content-center col-10"></div>
+    </main>
+    <footer>
+      <!-- Input luminosité & contrast -->
+      <div class="reglage" id="reglage">
+        <div>
+          <div id="brightnessForm">
+            <span id="brightness">Brightness</span>
+            <input
+              type="range"
+              name="amountRange"
+              id="main"
+              min="0"
+              max="5"
+              step="0.10"
+              class="rangeBrightness"
+            />
+            <input
+              type="number"
+              name="amountInput"
+              id="main"
+              min="0"
+              max="5"
+              step="0.10"
+              class="rangeBrightness"
+            />
+          </div>
+        </div>
 
-					<div id="last" class="d-flex flex-row-reverse bd-highlight">
-						<div class="bd-highlight">
-							<label class="switch" for="checkbox_coord">
-								<input type="checkbox" id="checkbox_coord" />
-								<div class="slider round"></div>
-							</label>
-							<p>TCS - Overlay</p>
-						</div>
-					</div>
+        <div>
+          <div id="contrastForm">
+            <span id="const">Contrast</span>
+            <input
+              type="range"
+              name="amountRange"
+              id="main"
+              min="0"
+              max="5"
+              step="0.10"
+              class="rangeContrast"
+            />
+            <input
+              class="rangeContrast"
+              type="number"
+              name="amountInput"
+              id="main"
+              min="0"
+              max="5"
+              step="0.10"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Fin input luminosité & contrast -->
+      <!-- Menu -->
 
-					<!-- Fin toggle overlay -->
-					<!-- Toggle auto refresh -->
+      <div id="nav">
+        <nav>
+          <ul>
+            <li class="menu-deroulant">
+              <a href="#">Choice of view</a>
+              <ul class="sous-menu">
+                <li>
+                  <button id="lastImage" data-type="lastImage">
+                    Last image
+                  </button>
+                </li>
+                <li>
+                  <button
+                    id="lastSubstractionImage"
+                    data-type="lastSubstractionImage"
+                  >
+                    Last substraction image
+                  </button>
+                </li>
+                <li>
+                  <button id="lastAnimation" data-type="lastAnimation">
+                    Last Animation
+                  </button>
+                </li>
+                <li>
+                  <button
+                    id="lastSubstractionAnimation"
+                    data-type="lastSubstractionAnimation"
+                  >
+                    Last Substraction Animation
+                  </button>
+                </li>
+                <li>
+                  <button id="2X1">View 2X1</button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-					<div class="d-flex flex-row-reverse bd-highlight" id="auto">
-						<div class="bd-highlight">
-							<label class="switch" for="checkbox">
-								<input type="checkbox" id="checkbox" checked />
-								<div class="slider round"></div>
-							</label>
-							<p id="d2">Auto refresh</p>
-						</div>
-					</div>
+      <!-- Fin menu -->
+    </footer>
+    <!-- **** SCRIPTS **** -->
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/Components/loadView.js"></script>
+    <script src="./assets/js/Components/loadCoords.js"></script>
+    <script src="./assets/js/reload.js"></script>
+    <script src="./assets/js/lumiContrast.js"></script>
+    <script src="./assets/js/single_view/view2X1.js"></script>
+    <script src="./assets/js/single_view/fullScreen.js"></script>
+    <script src="./assets/js/single_view/inactivite.js"></script>
+    <script src="./assets/js/panzoom.min.js"></script>
+    <script src="./assets/js/single_view/index.js" defer></script>
+    <script>
+      const area = document.querySelector("#content");
 
-					<!-- Fin toggle auto refresh -->
-				</article>
-			</div>
-			<div id="infoImg"></div>
-			<div id="content" class="d-flex justify-content-center col-10">
-				<div id="center"></div>
-			</div>
-		</div>
-		<footer>
-			<!-- Input luminosité & contrast -->
-			<div class="reglage" id="reglage">
-				<div>
-					<form id="brightnessForm">
-						<span id="brightness"> Brightness</span>
-						<input
-							type="range"
-							name="amountRange"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							oninput="this.form.amountInput.value=this.value"
-							onchange="brightness_and_contrast(this.value, contrastForm.amountInput.value)"
-						/>
-						<input
-							id="textInputBrightness"
-							type="number"
-							name="amountInput"
-							min="0"
-							max="5"
-							step="0.10"
-							value="1"
-							oninput="this.form.amountRange.value=this.value"
-							onchange="brightness_and_contrast(this.value, contrastForm.amountInput.value)"
-						/>
-					</form>
-				</div>
-
-				<div>
-					<form id="contrastForm">
-						<span id="const"> Contrast</span>
-						<input
-							type="range"
-							name="amountRange"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							oninput="this.form.amountInput.value=this.value"
-							onchange="brightness_and_contrast(brightnessForm.amountInput.value, this.value)"
-						/>
-						<input
-							id="textInputContrast"
-							type="number"
-							name="amountInput"
-							min="0"
-							max="5"
-							value="1"
-							step="0.10"
-							oninput="this.form.amountRange.value=this.value"
-							onchange="brightness_and_contrast(brightnessForm.amountInput.value, this.value)"
-						/>
-					</form>
-				</div>
-			</div>
-			<!-- Fin input luminosité & contrast -->
-			<!-- Menu -->
-
-			<div id="nav">
-				<nav>
-					<ul>
-						<li class="menu-deroulant">
-							<a href="#">Choice of view</a>
-							<ul class="sous-menu">
-								<li>
-									<button id="lastImage">Last image</button>
-								</li>
-								<li>
-									<button id="lastSubstractionImage">
-										Last substraction image
-									</button>
-								</li>
-								<li>
-									<button id="lastAnimation">
-										Last Animation
-									</button>
-								</li>
-								<li>
-									<button id="lastSubstractionAnimation">
-										Last Substraction Animation
-									</button>
-								</li>
-								<li>
-									<button id="2X1">View 2X1</button>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-			</div>
-
-			<!-- Fin menu -->
-		</footer>
-		<script src="./panzoom.min.js"></script>
-		<script>
-			var area = document.querySelector("#content");
-
-			panzoom(area, {
-				maxZoom: 10,
-				minZoom: 1,
-				zoomDoubleClickSpeed: 2,
-				// desactive les touche du clavier
-				filterKey: function (/* e, dx, dy, dz */) {
-					// ne laissez pas panzoom gérer cet événement :
-					return true;
-				},
-				// beforeMouseDown: function (e) {
-				// 	// autorise le déplacement de la souris uniquement si altKey est enfoncé. Sinon - ignore
-				// 	var shouldIgnore = !e.altKey;
-				// 	return shouldIgnore;
-				// },
-				// beforeWheel: function (e) {
-				// 	// autoriser le zoom de roue uniquement si altKey est enfoncé. Sinon - ignore
-				// 	var shouldIgnore = !e.altKey;
-				// 	return shouldIgnore;
-				// },
-			});
-		</script>
-	</body>
+      panzoom(area, {
+        maxZoom: 10,
+        minZoom: 1,
+        zoomDoubleClickSpeed: 2,
+        filterKey: function () {
+          return true;
+        },
+      });
+    </script>
+  </body>
 </html>
