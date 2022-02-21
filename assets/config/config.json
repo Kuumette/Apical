@@ -1,12 +1,12 @@
 {
-  "dev": {
-    "timer": "1000",
-    "images": "./image.json",
-    "coords": "./pointCoord_overlay.json"
-  },
-  "prod": {
-    "timer": "30000",
-    "images": "https://live.neos360.com/eso/paranal/apicam/config/image.json",
-    "coords": "./pointCoord_overlay.json"
-  }
+	"serveur": {
+		"urlProd": "https://live.neos360.com/eso/paranal/apicam",
+		"urlDev": "http://127.0.0.1:5502",
+		"isProd": false
+	},
+	"json": {
+		"timer": "1000",
+		"images": "/assets/config/image.json",
+		"coords": "/assets/config/pointCoord_overlay.json"
+	}
 }
