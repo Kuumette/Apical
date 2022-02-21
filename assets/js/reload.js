@@ -16,7 +16,7 @@
  * @param {string} side default value is main
  * @description reload la vue demandé par l'utilisateur
  */
-async function reload(type, side = "main", configFile) {
+async function reload(type, side = "main") {
 	console.log(`${type} loaded on ${side}`);
 	/** Je fetch les information dont j'ai besoins */
 	const response = await fetch(
