@@ -15,7 +15,6 @@
 	left: 0%;
 	z-index: 2;
 	margin-top: 3%;
-	transition: visibility 2s, opacity 2s linear;
 }
 #contrast {
 	margin-right: 1.9%;
@@ -26,7 +25,6 @@
 	font-size: 18px;
 	position: fixed;
 	z-index: 98;
-	transition: visibility 2s, opacity 2s linear;
 }
 
 span {
@@ -43,7 +41,6 @@ span {
 	font-size: 18px;
 	position: fixed;
 	z-index: 2;
-	transition: visibility 2s, opacity 2s linear;
 }
 #nav {
 	display: block;
@@ -51,7 +48,6 @@ span {
 	font-size: 18px;
 	position: absolute;
 	z-index: 2;
-	transition: visibility 2s, opacity 2s linear;
 }
 nav {
 	position: fixed;

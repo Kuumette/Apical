@@ -8,8 +8,8 @@ function loadView(type, side, displayImage, brightness, contrast) {
 	/** Je récupère les infos du DOM */
 	const CONTENT = document.querySelector(`#${side} #content`);
 	const INFO_IMG = document.querySelector(`#${side} #infoImg`);
-	const TOGGLE_COORDS = document.querySelector(`#last`);
-	console.log(TOGGLE_COORDS);
+	const TOGGLE_COORDS = document.querySelector("#last");
+	const REGLAGE = document.querySelector(".reglage");
 	let html = "";
 
 	// J'insere les information reçu depuis displayImage pour l'insérer dans le DOM
@@ -26,29 +26,40 @@ function loadView(type, side, displayImage, brightness, contrast) {
 		type === "panorama" ||
 		type === "attenuation"
 	) {
-		TOGGLE_COORDS.style.display = "block";
 		html = `
-		<div id="center-${side}" style="display: ${getItem(`display-${side}`)}"></div>
-		<img src="${
-			displayImage[type].img
-		}" alt="description" id="img" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
-    `;
+			<div id="center-${side}" style="display: ${getItem(`display-${side}`)}"></div>
+			<img src="${
+				displayImage[type].img
+			}" alt="description" id="img" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
+    	`;
 		// Les informations sont necessaire que pour les images
 		INFO_IMG.innerHTML = infoImg;
+		if (type === "lastImage" || type === "lastSubstractionImage") {
+			TOGGLE_COORDS.style.opacity = "1";
+			REGLAGE.style.display = "block";
+		} else if (type === "panorama") {
+			REGLAGE.style.display = "block";
+			TOGGLE_COORDS.style.opacity = "0";
+		} else if (type === "attenuation") {
+			REGLAGE.style.display = "none";
+			TOGGLE_COORDS.style.opacity = "0";
+		}
 	} else if (
 		type === "lastAnimation" ||
 		type === "lastSubstractionAnimation"
 	) {
-		TOGGLE_COORDS.style.display = "none";
 		/** Sinon c'est une vidéo */
 		html = `
-		<div id="center" style="display: ${getItem(`display-${side}`)}"></div>
+			<div id="center" style="display: ${getItem(`display-${side}`)}"></div>
 
-		<video src="${
-			displayImage[type].img
-		}" autoplay preload controls loop class="video-js"></video>`;
+			<video src="${
+				displayImage[type].img
+			}" autoplay preload controls loop class="video-js"></video>
+		`;
 		// j'efface les informations pour les vidéos
 		INFO_IMG.innerHTML = "";
+		TOGGLE_COORDS.style.opacity = "0";
+		REGLAGE.style.display = "none";
 	}
 
 	CONTENT.innerHTML = html;
