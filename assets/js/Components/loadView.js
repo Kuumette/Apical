@@ -20,12 +20,7 @@ function loadView(type, side, displayImage, brightness, contrast) {
   `;
 
 	/** Si c'est une image alors */
-	if (
-		type === "lastImage" ||
-		type === "lastSubstractionImage" ||
-		type === "panorama" ||
-		type === "attenuation"
-	) {
+	if (type === "lastImage" || type === "lastSubstractionImage") {
 		html = `
 			<div id="center-${side}" style="display: ${getItem(`display-${side}`)}"></div>
 			<img src="${
@@ -33,16 +28,11 @@ function loadView(type, side, displayImage, brightness, contrast) {
 			}" alt="description" id="img" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
     	`;
 		// Les informations sont necessaire que pour les images
+
 		INFO_IMG.innerHTML = infoImg;
 		if (type === "lastImage" || type === "lastSubstractionImage") {
 			TOGGLE_COORDS.style.opacity = "1";
 			REGLAGE.style.display = "block";
-		} else if (type === "panorama") {
-			REGLAGE.style.display = "block";
-			TOGGLE_COORDS.style.opacity = "0";
-		} else if (type === "attenuation") {
-			REGLAGE.style.display = "none";
-			TOGGLE_COORDS.style.opacity = "0";
 		}
 	} else if (
 		type === "lastAnimation" ||
@@ -60,6 +50,30 @@ function loadView(type, side, displayImage, brightness, contrast) {
 		INFO_IMG.innerHTML = "";
 		TOGGLE_COORDS.style.opacity = "0";
 		REGLAGE.style.display = "none";
+	} else if (type === "attenuation") {
+		html = `
+		
+			<img src="${displayImage[type].img}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(1) contrast(1) !important;"/>
+    	`;
+		// Les informations sont necessaire que pour les images
+
+		INFO_IMG.innerHTML = infoImg;
+		if (type === "attenuation") {
+			REGLAGE.style.display = "none";
+			TOGGLE_COORDS.style.opacity = "0";
+		}
+	} else if (type === "panorama") {
+		html = `
+		
+			<img src="${displayImage[type].img}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
+    	`;
+		// Les informations sont necessaire que pour les images
+
+		INFO_IMG.innerHTML = infoImg;
+		if (type === "panorama") {
+			REGLAGE.style.display = "block";
+			TOGGLE_COORDS.style.opacity = "0";
+		}
 	}
 
 	CONTENT.innerHTML = html;

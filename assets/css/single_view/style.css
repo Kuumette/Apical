@@ -117,7 +117,8 @@ p {
 	color: #f0f0f0;
 }
 @media only screen and (max-width: 699px) and (min-width: 500px) {
-	#img {
+	#img,
+	#imgAttenuation {
 		max-width: 100%;
 	}
 	#date {
@@ -169,7 +170,8 @@ p {
 	}
 }
 @media only screen and (max-width: 899px) and (min-width: 700px) {
-	#img {
+	#img,
+	#imgAttenuation {
 		max-width: 95%;
 	}
 	#date {
@@ -222,7 +224,8 @@ p {
 }
 /* Pour ordinateurs portables */
 @media only screen and (max-width: 1100px) and (min-width: 899px) {
-	#img {
+	#img,
+	#imgAttenuation {
 		max-width: 50%;
 	}
 	#date {
@@ -259,7 +262,7 @@ p {
 		margin-left: 8%;
 	}
 	#overlay {
-		max-width: 90%;
+		max-width: 50%;
 		margin-left: 0%;
 		margin-top: 0%;
 	}
@@ -270,12 +273,14 @@ p {
 		left: 30%;
 	}
 	.video-js {
-		width: 80%;
+		width: 50%;
 	}
 }
 @media only screen and (max-width: 1300px) and (min-width: 1099px) {
-	#img {
+	#img,
+	#imgAttenuation {
 		max-width: 46%;
+		/* border: 1px red solid; */
 	}
 	#date {
 		margin-top: 3%;
@@ -311,7 +316,7 @@ p {
 		margin-left: 10%;
 	}
 	#overlay {
-		max-width: 95%;
+		max-width: 46%;
 		margin-left: 0%;
 		margin-top: 0%;
 	}
@@ -322,12 +327,13 @@ p {
 		left: 28%;
 	}
 	.video-js {
-		width: 70%;
+		width: 46%;
 	}
 }
 /* Pour les grands écrans */
 @media only screen and (max-width: 1500px) and (min-width: 1299px) {
-	#img {
+	#img,
+	#imgAttenuation {
 		max-width: 40%;
 	}
 	#date {
@@ -364,8 +370,8 @@ p {
 		margin-left: 10%;
 	}
 	#overlay {
-		max-width: 90%;
-		margin-left: 5%;
+		max-width: 40%;
+		margin-left: 0%;
 		margin-top: 0%;
 	}
 	.reglage {
@@ -375,12 +381,13 @@ p {
 		left: 28%;
 	}
 	.video-js {
-		width: 60%;
+		width: 40%;
 	}
 }
 
 @media only screen and (max-width: 1700px) and (min-width: 1499px) {
-	#img {
+	#img,
+	#imgAttenuation {
 		max-width: 40%;
 	}
 	#date {
@@ -417,9 +424,9 @@ p {
 		margin-left: 28.3%;
 	}
 	#overlay {
-		max-width: 75%;
+		max-width: 40%;
 		margin-left: 0%;
-		margin-top: 2%;
+		margin-top: 0%;
 	}
 	.reglage {
 		top: 85%;
@@ -428,11 +435,12 @@ p {
 		left: 28%;
 	}
 	.video-js {
-		width: 60%;
+		width: 40%;
 	}
 }
 @media only screen and (max-width: 1900px) and (min-width: 1699px) {
-	#img {
+	#img,
+	#imgAttenuation {
 		max-width: 65%;
 	}
 	#date {
@@ -471,7 +479,7 @@ p {
 	#overlay {
 		max-width: 65%;
 		margin-left: 0%;
-		margin-top: 2%;
+		/* margin-top: 2%; */
 	}
 	.reglage {
 		top: 85%;
@@ -480,12 +488,13 @@ p {
 		left: 25%;
 	}
 	.video-js {
-		width: 55%;
-		border: 1px red solid;
+		width: 65%;
+		/* border: 1px red solid; */
 	}
 }
 @media only screen and (max-width: 2200px) and (min-width: 1899px) {
-	#img {
+	#img,
+	#imgAttenuation {
 		max-width: 55%;
 	}
 	#date {
@@ -534,11 +543,12 @@ p {
 		left: 25%;
 	}
 	.video-js {
-		width: 50%;
+		width: 55%;
 	}
 }
 @media only screen and (max-width: 5000px) and (min-width: 2199px) {
-	#img {
+	#img,
+	#imgAttenuation {
 		max-width: 50%;
 	}
 	#date {
