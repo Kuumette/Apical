@@ -19,12 +19,13 @@ function loadView(type, side, displayImage, brightness, contrast) {
   <p id="name">apicam</p>
   `;
 
-	/** Si c'est une image alors */
+	/** Si c'est lastImage ou lastSubstractionImage alors */
 	if (type === "lastImage" || type === "lastSubstractionImage") {
+		let tmp = new Date();
 		html = `
 			<div id="center-${side}" style="display: ${getItem(`display-${side}`)}"></div>
 			<img src="${
-				displayImage[type].img
+				displayImage[type].img + "?" + tmp.getTime()
 			}" alt="description" id="img" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
     	`;
 		// Les informations sont necessaire que pour les images
@@ -34,26 +35,32 @@ function loadView(type, side, displayImage, brightness, contrast) {
 			TOGGLE_COORDS.style.opacity = "1";
 			REGLAGE.style.display = "block";
 		}
+		/** Si c'est lastAnimation ou lastSubstractionAnimation alors */
 	} else if (
 		type === "lastAnimation" ||
 		type === "lastSubstractionAnimation"
 	) {
+		let tmp = new Date();
 		/** Sinon c'est une vidéo */
 		html = `
 			<div id="center" style="display: ${getItem(`display-${side}`)}"></div>
 
 			<video src="${
-				displayImage[type].img
+				displayImage[type].img + "?" + tmp.getTime()
 			}" autoplay preload controls loop class="video-js"></video>
 		`;
 		// j'efface les informations pour les vidéos
 		INFO_IMG.innerHTML = "";
 		TOGGLE_COORDS.style.opacity = "0";
 		REGLAGE.style.display = "none";
+		/** Si c'est attenuation alors */
 	} else if (type === "attenuation") {
+		let tmp = new Date();
 		html = `
 		
-			<img src="${displayImage[type].img}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(1) contrast(1) !important;"/>
+			<img src="${
+				displayImage[type].img + "?" + tmp.getTime()
+			}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(1) contrast(1) !important;"/>
     	`;
 		// Les informations sont necessaire que pour les images
 
@@ -62,10 +69,14 @@ function loadView(type, side, displayImage, brightness, contrast) {
 			REGLAGE.style.display = "none";
 			TOGGLE_COORDS.style.opacity = "0";
 		}
+		/** Si c'est panorama alors */
 	} else if (type === "panorama") {
+		let tmp = new Date();
 		html = `
 		
-			<img src="${displayImage[type].img}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
+			<img src="${
+				displayImage[type].img + "?" + tmp.getTime()
+			}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
     	`;
 		// Les informations sont necessaire que pour les images
 
