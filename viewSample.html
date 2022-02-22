@@ -191,15 +191,16 @@
 		<script src="./assets/js/single_view/index.js" defer></script>
 		<script>
 			const area = document.querySelector("#content");
-
-			panzoom(area, {
-				maxZoom: 10,
-				minZoom: 1,
-				zoomDoubleClickSpeed: 2,
-				filterKey: function () {
-					return true;
-				},
-			});
+			if (window.innerWidth > 499) {
+				panzoom(area, {
+					maxZoom: 10,
+					minZoom: 1,
+					zoomDoubleClickSpeed: 2,
+					filterKey: function () {
+						return true;
+					},
+				});
+			}
 		</script>
 	</body>
 </html>

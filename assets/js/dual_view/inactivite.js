@@ -1,29 +1,29 @@
 let temps,
-  secondes = 0;
+	secondes = 0;
 
-let display = document.getElementById("reglageGauche");
-let overlay = document.getElementById("last");
-let display1 = document.getElementById("nav1");
-let refresh = document.getElementById("d2");
-let refreshDroite = document.getElementById("auto_droite");
-let lastDroite = document.getElementById("lastDroite");
-let reglageDroite = document.getElementById("reglageDroite");
-let navDroite = document.getElementById("navDroite");
+let FOOTER_G = document.getElementById("footerGauche");
+let FOOTER_D = document.getElementById("footerDroite");
+
+const NAV_G = document.getElementById("leftNav");
+const NAV_D = document.getElementById("rightNav");
+
+const TOOGLE_G = document.getElementById("d2");
+const TOOGLE_D = document.getElementById("toogle_d");
 
 function resetTemps() {
-  document.querySelector(".delai").style.display = "none";
-  clearInterval(temps);
-  secondes = 0;
+	document.querySelector(".delai").style.display = "none";
+	clearInterval(temps);
+	secondes = 0;
 
-  temps = setInterval(startTemps, 5000);
-  display.style.opacity = "1";
-  overlay.style.opacity = "1";
-  display1.style.opacity = "1";
-  refresh.style.opacity = "1";
-  refreshDroite.style.opacity = "1";
-  lastDroite.style.opacity = "1";
-  reglageDroite.style.opacity = "1";
-  navDroite.style.opacity = "1";
+	temps = setInterval(startTemps, 5000);
+	FOOTER_G.style.opacity = "1";
+	FOOTER_D.style.opacity = "1";
+
+	NAV_G.style.opacity = "1";
+	NAV_D.style.opacity = "1";
+
+	TOOGLE_G.style.opacity = "1";
+	TOOGLE_D.style.opacity = "1";
 }
 
 window.onload = resetTemps;
@@ -34,15 +34,15 @@ window.onmousemove = resetTemps;
 window.onmousedown = resetTemps;
 
 function startTemps() {
-  secondes++;
-  document.querySelector(".secondes").textContent = secondes;
-  document.querySelector(".delai").style.display = "none";
-  display.style.opacity = "0";
-  overlay.style.opacity = "0";
-  display1.style.opacity = "0";
-  refresh.style.opacity = "0";
-  refreshDroite.style.opacity = "0";
-  lastDroite.style.opacity = "0";
-  reglageDroite.style.opacity = "0";
-  navDroite.style.opacity = "0";
+	secondes++;
+	document.querySelector(".secondes").textContent = secondes;
+	document.querySelector(".delai").style.display = "none";
+	FOOTER_G.style.opacity = "0";
+	FOOTER_D.style.opacity = "0";
+
+	NAV_G.style.opacity = "0";
+	NAV_D.style.opacity = "0";
+
+	TOOGLE_G.style.opacity = "0";
+	TOOGLE_D.style.opacity = "0";
 }

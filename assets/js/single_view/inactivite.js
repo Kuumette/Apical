@@ -10,8 +10,8 @@ function resetTemps() {
 	document.querySelector(".delai").style.display = "none";
 	clearInterval(temps);
 	secondes = 0;
-
-	temps = setInterval(startTemps, 5000);
+	//5000
+	temps = setInterval(startTemps, 500000);
 	display.style.opacity = "1";
 	toogle.style.opacity = "1";
 	display1.style.opacity = "1";
