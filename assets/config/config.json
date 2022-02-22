@@ -5,7 +5,7 @@
 		"isProd": true
 	},
 	"json": {
-		"timer": "1000",
+		"timer": "60000",
 		"images": "/assets/config/image.json",
 		"coords": "/assets/config/pointCoord_overlay.json"
 	}

@@ -1,6 +1,10 @@
 * {
 	font-size: 1.5vh;
 }
+html {
+	height: 100%;
+	width: 100%;
+}
 #infoImg {
 	width: 70%;
 	position: relative;
