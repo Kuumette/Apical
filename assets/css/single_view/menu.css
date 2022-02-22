@@ -17,7 +17,7 @@
 nav > ul {
 	display: flex;
 	text-align: center;
-	/* box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3); */
+
 	height: var(--hauteur-menu);
 }
 
@@ -50,7 +50,7 @@ li a {
 }
 .sous-menu {
 	width: 113%;
-	margin-top: -170%;
+	margin-top: -180%;
 	text-align: left;
 	background-color: rgba(0, 0, 0, 0.712);
 	border-radius: 2px;
@@ -59,21 +59,26 @@ li a {
 }
 
 .sous-menu > li > a {
-	height: 50px;
-	padding-left: 20px;
-	width: 100%;
+	/* height: 50px; */
+	/* padding-left: 20px; */
+	/* width: 100%; */
 	align-items: center;
 	display: flex;
 }
+#menuA {
+	padding-top: 30%;
+}
 
-nav > ul > li:hover > a {
+nav > ul > li:hover > a,
+nav > ul > li:focus > a {
 	color: #f0f0f0;
 }
 .sous-menu > li:hover {
 	background-color: rgba(255, 255, 255, 0);
 }
 
-.sous-menu > li:hover > a {
+.sous-menu > li:hover > a,
+.sous-menu > li:focus > a {
 	color: #f0f0f0;
 }
 
@@ -85,7 +90,8 @@ nav > ul > li:hover > a {
 		transform: rotate(270deg);
 	}
 }
-.menu-deroulant:hover > a:after {
+.menu-deroulant:hover > a:after,
+.menu-deroulant:focus > a:after {
 	animation: rotationFleche 0.5s linear forwards;
 }
 @keyframes apparitionSousMenu {
@@ -102,14 +108,13 @@ nav > ul > li:hover > a {
 		box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
 	}
 }
-.menu-deroulant:hover > .sous-menu {
+.menu-deroulant:hover > .sous-menu,
+.menu-deroulant:focus > .sous-menu {
 	animation: apparitionSousMenu 0s forwards;
 }
 
 #nav {
 	margin-top: 10%;
-	/* display: flex;
-	justify-content: flex-end; */
 }
 
 button {
@@ -127,7 +132,6 @@ button {
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
 	cursor: pointer;
-	/* margin: 5px; */
 }
 button:hover {
 	background-color: #f0f0f0;
@@ -190,4 +194,74 @@ button:hover {
 	.sous-menu {
 		margin-top: -170%;
 	}
+} */
+
+/* #nav {
+	width: 50%;
+	z-index: 55;
+	position: absolute;
+	margin: 0 auto;
+	color: rgb(255, 255, 255);
+	padding: 0.8em;
+	border-radius: 10px;
+	font-size: 0.85em;
+	margin-top: -25%;
+	border: 1px red solid;
+	margin-left: 80%;
+}
+
+#div1 {
+	position: absolute;
+	width: 24%;
+	border-radius: 10px;
+	padding: 0.5em;
+	overflow: hidden;
+	height: 1.5em;
+	cursor: pointer;
+}
+
+#div1:hover,
+#div1:focus {
+	background-color: rgb(38, 38, 40);
+	padding-bottom: 42%;
+	color: rgb(255, 255, 255);
+	transition: background 0.5s ease, color 0.5s ease;
+}
+#div1:active,
+#div1:focus {
+	height: 6.7em;
+	transition: height 0.3s ease;
+	z-index: 3;
+}
+
+#nav h4 {
+	font-size: 1em;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 0 0.5em 0;
+}
+#nav ul {
+	margin: 0;
+	list-style: none;
+	padding-left: 0.4em;
+}
+button {
+	display: inline-block;
+	background-color: #7b38d800;
+	border-radius: 10px;
+	border: 4px double #cccccc00;
+	color: #f0f0f0;
+
+	font-size: 15px;
+	padding: 10px;
+	width: 200px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+button:hover {
+	background-color: #f0f0f0;
+	color: black;
 } */

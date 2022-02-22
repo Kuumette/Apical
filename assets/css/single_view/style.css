@@ -42,13 +42,13 @@ span {
 	position: fixed;
 	z-index: 2;
 }
-#nav {
+/* #nav {
 	display: block;
 	width: 50%;
 	font-size: 18px;
 	position: absolute;
 	z-index: 2;
-}
+} */
 nav {
 	position: fixed;
 	width: 12%;
