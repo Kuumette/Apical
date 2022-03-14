@@ -2,7 +2,7 @@
 	"serveur": {
 		"urlProd": "https://live.neos360.com/eso/paranal/apicam",
 		"urlDev": "http://127.0.0.1:5502",
-		"isProd": true
+		"isProd": false
 	},
 	"json": {
 		"timer": "60000",

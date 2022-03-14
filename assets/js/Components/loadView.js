@@ -23,7 +23,7 @@ function loadView(type, side, displayImage, brightness, contrast) {
   <p id="heure">${displayImage[type].heure}</p>
   <p id="name">apicam</p>
   `;
-	console.log(side);
+
 	/** Si c'est lastImage ou lastSubstractionImage alors */
 	if (type === "lastImage" || type === "lastSubstractionImage") {
 		let tmp = new Date();
@@ -34,7 +34,7 @@ function loadView(type, side, displayImage, brightness, contrast) {
 			}" alt="description" id="img" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
     	`;
 		// Les informations sont necessaire que pour les images
-		console.log(side);
+
 		INFO_IMG.innerHTML = infoImg;
 		if (side === "main") {
 			if (type === "lastImage" || type === "lastSubstractionImage") {
@@ -75,7 +75,6 @@ function loadView(type, side, displayImage, brightness, contrast) {
 			TOGGLE_COORDS_G.style.opacity = "0";
 			REGLAGE_GAUCHE.style.display = "none";
 		} else if (side === "rightSide") {
-			console.log("eee");
 			TOGGLE_COORDS_D.style.opacity = "0";
 			REGLAGE_DROITE.style.display = "none";
 		}
@@ -83,7 +82,6 @@ function loadView(type, side, displayImage, brightness, contrast) {
 	} else if (type === "attenuation") {
 		let tmp = new Date();
 		html = `
-		
 			<img src="${
 				displayImage[type].img + "?" + tmp.getTime()
 			}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(1) contrast(1) !important;"/>
@@ -100,7 +98,6 @@ function loadView(type, side, displayImage, brightness, contrast) {
 			TOGGLE_COORDS_G.style.opacity = "0";
 			REGLAGE_GAUCHE.style.display = "none";
 		} else if (side === "rightSide") {
-			console.log("eee");
 			TOGGLE_COORDS_D.style.opacity = "0";
 			REGLAGE_DROITE.style.display = "none";
 		}
@@ -108,7 +105,6 @@ function loadView(type, side, displayImage, brightness, contrast) {
 	} else if (type === "panorama") {
 		let tmp = new Date();
 		html = `
-		
 			<img src="${
 				displayImage[type].img + "?" + tmp.getTime()
 			}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>

@@ -17,11 +17,10 @@
  * @description reload la vue demandé par l'utilisateur
  */
 async function reload(type, side = "main") {
-	console.log(`${type} loaded on ${side}`);
 	/** Je fetch les information dont j'ai besoins */
 	const response = await fetch(
-		"https://live.neos360.com/eso/paranal/apicam/assets/config/config.json"
-		//"http://127.0.0.1:5502/assets/config/config.json"
+		//"https://live.neos360.com/eso/paranal/apicam/assets/config/config.json"
+		"http://127.0.0.1:5502/assets/config/config.json"
 	);
 	const { json, serveur } = await response.json();
 
@@ -54,9 +53,9 @@ async function reload(type, side = "main") {
 		getItem(`brightness-${side}`),
 		getItem(`contrast-${side}`)
 	);
-
-	const viewCoords = loadCoords(tcs.img, side);
-
+	if (type === "lastImage" || type === "lastSubstractionImage") {
+		const viewCoords = loadCoords(tcs.img, side);
+	}
 	/**
 	 * Ici, en plus de reload mon composant IMAGE
 	 * je dois aussi ajouter les filtres
@@ -64,8 +63,7 @@ async function reload(type, side = "main") {
 	if (
 		type === "lastImage" ||
 		type === "lastSubstractionImage" ||
-		type === "panorama" ||
-		type === "attenuation"
+		type === "panorama"
 	) {
 		const IMG = document.querySelectorAll("#img");
 		IMG.forEach((img) => {
@@ -95,7 +93,7 @@ async function reload(type, side = "main") {
 					getItem(`brightness-${side}`),
 					getItem(`contrast-${side}`)
 				);
-				console.log(getItem(`type-${side}`));
+
 				loadCoords(tcs.img, side);
 			}, refresh);
 		} else {
@@ -108,7 +106,6 @@ const SIDES = document.querySelectorAll(".side");
 
 if (SIDES.length === 0) {
 	reload(getItem("type-main"));
-	console.log(getItem("type-main"));
 }
 
 SIDES.forEach((side) => {
