@@ -2,8 +2,8 @@ const BRIGHTNESS = document.querySelectorAll(".rangeBrightness");
 const CONTRASTS = document.querySelectorAll(".rangeContrast");
 //const BUTTON = document.querySelectorAll("#niveau1");
 /** La fonction init() provient de utils.js et permet d'initialiser le localStorage */
-getItem();
-//init();
+
+init();
 
 // Sur mon tableau de BRIGHTNESS, je parcours chaque élément
 BRIGHTNESS.forEach((range) => {
@@ -35,10 +35,10 @@ function synchro(range) {
 	// synchronisation des valeurs
 	if (range.name === "amountRange") {
 		range.nextElementSibling.value = range.value;
-		console.log(range.value);
+		//console.log(range.value);
 	} else {
 		range.previousElementSibling.value = range.value;
-		console.log(range.value);
+		//console.log(range.value);
 	}
 }
 

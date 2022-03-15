@@ -2,18 +2,19 @@
  * J'utilise le localStorage pour stocker les valeurs simples
  * qui ne sont pas de haute sécurité
  */
+
 function init() {
 	// localStorage.clear();
 	/** Init contrast et brightness ainsi que l'overlay */
 	localStorage.setItem("init", "1");
-	localStorage.setItem("brightness-leftSide", "1");
-	localStorage.setItem("contrast-leftSide", "1");
+	// localStorage.setItem("brightness-leftSide", "1");
+	// localStorage.setItem("contrast-leftSide", "1");
 	localStorage.setItem("display-leftSide", "none");
-	localStorage.setItem("brightness-rightSide", "1");
-	localStorage.setItem("contrast-rightSide", "1");
+	// localStorage.setItem("brightness-rightSide", "1");
+	// localStorage.setItem("contrast-rightSide", "1");
 	localStorage.setItem("display-rightSide", "none");
-	localStorage.setItem("brightness-main", "1");
-	localStorage.setItem("contrast-main", "1");
+	// localStorage.setItem("brightness-main", "1");
+	// localStorage.setItem("contrast-main", "1");
 	localStorage.setItem("display-main", "none");
 	localStorage.setItem("type-leftSide", "lastImage");
 	localStorage.setItem("type-rightSide", "lastSubstractionImage");
