@@ -53,7 +53,7 @@ document.querySelector("#default").addEventListener("click", function () {
 	localStorage.setItem("type-rightSide", "lastSubstractionImage");
 	localStorage.setItem("type-main", "lastImage");
 
-	window.location.reload();
+	reload();
 });
 
 document.querySelector("#reglage1").addEventListener("click", function () {
@@ -74,5 +74,5 @@ document.querySelector("#reglage1").addEventListener("click", function () {
 	localStorage.setItem("type-rightSide", "lastSubstractionImage");
 	localStorage.setItem("type-main", "lastImage");
 
-	window.location.reload();
+	reload();
 });

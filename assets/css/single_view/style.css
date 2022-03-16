@@ -10,6 +10,10 @@ html {
 	position: relative;
 	z-index: 8;
 }
+#menu {
+	position: fixed;
+	padding: 3%;
+}
 .reglage {
 	display: block;
 	width: 50%;
@@ -173,6 +177,10 @@ p {
 	.video-js {
 		width: 80%;
 	}
+	#menu {
+		bottom: 27%;
+		left: -8%;
+	}
 }
 @media only screen and (max-width: 699px) and (min-width: 500px) {
 	#img,
@@ -226,6 +234,10 @@ p {
 	.video-js {
 		width: 80%;
 	}
+	#menu {
+		bottom: 22%;
+		left: -5%;
+	}
 }
 @media only screen and (max-width: 899px) and (min-width: 700px) {
 	#img,
@@ -278,6 +290,10 @@ p {
 	}
 	.video-js {
 		width: 80%;
+	}
+	#menu {
+		bottom: 2%;
+		left: -4.5%;
 	}
 }
 /* Pour ordinateurs portables */
@@ -333,6 +349,10 @@ p {
 	.video-js {
 		width: 50%;
 	}
+	#menu {
+		bottom: 1%;
+		left: -1%;
+	}
 }
 @media only screen and (max-width: 1300px) and (min-width: 1099px) {
 	#img,
@@ -386,6 +406,10 @@ p {
 	}
 	.video-js {
 		width: 46%;
+	}
+	#menu {
+		bottom: 1%;
+		left: 0.4%;
 	}
 }
 /* Pour les grands écrans */
@@ -441,6 +465,10 @@ p {
 	.video-js {
 		width: 40%;
 	}
+	#menu {
+		bottom: 0%;
+		left: 0.7%;
+	}
 }
 
 @media only screen and (max-width: 1700px) and (min-width: 1499px) {
@@ -494,6 +522,10 @@ p {
 	}
 	.video-js {
 		width: 40%;
+	}
+	#menu {
+		bottom: -3%;
+		left: 10%;
 	}
 }
 @media only screen and (max-width: 1900px) and (min-width: 1699px) {
@@ -549,6 +581,10 @@ p {
 		width: 65%;
 		/* border: 1px red solid; */
 	}
+	#menu {
+		bottom: -3%;
+		left: 15%;
+	}
 }
 @media only screen and (max-width: 2200px) and (min-width: 1899px) {
 	#img,
@@ -602,6 +638,10 @@ p {
 	}
 	.video-js {
 		width: 55%;
+	}
+	#menu {
+		bottom: 2%;
+		left: 13.5%;
 	}
 }
 @media only screen and (max-width: 5000px) and (min-width: 2199px) {
@@ -658,5 +698,10 @@ p {
 	}
 	.video-js {
 		width: 50%;
+	}
+	#menu {
+		bottom: -5%;
+		/* border: 1px solid red; */
+		left: 25%;
 	}
 }
