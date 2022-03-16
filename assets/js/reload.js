@@ -24,7 +24,7 @@ async function reload(type, side = "main") {
 		//"https://live.neos360.com/apical/test/apicam/assets/config/config.json"
 	);
 	const { json, serveur } = await response.json();
-	console.log("je refresh");
+
 	let urlImg = "";
 	if (serveur.isProd === false) {
 		urlImg = serveur.urlDev + json.images;
