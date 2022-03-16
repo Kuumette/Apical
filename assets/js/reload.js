@@ -21,9 +21,10 @@ async function reload(type, side = "main") {
 	const response = await fetch(
 		//"https://live.neos360.com/eso/paranal/apicam/assets/config/config.json"
 		"http://127.0.0.1:5502/assets/config/config.json"
+		//"https://live.neos360.com/apical/test/apicam/assets/config/config.json"
 	);
 	const { json, serveur } = await response.json();
-
+	console.log("je refresh");
 	let urlImg = "";
 	if (serveur.isProd === false) {
 		urlImg = serveur.urlDev + json.images;

@@ -26,13 +26,19 @@ function loadView(type, side, displayImage, brightness, contrast) {
 
 	/** Si c'est lastImage ou lastSubstractionImage alors */
 	if (type === "lastImage" || type === "lastSubstractionImage") {
-		let tmp = new Date();
+		// let tmp = new Date();
+		// html = `
+		// 	<div id="center-${side}" style="display: ${getItem(`display-${side}`)}"></div>
+		// 	<img src="${
+		// 		displayImage[type].img + "?" + tmp.getTime()
+		// 	}" alt="description" id="img" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
+		// `;
 		html = `
 			<div id="center-${side}" style="display: ${getItem(`display-${side}`)}"></div>
 			<img src="${
-				displayImage[type].img + "?" + tmp.getTime()
+				displayImage[type].img
 			}" alt="description" id="img" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
-    	`;
+    	 `;
 		// Les informations sont necessaire que pour les images
 
 		INFO_IMG.innerHTML = infoImg;
@@ -57,13 +63,20 @@ function loadView(type, side, displayImage, brightness, contrast) {
 		type === "lastAnimation" ||
 		type === "lastSubstractionAnimation"
 	) {
-		let tmp = new Date();
-		/** Sinon c'est une vidéo */
+		// let tmp = new Date();
+		// /** Sinon c'est une vidéo */
+		// html = `
+		// 	<div id="center" style="display: ${getItem(`display-${side}`)}"></div>
+
+		// 	<video src="${
+		// 		displayImage[type].img + "?" + tmp.getTime()
+		// 	}" autoplay preload controls loop class="video-js"></video>
+		// `;
 		html = `
 			<div id="center" style="display: ${getItem(`display-${side}`)}"></div>
 
 			<video src="${
-				displayImage[type].img + "?" + tmp.getTime()
+				displayImage[type].img
 			}" autoplay preload controls loop class="video-js"></video>
 		`;
 		// j'efface les informations pour les vidéos
@@ -80,11 +93,14 @@ function loadView(type, side, displayImage, brightness, contrast) {
 		}
 		/** Si c'est attenuation alors */
 	} else if (type === "attenuation") {
-		let tmp = new Date();
+		// let tmp = new Date();
+		// html = `
+		// 	<img src="${
+		// 		displayImage[type].img + "?" + tmp.getTime()
+		// 	}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(1) contrast(1) !important;"/>
+		// `;
 		html = `
-			<img src="${
-				displayImage[type].img + "?" + tmp.getTime()
-			}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(1) contrast(1) !important;"/>
+			<img src="${displayImage[type].img}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(1) contrast(1) !important;"/>
     	`;
 		// Les informations sont necessaire que pour les images
 
@@ -103,11 +119,14 @@ function loadView(type, side, displayImage, brightness, contrast) {
 		}
 		/** Si c'est panorama alors */
 	} else if (type === "panorama") {
-		let tmp = new Date();
+		// let tmp = new Date();
+		// html = `
+		// 	<img src="${
+		// 		displayImage[type].img + "?" + tmp.getTime()
+		// 	}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
+		// `;
 		html = `
-			<img src="${
-				displayImage[type].img + "?" + tmp.getTime()
-			}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
+			<img src="${displayImage[type].img}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) !important;"/>
     	`;
 		// Les informations sont necessaire que pour les images
 

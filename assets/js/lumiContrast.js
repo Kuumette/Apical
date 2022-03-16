@@ -1,6 +1,6 @@
 const BRIGHTNESS = document.querySelectorAll(".rangeBrightness");
 const CONTRASTS = document.querySelectorAll(".rangeContrast");
-//const BUTTON = document.querySelectorAll("#niveau1");
+
 /** La fonction init() provient de utils.js et permet d'initialiser le localStorage */
 
 init();
@@ -11,10 +11,13 @@ BRIGHTNESS.forEach((range) => {
 	range.addEventListener("change", () => {
 		// Je récupère la valeur de l'élément
 		setItem(`brightness-${range.id}`, range.value);
+		console.log(`brightness-${range.id}`, range.value);
 		// synchronisation des valeurs
 		synchro(range);
+		console.log(range);
 		// Je reload l'image
 		reload(getItem(`type-${range.id}`), range.id);
+		console.log(getItem(`type-${range.id}`), range.id);
 	});
 	// J'initialise la valeur de l'élément
 	range.setAttribute("value", getItem(`brightness-${range.id}`, range.value));
