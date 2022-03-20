@@ -20,8 +20,8 @@ async function reload(type, side = "main") {
 	/** Je fetch les information dont j'ai besoins */
 	const response = await fetch(
 		//"https://live.neos360.com/eso/paranal/apicam/assets/config/config.json"
-		"http://127.0.0.1:5502/assets/config/config.json"
-		//"https://live.neos360.com/apical/test/apicam/assets/config/config.json"
+		//"http://127.0.0.1:5502/assets/config/config.json"
+		"https://live.neos360.com/apical/test/apicam/assets/config/config.json"
 	);
 	const { json, serveur } = await response.json();
 
@@ -52,7 +52,8 @@ async function reload(type, side = "main") {
 		side,
 		displayImage,
 		getItem(`brightness-${side}`),
-		getItem(`contrast-${side}`)
+		getItem(`contrast-${side}`),
+		getItem(`invert-${side}`)
 	);
 	if (type === "lastImage" || type === "lastSubstractionImage") {
 		const viewCoords = loadCoords(tcs.img, side);
@@ -72,7 +73,8 @@ async function reload(type, side = "main") {
 				addFilter(
 					img,
 					getItem(`brightness-${side}`),
-					getItem(`contrast-${side}`)
+					getItem(`contrast-${side}`),
+					getItem(`invert-${side}`)
 				);
 			}
 		});
@@ -82,27 +84,28 @@ async function reload(type, side = "main") {
 	const refresh = json.timer;
 	let refreshEnabled = document.querySelector(`#${side} #checkbox-${side}`);
 	let refreshTime = null;
-
 	/** Get event if button changed */
-	refreshEnabled.addEventListener("change", function () {
-		if (refreshEnabled.checked) {
-			refreshTime = setInterval(() => {
-				loadView(
-					getItem(`type-${side}`),
-					side,
-					displayImage,
-					getItem(`brightness-${side}`),
-					getItem(`contrast-${side}`)
-				);
+	//refreshEnabled.addEventListener("change", function () {
+	if (refreshEnabled.checked) {
+		refreshTime = setInterval(() => {
+			console.log("ok");
+			loadView(
+				getItem(`type-${side}`),
+				side,
+				displayImage,
+				getItem(`brightness-${side}`),
+				getItem(`contrast-${side}`),
+				getItem(`invert-${side}`)
+			);
 
-				loadCoords(tcs.img, side);
-			}, refresh);
-		} else {
-			clearInterval(refreshTime);
-		}
-	});
+			loadCoords(tcs.img, side);
+		}, 60000);
+	} else {
+		clearInterval(refreshTime);
+	}
+	//}
+	//);
 }
-
 const SIDES = document.querySelectorAll(".side");
 
 if (SIDES.length === 0) {

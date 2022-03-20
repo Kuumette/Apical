@@ -1,6 +1,9 @@
 * {
 	font-size: 1.5vh;
 }
+small {
+	opacity: 0;
+}
 html {
 	height: 100%;
 	width: 100%;
@@ -16,14 +19,14 @@ html {
 }
 .reglage {
 	display: block;
-	width: 50%;
 	font-size: 18px;
 	position: fixed;
-
 	left: 0%;
 	z-index: 2;
 	margin-top: 3%;
+	background-color: rgba(0, 0, 0, 0.712);
 }
+
 #contrast {
 	margin-right: 1.9%;
 }
@@ -45,7 +48,7 @@ span {
 
 #auto {
 	display: block;
-
+	opacity: 0;
 	font-size: 18px;
 	position: fixed;
 	z-index: 2;
@@ -92,6 +95,9 @@ label {
 	width: 100%;
 	height: 100%;
 }
+#img {
+	border-radius: 100%;
+}
 body {
 	background-color: black;
 	width: 100%;
@@ -124,6 +130,9 @@ body {
 p {
 	color: #f0f0f0;
 }
+/* #img {
+	filter: invert(1) !important;
+} */
 @media only screen and (max-width: 499px) and (min-width: 250px) {
 	#img,
 	#imgAttenuation {
@@ -163,6 +172,11 @@ p {
 	#brightness {
 		margin-left: 2%;
 	}
+	#invert {
+		margin-left: 7.8%;
+		margin-top: 10%;
+		border: 1px solid red;
+	}
 	#overlay {
 		max-width: 100%;
 		margin-left: 0%;
@@ -180,6 +194,7 @@ p {
 	#menu {
 		bottom: 27%;
 		left: -8%;
+		border: 1px solid red;
 	}
 }
 @media only screen and (max-width: 699px) and (min-width: 500px) {
@@ -201,24 +216,28 @@ p {
 	}
 	nav {
 		width: 32%;
-		top: 75%;
-		left: 65%;
+		top: 80%;
+		left: 60%;
 	}
 	#last {
 		width: 129.5%;
 		left: -35%;
-		margin-top: 6%;
+		margin-top: 1%;
 	}
 	#auto {
 		width: 120%;
-		left: -27%;
+		left: -0%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 5.8%;
+		margin-left: 0%;
 	}
 	#brightness {
-		margin-left: 2%;
+		margin-left: 0%;
+	}
+	#invert {
+		margin-left: 0%;
+		margin-top: 10%;
 	}
 	#overlay {
 		max-width: 100%;
@@ -226,7 +245,7 @@ p {
 		margin-top: 0%;
 	}
 	.reglage {
-		top: 70%;
+		top: 75%;
 	}
 	#infoImg {
 		left: 25%;
@@ -235,8 +254,8 @@ p {
 		width: 80%;
 	}
 	#menu {
-		bottom: 22%;
-		left: -5%;
+		margin-top: -12%;
+		left: -19%;
 	}
 }
 @media only screen and (max-width: 899px) and (min-width: 700px) {
@@ -258,24 +277,28 @@ p {
 	}
 	nav {
 		width: 32%;
-		top: 90%;
-		left: 68%;
+		top: 95%;
+		left: 65%;
 	}
 	#last {
 		width: 129.5%;
 		left: -35%;
-		margin-top: 5%;
+		margin-top: 1%;
 	}
 	#auto {
 		width: 120%;
-		left: -27%;
+		left: 0%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 5.8%;
+		margin-left: 0%;
 	}
 	#brightness {
-		margin-left: 2%;
+		margin-left: 0%;
+	}
+	#invert {
+		margin-left: 0%;
+		margin-top: 10%;
 	}
 	#overlay {
 		max-width: 95%;
@@ -284,6 +307,7 @@ p {
 	}
 	.reglage {
 		top: 88%;
+		left: 2.5%;
 	}
 	#infoImg {
 		left: 30%;
@@ -292,56 +316,61 @@ p {
 		width: 80%;
 	}
 	#menu {
-		bottom: 2%;
-		left: -4.5%;
+		bottom: 4%;
+		left: -13%;
 	}
 }
 /* Pour ordinateurs portables */
 @media only screen and (max-width: 1100px) and (min-width: 899px) {
 	#img,
 	#imgAttenuation {
-		max-width: 50%;
+		max-width: 70%;
 	}
 	#date {
-		margin-top: 6%;
-		margin-left: -35%;
+		margin-top: 4%;
+		margin-left: -18%;
 	}
 	#heure {
-		margin-top: 8.5%;
-		margin-left: -35%;
+		margin-top: 6.5%;
+		margin-left: -18%;
 	}
 	#name {
-		margin-top: 11%;
-		margin-left: -35%;
+		margin-top: 9%;
+		margin-left: -18%;
 	}
 	nav {
 		width: 28%;
-		top: 90%;
-		left: 70%;
+		top: 92%;
+		left: 60%;
 	}
 	#last {
 		width: 117.2%;
-		left: -25%;
-		margin-top: 4%;
+		right: 17%;
+		margin-top: 1%;
 	}
 	#auto {
 		width: 108%;
-		left: -17.3%;
+		left: -10.3%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 10.8%;
+		margin-left: 0%;
 	}
 	#brightness {
-		margin-left: 8%;
+		margin-left: 0%;
+	}
+	#invert {
+		margin-left: 0%;
+		margin-top: 10%;
 	}
 	#overlay {
-		max-width: 50%;
+		max-width: 70%;
 		margin-left: 0%;
 		margin-top: 0%;
 	}
 	.reglage {
-		top: 88%;
+		top: 85.5%;
+		left: 15%;
 	}
 	#infoImg {
 		left: 30%;
@@ -350,37 +379,37 @@ p {
 		width: 50%;
 	}
 	#menu {
-		bottom: 1%;
-		left: -1%;
+		bottom: 2%;
+		left: 2%;
 	}
 }
 @media only screen and (max-width: 1300px) and (min-width: 1099px) {
 	#img,
 	#imgAttenuation {
-		max-width: 46%;
+		max-width: 60%;
 		/* border: 1px red solid; */
 	}
 	#date {
 		margin-top: 3%;
-		margin-left: -30%;
+		margin-left: -10%;
 	}
 	#heure {
 		margin-top: 5.5%;
-		margin-left: -30%;
+		margin-left: -10%;
 	}
 	#name {
 		margin-top: 8%;
-		margin-left: -30%;
+		margin-left: -10%;
 	}
 	nav {
 		width: 23.5%;
-		top: 90%;
-		left: 75%;
+		top: 95%;
+		left: 60%;
 	}
 	#last {
 		width: 117%;
-		left: -22%;
-		margin-top: 3.5%;
+		right: 22%;
+		margin-top: 1%;
 	}
 	#auto {
 		width: 108%;
@@ -388,18 +417,23 @@ p {
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 13%;
+		margin-left: 0%;
 	}
 	#brightness {
-		margin-left: 10%;
+		margin-left: 0%;
+	}
+	#invert {
+		margin-left: 0%;
+		margin-top: 10%;
 	}
 	#overlay {
-		max-width: 46%;
+		max-width: 60%;
 		margin-left: 0%;
 		margin-top: 0%;
 	}
 	.reglage {
 		top: 86%;
+		left: 20%;
 	}
 	#infoImg {
 		left: 28%;
@@ -408,37 +442,37 @@ p {
 		width: 46%;
 	}
 	#menu {
-		bottom: 1%;
-		left: 0.4%;
+		bottom: 4%;
+		left: 8.5%;
 	}
 }
 /* Pour les grands écrans */
 @media only screen and (max-width: 1500px) and (min-width: 1299px) {
 	#img,
 	#imgAttenuation {
-		max-width: 40%;
+		max-width: 60%;
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: -30%;
+		margin-left: -10%;
 	}
 	#heure {
 		margin-top: 4%;
-		margin-left: -30%;
+		margin-left: -10%;
 	}
 	#name {
 		margin-top: 6%;
-		margin-left: -30%;
+		margin-left: -10%;
 	}
 	nav {
 		width: 20.5%;
 		top: 90%;
-		left: 78%;
+		left: 62%;
 	}
 	#last {
 		width: 110.9%;
-		left: -15%;
-		margin-top: 3.5%;
+		right: 22%;
+		margin-top: 1%;
 	}
 	#auto {
 		width: 102%;
@@ -446,18 +480,23 @@ p {
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 12.8%;
+		margin-left: 0%;
 	}
 	#brightness {
-		margin-left: 10%;
+		margin-left: 0%;
+	}
+	#invert {
+		margin-left: 0%;
+		margin-top: 10%;
 	}
 	#overlay {
-		max-width: 40%;
+		max-width: 60%;
 		margin-left: 0%;
 		margin-top: 0%;
 	}
 	.reglage {
 		top: 84%;
+		left: 20%;
 	}
 	#infoImg {
 		left: 28%;
@@ -466,37 +505,37 @@ p {
 		width: 40%;
 	}
 	#menu {
-		bottom: 0%;
-		left: 0.7%;
+		bottom: 5%;
+		left: 9.7%;
 	}
 }
 
 @media only screen and (max-width: 1700px) and (min-width: 1499px) {
 	#img,
 	#imgAttenuation {
-		max-width: 40%;
+		max-width: 55%;
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: -20%;
+		margin-left: -5%;
 	}
 	#heure {
 		margin-top: 4%;
-		margin-left: -20%;
+		margin-left: -5%;
 	}
 	#name {
 		margin-top: 6%;
-		margin-left: -20%;
+		margin-left: -5%;
 	}
 	nav {
 		width: 18.5%;
 		top: 90%;
-		left: 70%;
+		left: 60%;
 	}
 	#last {
 		width: 110.8%;
-		left: -25%;
-		margin-top: 3%;
+		right: 25%;
+		margin-top: 1%;
 	}
 	#auto {
 		width: 102%;
@@ -504,18 +543,23 @@ p {
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 30.8%;
+		margin-left: 0%;
 	}
 	#brightness {
-		margin-left: 28.3%;
+		margin-left: 0%;
+	}
+	#invert {
+		margin-left: 0%;
+		margin-top: 10%;
 	}
 	#overlay {
-		max-width: 40%;
+		max-width: 55%;
 		margin-left: 0%;
 		margin-top: 0%;
 	}
 	.reglage {
 		top: 85%;
+		left: 22.5%;
 	}
 	#infoImg {
 		left: 28%;
@@ -524,8 +568,8 @@ p {
 		width: 40%;
 	}
 	#menu {
-		bottom: -3%;
-		left: 10%;
+		bottom: 3%;
+		left: 12.5%;
 	}
 }
 @media only screen and (max-width: 1900px) and (min-width: 1699px) {
@@ -548,7 +592,7 @@ p {
 	nav {
 		width: 16%;
 		top: 90%;
-		left: 65%;
+		left: 67%;
 	}
 	#last {
 		width: 103.7%;
@@ -561,10 +605,14 @@ p {
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 40.5%;
+		margin-left: 0%;
 	}
 	#brightness {
-		margin-left: 38.5%;
+		margin-left: 0%;
+	}
+	#invert {
+		margin-left: 0%;
+		margin-top: 10%;
 	}
 	#overlay {
 		max-width: 65%;
@@ -573,6 +621,7 @@ p {
 	}
 	.reglage {
 		top: 85%;
+		left: 17.5%;
 	}
 	#infoImg {
 		left: 25%;
@@ -582,10 +631,11 @@ p {
 		/* border: 1px red solid; */
 	}
 	#menu {
-		bottom: -3%;
-		left: 15%;
+		bottom: 1%;
+		left: 8.5%;
 	}
 }
+/* Pour mon ecran */
 @media only screen and (max-width: 2200px) and (min-width: 1899px) {
 	#img,
 	#imgAttenuation {
@@ -593,37 +643,39 @@ p {
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: -5%;
+		margin-left: -0%;
 	}
 	#heure {
 		margin-top: 3.5%;
-		margin-left: -5%;
+		margin-left: -0%;
 	}
 	#name {
 		margin-top: 5%;
-		margin-left: -5%;
+		margin-left: -0%;
 	}
 	nav {
 		width: 16%;
-		top: 90%;
-		left: 70%;
+		top: 95%;
+		left: 63%;
 	}
 	#last {
 		width: 103.7%;
-		left: -25%;
-		margin-top: 3%;
+		left: -29%;
+		margin-top: 1%;
 	}
 	#auto {
 		width: 95%;
-		left: -17%;
+		left: -0%;
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 36.6%;
+		margin-left: 0%;
 	}
 	#brightness {
-		margin-left: 35%;
-		margin-top: 10%;
+		margin-left: 0%;
+	}
+	#invert {
+		margin-left: 0%;
 	}
 	#overlay {
 		max-width: 55%;
@@ -632,6 +684,7 @@ p {
 	}
 	.reglage {
 		top: 85%;
+		left: 22.5%;
 	}
 	#infoImg {
 		left: 25%;
@@ -641,39 +694,39 @@ p {
 	}
 	#menu {
 		bottom: 2%;
-		left: 13.5%;
+		left: 13.8%;
 	}
 }
-@media only screen and (max-width: 5000px) and (min-width: 2199px) {
+@media only screen and (max-width: 6000px) and (min-width: 2199px) {
 	#img,
 	#imgAttenuation {
 		max-width: 50%;
 	}
 	#date {
 		margin-top: 2%;
-		margin-left: 10%;
+		margin-left: 5%;
 	}
 	#heure {
 		margin-top: 3.5%;
-		margin-left: 10%;
+		margin-left: 5%;
 	}
 	#name {
 		margin-top: 5%;
-		margin-left: 10%;
+		margin-left: 5%;
 	}
 	nav {
 		width: 16%;
 		top: 94%;
-		left: 58%;
+		left: 62%;
 	}
 	#last {
 		width: 103.6%;
-		left: -35%;
-		margin-top: 2.5%;
+		left: -32%;
+		margin-top: 1%;
 	}
 	#auto {
 		width: 95%;
-		left: -27%;
+		left: 50%;
 		margin-top: 1%;
 	}
 	#const {
@@ -685,13 +738,17 @@ p {
 		margin-top: 0%;
 	}
 	#const {
-		margin-left: 58.8%;
+		margin-left: 0%;
 	}
 	#brightness {
-		margin-left: 57.3%;
+		margin-left: 0%;
+	}
+	#invert {
+		margin-left: 0%;
 	}
 	.reglage {
-		top: 85%;
+		top: 83%;
+		left: 25%;
 	}
 	#infoImg {
 		left: 23%;
@@ -700,8 +757,7 @@ p {
 		width: 50%;
 	}
 	#menu {
-		bottom: -5%;
-		/* border: 1px solid red; */
-		left: 25%;
+		margin-top: -1%;
+		left: 17.5%;
 	}
 }

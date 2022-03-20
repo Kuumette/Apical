@@ -4,17 +4,18 @@ let temps,
 let display = document.getElementById("reglage");
 let toogle = document.getElementById("d2");
 let display1 = document.getElementById("nav");
-//let display2 = document.getElementById("auto");
+let menu = document.getElementById("menu");
 
 function resetTemps() {
 	document.querySelector(".delai").style.display = "none";
 	clearInterval(temps);
 	secondes = 0;
 	//5000
-	temps = setInterval(startTemps, 5000);
+	temps = setInterval(startTemps, 500000);
 	display.style.opacity = "1";
 	toogle.style.opacity = "1";
 	display1.style.opacity = "1";
+	menu.style.opacity = "1";
 }
 
 window.onload = resetTemps;
@@ -31,4 +32,5 @@ function startTemps() {
 	display.style.opacity = "0";
 	toogle.style.opacity = "0";
 	display1.style.opacity = "0";
+	menu.style.opacity = "0";
 }

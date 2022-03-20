@@ -63,6 +63,38 @@
 				<!-- Fin toggle overlay -->
 				<div id="infoImg" class="leftInfo"></div>
 				<div id="content" class="left"></div>
+				<div id="menuLeft">
+					<div id="menuD">
+						<ul>
+							<li class="menuDeroulant">
+								<a href="#" id="menuDisplay">Display</a>
+								<ul class="sousMenuDisplay">
+									<li>
+										<a
+											href="#"
+											class="btnDisplay"
+											id="default"
+											>Default</a
+										>
+									</li>
+									<li>
+										<a
+											href="#"
+											class="btnDisplay"
+											id="invertDefault"
+											>Invert</a
+										>
+									</li>
+									<li>
+										<a href="#" class="btnDisplay" id="user"
+											>User</a
+										>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
 				<div
 					id="leftNav"
 					class="d-flex flex-row-reverse bd-highlight nav"
@@ -173,7 +205,41 @@
 				<!-- Fin toggle overlay -->
 				<div id="infoImg" class="rightInfo"></div>
 				<div id="content" class="right"></div>
-
+				<div id="menuRight">
+					<div id="menuD">
+						<ul>
+							<li class="menuDeroulant">
+								<a href="#" id="menuDisplay">Display</a>
+								<ul class="sousMenuDisplay">
+									<li>
+										<a
+											href="#"
+											class="btnDisplay"
+											id="defaultRight"
+											>Default</a
+										>
+									</li>
+									<li>
+										<a
+											href="#"
+											class="btnDisplay"
+											id="invertDefaultRight"
+											>Invert</a
+										>
+									</li>
+									<li>
+										<a
+											href="#"
+											class="btnDisplay"
+											id="userRight"
+											>User</a
+										>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
 				<div
 					id="rightNav"
 					class="d-flex flex-row-reverse bd-highlight nav"
@@ -252,7 +318,7 @@
 						<input
 							type="range"
 							name="amountRange"
-							class="rangeBrightness"
+							class="rangeBrightness bLeft"
 							id="leftSide"
 							min="0"
 							max="5"
@@ -286,6 +352,26 @@
 							id="leftSide"
 							min="0"
 							max="5"
+							step="0.10"
+						/>
+					</div>
+					<div id="invertFormGauche">
+						<span id="invert"> Invert</span>
+						<input
+							type="range"
+							name="amountRange"
+							class="rangeInvert"
+							id="leftSide"
+							min="0"
+							max="1"
+							step="0.10"
+						/>
+						<input
+							type="number"
+							class="rangeInvert"
+							id="leftSide"
+							min="0"
+							max="1"
 							step="0.10"
 						/>
 					</div>
@@ -338,12 +424,32 @@
 							step="0.10"
 						/>
 					</div>
+					<div id="invertFormDroite">
+						<span id="invert"> Invert</span>
+						<input
+							type="range"
+							name="amountRange"
+							class="rangeInvert"
+							id="rightSide"
+							min="0"
+							max="1"
+							step="0.10"
+						/>
+						<input
+							type="number"
+							class="rangeInvert"
+							id="rightSide"
+							min="0"
+							max="1"
+							step="0.10"
+						/>
+					</div>
 				</div>
 			</div>
 		</footer>
 
 		<!-- **** SCRIPTS **** -->
-		<script src="./assets/js/utils.js"></script>
+		<script src="./assets/js/utilsDouble.js"></script>
 		<script src="./assets/js/Components/loadView.js"></script>
 		<script src="./assets/js/Components/loadCoords.js"></script>
 		<script src="./assets/js/lumiContrast.js"></script>

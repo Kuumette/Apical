@@ -45,7 +45,12 @@
 					<div class="d-flex flex-row-reverse bd-highlight" id="auto">
 						<div class="bd-highlight">
 							<label class="switch" for="checkbox-main">
-								<input type="checkbox" id="checkbox-main" />
+								<input
+									type="checkbox"
+									id="checkbox-main"
+									checked
+								/>
+
 								<div class="slider round"></div>
 							</label>
 							<p id="autoRefresh">Auto refresh</p>
@@ -62,67 +67,112 @@
 		</main>
 		<footer>
 			<!-- Input luminosité & contrast -->
-
-			<ul id="menu">
-				<li>
-					<a href="#">Réglage</a>
+			<div id="menu">
+				<div id="menuD">
 					<ul>
-						<li><a href="#" id="default">default</a></li>
-						<li><a href="#" id="reglage1">reglage 1</a></li>
+						<li class="menuDeroulant">
+							<a href="#" id="menuDisplay">Display</a>
+							<ul class="sousMenuDisplay">
+								<li>
+									<a href="#" class="btnDisplay" id="default"
+										>Default</a
+									>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="btnDisplay"
+										id="invertDefault"
+										>Invert</a
+									>
+								</li>
+								<li>
+									<a href="#" class="btnDisplay" id="user"
+										>User</a
+									>
+								</li>
+							</ul>
+						</li>
 					</ul>
-				</li>
-			</ul>
-
-			<div class="reglage" id="reglage">
-				<div>
-					<div id="brightnessForm">
-						<span id="brightness">Brightness</span>
-						<input
-							type="range"
-							name="amountRange"
-							id="main"
-							min="0"
-							max="5"
-							step="0.10"
-							class="rangeBrightness"
-						/>
-						<input
-							type="number"
-							name="amountInput"
-							id="main"
-							min="0"
-							max="5"
-							step="0.10"
-							class="rangeBrightness"
-						/>
-					</div>
 				</div>
+			</div>
+			<div class="reglage" id="reglage">
+				<div id="inputRange">
+					<div>
+						<div id="brightnessForm">
+							<span id="brightness">Brightness </span>
+							<input
+								type="range"
+								name="amountRange"
+								id="main"
+								min="0"
+								max="5"
+								step="0.10"
+								class="rangeBrightness"
+							/>
+							<input
+								type="number"
+								name="amountInput"
+								id="main"
+								min="0"
+								max="5"
+								step="0.10"
+								class="rangeBrightness"
+							/>
+						</div>
+					</div>
 
-				<div>
-					<div id="contrastForm">
-						<span id="const">Contrast</span>
-						<input
-							type="range"
-							name="amountRange"
-							id="main"
-							min="0"
-							max="5"
-							step="0.10"
-							class="rangeContrast"
-						/>
-						<input
-							class="rangeContrast"
-							type="number"
-							name="amountInput"
-							id="main"
-							min="0"
-							max="5"
-							step="0.10"
-						/>
+					<div>
+						<div id="contrastForm">
+							<span id="const">Contrast <small>---</small></span>
+							<input
+								type="range"
+								name="amountRange"
+								id="main"
+								min="0"
+								max="5"
+								step="0.10"
+								class="rangeContrast"
+							/>
+							<input
+								class="rangeContrast"
+								type="number"
+								name="amountInput"
+								id="main"
+								min="0"
+								max="5"
+								step="0.10"
+							/>
+						</div>
+					</div>
+
+					<div>
+						<div id="invertForm">
+							<span id="invert"
+								>Invert <small>-------</small></span
+							>
+							<input
+								type="range"
+								name="amountRange"
+								id="main"
+								min="0"
+								max="1"
+								step="0.10"
+								class="rangeInvert"
+							/>
+							<input
+								class="rangeInvert"
+								type="number"
+								name="amountInput"
+								id="main"
+								min="0"
+								max="1"
+								step="0.10"
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
-
 			<!-- Fin input luminosité & contrast -->
 
 			<div id="nav">
@@ -198,6 +248,11 @@
 		<script src="./assets/js/single_view/inactivite.js"></script>
 		<script src="./assets/js/panzoom.min.js"></script>
 		<script src="./assets/js/single_view/index.js" defer></script>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
 		<script>
 			const area = document.querySelector("#content");
 			if (window.innerWidth > 499) {
