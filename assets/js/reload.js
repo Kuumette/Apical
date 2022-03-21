@@ -21,8 +21,8 @@ async function reload(type, side = "main") {
 	/** Je fetch les information dont j'ai besoins */
 	const response = await fetch(
 		//"https://live.neos360.com/eso/paranal/apicam/assets/config/config.json"
-		//"http://127.0.0.1:5502/assets/config/config.json"
-		"https://live.neos360.com/apical/test/apicam/assets/config/config.json"
+		"http://127.0.0.1:5502/assets/config/config.json"
+		//"https://live.neos360.com/apical/test/apicam/assets/config/config.json"
 	);
 	const { json, serveur } = await response.json();
 
@@ -89,7 +89,7 @@ async function reload(type, side = "main") {
 	clearInterval(refreshTime);
 	if (refreshEnabled.checked) {
 		refreshTime = setInterval(() => {
-			console.log("refrsh");
+			//console.log("refrsh");
 			let refreshEnabled = document.querySelector(
 				`#${side} #checkbox-${side}`
 			);
