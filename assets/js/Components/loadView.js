@@ -134,7 +134,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 		html = `
 			<img src="${
 				displayImage[type].img + "?" + tmp.getTime()
-			}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) invert(${invert}) !important;"/>
+			}" alt="description" id="imgPanorama" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) invert(${invert}) !important;"/>
 		`;
 		// html = `
 		// 	<img src="${displayImage[type].img}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast} invert(${invert})) !important;"/>
