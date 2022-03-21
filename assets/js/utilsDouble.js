@@ -9,6 +9,8 @@ const valueContrastLeft = document.querySelector(".cLeft");
 const valueContrastRight = document.querySelector(".cRight");
 const valueInvertLeft = document.querySelector(".iLeft");
 const valueInvertRight = document.querySelector(".iRight");
+const displayRight = document.querySelector("#reglageDroite");
+const displayLeft = document.querySelector("#reglageGauche");
 
 function init() {
 	localStorage.setItem("init", "1");
@@ -16,6 +18,9 @@ function init() {
 	localStorage.setItem("display-rightSide", "none");
 	localStorage.setItem("type-leftSide", "lastImage");
 	localStorage.setItem("type-rightSide", "lastSubstractionImage");
+
+	displayRight.style.opacity = "0";
+	displayLeft.style.opacity = "0";
 }
 init();
 /** Permet d'avoir le localStorage plus rapidement */
@@ -38,6 +43,7 @@ document.querySelector("#default").addEventListener("click", function () {
 	localStorage.setItem("brightness-leftSide", "1");
 	localStorage.setItem("contrast-leftSide", "1");
 	localStorage.setItem("invert-leftSide", "0");
+	displayLeft.style.opacity = "0";
 
 	location.reload();
 });
@@ -46,6 +52,7 @@ document.querySelector("#defaultRight").addEventListener("click", function () {
 	localStorage.setItem("brightness-rightSide", "1");
 	localStorage.setItem("contrast-rightSide", "1");
 	localStorage.setItem("invert-rightSide", "0");
+	displayRight.style.opacity = "0";
 
 	location.reload();
 });
@@ -55,6 +62,7 @@ document.querySelector("#invertDefault").addEventListener("click", function () {
 	localStorage.setItem("brightness-leftSide", "1");
 	localStorage.setItem("contrast-leftSide", "1");
 	localStorage.setItem("invert-leftSide", "1");
+	displayLeft.style.opacity = "0";
 
 	location.reload();
 });
@@ -65,6 +73,7 @@ document
 		localStorage.setItem("brightness-rightSide", "1");
 		localStorage.setItem("contrast-rightSide", "1");
 		localStorage.setItem("invert-rightSide", "1");
+		displayRight.style.opacity = "0";
 		location.reload();
 	});
 
@@ -73,14 +82,15 @@ document.querySelector("#user").addEventListener("click", function () {
 	localStorage.setItem("brightness-main", valueBritnessLeft.value);
 	localStorage.setItem("contrast-main", valueContrastLeft.value);
 	localStorage.setItem("invert-main", valueInvertLeft.value);
+	displayLeft.style.opacity = "1";
 
-	location.reload();
+	reload();
 });
 document.querySelector("#userRight").addEventListener("click", function () {
 	localStorage.setItem("userRight", "1");
 	localStorage.setItem("brightness-main", valueBritnessRight.value);
 	localStorage.setItem("contrast-main", valueContrastRight.value);
 	localStorage.setItem("invert-main", valueInvertRight.value);
-
-	location.reload();
+	displayRight.style.opacity = "1";
+	reload();
 });

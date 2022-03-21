@@ -24,8 +24,10 @@ html {
 	position: fixed;
 	left: 0%;
 	z-index: 98;
-	margin-top: 3%;
-	background-color: rgba(0, 0, 0, 0.712);
+	margin-top: 4%;
+	padding: 0.5%;
+	background-color: rgba(0, 0, 0, 0.5);
+	border: 2px solid white;
 }
 
 #contrast {
@@ -189,7 +191,6 @@ p {
 	}
 	.reglage {
 		top: 70%;
-		border: 1px solid red;
 	}
 	#infoImg {
 		left: 25%;
@@ -689,8 +690,8 @@ p {
 		margin-top: 0%;
 	}
 	.reglage {
-		top: 75%;
-		left: 20%;
+		top: 82%;
+		left: 43%;
 	}
 	#infoImg {
 		left: 25%;
@@ -765,6 +766,5 @@ p {
 	#menu {
 		margin-top: 2.5%;
 		left: 22%;
-		border: 1px solid red;
 	}
 }

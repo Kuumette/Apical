@@ -18,7 +18,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 	const MENURIGHT = document.querySelector("#menuRight");
 	const REGLAGE = document.querySelector(".reglage");
 	let html = "";
-
+	console.log("je reload la vue");
 	// J'insere les information reçu depuis displayImage pour l'insérer dans le DOM
 	const infoImg = `
   <p id="date">${displayImage[type].date}</p>

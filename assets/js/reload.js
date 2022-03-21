@@ -24,6 +24,7 @@ async function reload(type, side = "main") {
 		"http://127.0.0.1:5502/assets/config/config.json"
 		//"https://live.neos360.com/apical/test/apicam/assets/config/config.json"
 	);
+	console.log("je reload");
 	const { json, serveur } = await response.json();
 
 	let urlImg = "";
@@ -77,6 +78,7 @@ async function reload(type, side = "main") {
 					getItem(`contrast-${side}`),
 					getItem(`invert-${side}`)
 				);
+				addCoord(img, getItem(`display-${side}`, "block"));
 			}
 		});
 	}

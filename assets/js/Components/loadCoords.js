@@ -3,7 +3,7 @@ function loadCoords(img, side) {
 	const CENTER = document.querySelector(`#center-${side}`);
 	const TOGGLE_COORDS = document.querySelector(`#checkbox_coord-${side}`);
 	const HTML = `<img src="${img}" alt="overlay" id="overlay" />`;
-
+	console.log("je reload les coords");
 	/**
 	 * Toggle buttons for coordinates
 	 */
