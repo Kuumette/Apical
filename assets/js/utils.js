@@ -10,7 +10,7 @@ const valueContrastMain = document.querySelector(".rangeContrast");
 const valueInvertMain = document.querySelector(".rangeInvert");
 
 function init() {
-	//localStorage.setItem("init", "1");
+	localStorage.setItem("init", "1");
 	localStorage.setItem("display-main", "block");
 	localStorage.setItem("type-main", "lastImage");
 
@@ -32,12 +32,12 @@ function setItem(item, value) {
 function addFilter(img, brightness, contrast, invert) {
 	img.style.filter = `brightness(${brightness}) contrast(${contrast}) invert(${invert})`;
 }
-function addCoord(img) {
+function addCoord() {
 	img.style.display = "block";
 }
 
 document.querySelector("#default").addEventListener("click", function () {
-	//localStorage.setItem("default", "1");
+	localStorage.setItem("default", "1");
 
 	localStorage.setItem("brightness-main", "1");
 	localStorage.setItem("contrast-main", "1");
