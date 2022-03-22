@@ -12,7 +12,7 @@ BRIGHTNESS.forEach((range) => {
 	range.addEventListener("change", () => {
 		// Je récupère la valeur de l'élément
 		setItem(`brightness-${range.id}`, range.value);
-		//console.log(`brightness-${range.id}`, range.value);
+		//console.log(`brightness-${range.id}`, "1");
 		// synchronisation des valeurs
 		synchro(range);
 		//console.log(range);

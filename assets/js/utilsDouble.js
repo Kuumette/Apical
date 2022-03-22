@@ -43,9 +43,13 @@ document.querySelector("#default").addEventListener("click", function () {
 	localStorage.setItem("brightness-leftSide", "1");
 	localStorage.setItem("contrast-leftSide", "1");
 	localStorage.setItem("invert-leftSide", "0");
+
+	localStorage.setItem("brightness-rightSide", valueBritnessRight.value);
+	localStorage.setItem("contrast-rightSide", valueContrastRight.value);
+	localStorage.setItem("invert-rightSide", valueInvertRight.value);
 	displayLeft.style.opacity = "0";
 
-	location.reload();
+	reload();
 });
 document.querySelector("#defaultRight").addEventListener("click", function () {
 	localStorage.setItem("defaultRight", "1");
@@ -54,7 +58,7 @@ document.querySelector("#defaultRight").addEventListener("click", function () {
 	localStorage.setItem("invert-rightSide", "0");
 	displayRight.style.opacity = "0";
 
-	location.reload();
+	reload();
 });
 
 document.querySelector("#invertDefault").addEventListener("click", function () {
@@ -64,7 +68,7 @@ document.querySelector("#invertDefault").addEventListener("click", function () {
 	localStorage.setItem("invert-leftSide", "1");
 	displayLeft.style.opacity = "0";
 
-	location.reload();
+	reload();
 });
 document
 	.querySelector("#invertDefaultRight")
@@ -79,18 +83,18 @@ document
 
 document.querySelector("#user").addEventListener("click", function () {
 	localStorage.setItem("user", "1");
-	localStorage.setItem("brightness-main", valueBritnessLeft.value);
-	localStorage.setItem("contrast-main", valueContrastLeft.value);
-	localStorage.setItem("invert-main", valueInvertLeft.value);
+	localStorage.setItem("brightness-leftSide", valueBritnessLeft.value);
+	localStorage.setItem("contrast-leftSide", valueContrastLeft.value);
+	localStorage.setItem("invert-leftSide", valueInvertLeft.value);
 	displayLeft.style.opacity = "1";
 
 	reload();
 });
 document.querySelector("#userRight").addEventListener("click", function () {
 	localStorage.setItem("userRight", "1");
-	localStorage.setItem("brightness-main", valueBritnessRight.value);
-	localStorage.setItem("contrast-main", valueContrastRight.value);
-	localStorage.setItem("invert-main", valueInvertRight.value);
+	localStorage.setItem("brightness-rightSide", valueBritnessRight.value);
+	localStorage.setItem("contrast-rightSide", valueContrastRight.value);
+	localStorage.setItem("invert-rightSide", valueInvertRight.value);
 	displayRight.style.opacity = "1";
 	reload();
 });

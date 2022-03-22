@@ -33,7 +33,6 @@
 								<input
 									type="checkbox"
 									id="checkbox_coord-main"
-									checked
 								/>
 								<div class="slider round"></div>
 							</label>
@@ -101,7 +100,9 @@
 				<div id="inputRange">
 					<div>
 						<div id="brightnessForm">
-							<span id="brightness">Brightness </span>
+							<span id="brightness"
+								>Brightness<small>i</small>
+							</span>
 							<input
 								type="range"
 								name="amountRange"
@@ -120,6 +121,23 @@
 								step="0.10"
 								class="rangeBrightness"
 							/>
+							<a href="#" id="resetBrightness"
+								><svg
+									xmlns="./ressources/arrow-clockwise.svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-arrow-clockwise"
+									viewBox="0 0 16 16"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+									/>
+									<path
+										d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+									/></svg
+							></a>
 						</div>
 					</div>
 
@@ -144,14 +162,29 @@
 								max="5"
 								step="0.10"
 							/>
+							<a href="#" id="resetContrast"
+								><svg
+									xmlns="./ressources/arrow-clockwise.svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-arrow-clockwise"
+									viewBox="0 0 16 16"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+									/>
+									<path
+										d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+									/></svg
+							></a>
 						</div>
 					</div>
 
 					<div>
 						<div id="invertForm">
-							<span id="invert"
-								>Invert <small>-------</small></span
-							>
+							<span id="invert">Invert <small>azzzz</small></span>
 							<input
 								type="range"
 								name="amountRange"
@@ -170,6 +203,23 @@
 								max="1"
 								step="0.10"
 							/>
+							<a href="#" id="resetInvert"
+								><svg
+									xmlns="./ressources/arrow-clockwise.svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-arrow-clockwise"
+									viewBox="0 0 16 16"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+									/>
+									<path
+										d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+									/></svg
+							></a>
 						</div>
 					</div>
 				</div>

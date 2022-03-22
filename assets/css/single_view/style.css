@@ -13,10 +13,14 @@ html {
 	position: relative;
 	z-index: 8;
 }
+
+svg {
+	color: #f0f0f0;
+}
 #menu {
 	position: fixed;
 	padding-top: 3%;
-	z-index: 99;
+	z-index: 97;
 }
 .reglage {
 	display: block;
@@ -264,6 +268,10 @@ p {
 		margin-top: -3%;
 		left: -8%;
 	}
+	.reglage {
+		top: 75%;
+		left: 28%;
+	}
 }
 @media only screen and (max-width: 899px) and (min-width: 700px) {
 	#img,
@@ -312,10 +320,7 @@ p {
 		margin-left: 0%;
 		margin-top: 0%;
 	}
-	.reglage {
-		top: 78%;
-		left: 2.5%;
-	}
+
 	#infoImg {
 		left: 30%;
 	}
@@ -325,6 +330,10 @@ p {
 	#menu {
 		margin-top: 15%;
 		left: -1%;
+	}
+	.reglage {
+		top: 84%;
+		left: 33%;
 	}
 }
 /* Pour ordinateurs portables */
@@ -375,10 +384,7 @@ p {
 		margin-left: 0%;
 		margin-top: 0%;
 	}
-	.reglage {
-		top: 76%;
-		left: 11%;
-	}
+
 	#infoImg {
 		left: 30%;
 	}
@@ -388,6 +394,10 @@ p {
 	#menu {
 		margin-top: 9%;
 		left: 8%;
+	}
+	.reglage {
+		top: 82%;
+		left: 36%;
 	}
 }
 @media only screen and (max-width: 1300px) and (min-width: 1099px) {
@@ -438,10 +448,7 @@ p {
 		margin-left: 0%;
 		margin-top: 0%;
 	}
-	.reglage {
-		top: 77%;
-		left: 14%;
-	}
+
 	#infoImg {
 		left: 28%;
 	}
@@ -450,7 +457,11 @@ p {
 	}
 	#menu {
 		margin-top: 8%;
-		left: 11%;
+		left: 13%;
+	}
+	.reglage {
+		top: 82%;
+		left: 38%;
 	}
 }
 /* Pour les grands écrans */
@@ -501,19 +512,20 @@ p {
 		margin-left: 0%;
 		margin-top: 0%;
 	}
-	.reglage {
-		top: 74%;
-		left: 14%;
-	}
+
 	#infoImg {
 		left: 28%;
 	}
 	.video-js {
 		width: 40%;
 	}
+	.reglage {
+		top: 82%;
+		left: 41%;
+	}
 	#menu {
-		margin-top: 5%;
-		left: 12%;
+		margin-top: 6.5%;
+		left: 15%;
 	}
 }
 
@@ -537,11 +549,11 @@ p {
 	nav {
 		width: 18.5%;
 		top: 95%;
-		left: 60%;
+		left: 66%;
 	}
 	#last {
 		width: 110.8%;
-		right: 25%;
+		right: 20%;
 		margin-top: 1%;
 	}
 	#auto {
@@ -564,18 +576,19 @@ p {
 		margin-left: 0%;
 		margin-top: 0%;
 	}
-	.reglage {
-		top: 74%;
-		left: 19%;
-	}
+
 	#infoImg {
 		left: 28%;
 	}
 	.video-js {
 		width: 40%;
 	}
+	.reglage {
+		top: 82%;
+		left: 42%;
+	}
 	#menu {
-		margin-top: 5%;
+		margin-top: 6%;
 		left: 17.5%;
 	}
 }
@@ -599,11 +612,11 @@ p {
 	nav {
 		width: 16%;
 		top: 95%;
-		left: 67%;
+		left: 71%;
 	}
 	#last {
 		width: 103.7%;
-		left: -24.8%;
+		left: -20%;
 		margin-top: 3%;
 	}
 	#auto {
@@ -626,10 +639,7 @@ p {
 		margin-left: 0%;
 		/* margin-top: 2%; */
 	}
-	.reglage {
-		top: 75%;
-		left: 13.5%;
-	}
+
 	#infoImg {
 		left: 25%;
 	}
@@ -638,11 +648,15 @@ p {
 		/* border: 1px red solid; */
 	}
 	#menu {
-		margin-top: 5%;
+		margin-top: 5.5%;
 		left: 12%;
 	}
+	.reglage {
+		top: 82%;
+		left: 42%;
+	}
 }
-/* Pour mon ecran */
+/* Pour mon ecran à la maison */
 @media only screen and (max-width: 2200px) and (min-width: 1899px) {
 	#img,
 	#imgAttenuation {
@@ -663,11 +677,11 @@ p {
 	nav {
 		width: 16%;
 		top: 95%;
-		left: 63%;
+		left: 67%;
 	}
 	#last {
 		width: 103.7%;
-		left: -29%;
+		left: -26%;
 		margin-top: 1%;
 	}
 	#auto {
@@ -689,18 +703,19 @@ p {
 		margin-left: 0%;
 		margin-top: 0%;
 	}
-	.reglage {
-		top: 82%;
-		left: 43%;
-	}
+
 	#infoImg {
 		left: 25%;
 	}
 	.video-js {
 		width: 55%;
 	}
+	.reglage {
+		top: 82%;
+		left: 42%;
+	}
 	#menu {
-		margin-top: 6%;
+		margin-top: 5.8%;
 		left: 19%;
 	}
 }
@@ -724,11 +739,11 @@ p {
 	nav {
 		width: 16%;
 		top: 94%;
-		left: 62%;
+		left: 66%;
 	}
 	#last {
 		width: 103.6%;
-		left: -32%;
+		left: -30%;
 		margin-top: 1%;
 	}
 	#auto {
@@ -764,7 +779,11 @@ p {
 		width: 50%;
 	}
 	#menu {
-		margin-top: 2.5%;
+		margin-top: 3%;
 		left: 22%;
+	}
+	.reglage {
+		top: 79%;
+		left: 44%;
 	}
 }

@@ -18,7 +18,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 	const MENURIGHT = document.querySelector("#menuRight");
 	const REGLAGE = document.querySelector(".reglage");
 	let html = "";
-	console.log("je reload la vue");
+
 	// J'insere les information reçu depuis displayImage pour l'insérer dans le DOM
 	const infoImg = `
   <p id="date">${displayImage[type].date}</p>
@@ -35,12 +35,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 				displayImage[type].img + "?" + tmp.getTime()
 			}" alt="description" id="img" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) invert(${invert}) !important;"/>
 		`;
-		// html = `
-		// 	<div id="center-${side}" style="display: ${getItem(`display-${side}`)}"></div>
-		// 	<img src="${
-		// 		displayImage[type].img
-		// 	}" alt="description" id="img" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) invert(${invert}) !important;"/>
-		//  `;
+
 		// Les informations sont necessaire que pour les images
 
 		INFO_IMG.innerHTML = infoImg;
@@ -77,13 +72,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 				displayImage[type].img + "?" + tmp.getTime()
 			}" autoplay preload controls loop class="video-js"></video>
 		`;
-		// html = `
-		// 	<div id="center" style="display: ${getItem(`display-${side}`)}"></div>
 
-		// 	<video src="${
-		// 		displayImage[type].img
-		// 	}" autoplay preload controls loop class="video-js"></video>
-		// `;
 		// j'efface les informations pour les vidéos
 		INFO_IMG.innerHTML = "";
 		if (side === "main") {
@@ -107,9 +96,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 				displayImage[type].img + "?" + tmp.getTime()
 			}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(1) contrast(1) invert(0) !important;"/>
 		`;
-		// html = `
-		// 	<img src="${displayImage[type].img}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(1) contrast(1) invert(0) !important;"/>
-		// `;
+
 		// Les informations sont necessaire que pour les images
 
 		INFO_IMG.innerHTML = infoImg;
@@ -136,9 +123,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 				displayImage[type].img + "?" + tmp.getTime()
 			}" alt="description" id="imgPanorama" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast}) invert(${invert}) !important;"/>
 		`;
-		// html = `
-		// 	<img src="${displayImage[type].img}" alt="description" id="imgAttenuation" name="img-${side}" style="filter: brightness(${brightness}) contrast(${contrast} invert(${invert})) !important;"/>
-		// `;
+
 		// Les informations sont necessaire que pour les images
 
 		INFO_IMG.innerHTML = infoImg;
