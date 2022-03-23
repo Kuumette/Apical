@@ -12,13 +12,12 @@ const valueInvertMain = document.querySelector(".rangeInvert");
 function init() {
 	localStorage.setItem("init", "1");
 	localStorage.setItem("display-main", "none");
-	localStorage.setItem("type-main", "lastImage");
-	// INPUTRANGE.style.opacity = "0";
-	// INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0)";
-	// INPUTRANGECOLOR.style.border = "0px solid white";
+	//localStorage.setItem("type-main", "lastImage");
+	INPUTRANGE.style.opacity = "0";
+	INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0)";
+	INPUTRANGECOLOR.style.border = "0px solid white";
 }
 init();
-
 /** Permet d'avoir le localStorage plus rapidement */
 function getItem(item) {
 	return localStorage.getItem(item);
@@ -79,6 +78,11 @@ document
 	.querySelector("#resetBrightness")
 	.addEventListener("click", function () {
 		//localStorage.clear();
+		let btn1 = document.querySelector(".bNumber");
+		let btn2 = document.querySelector(".bRange");
+		btn1.value = 1;
+		btn2.value = 1;
+
 		localStorage.setItem("init", "5");
 
 		localStorage.setItem("brightness-main", "1");
@@ -96,6 +100,11 @@ document
 
 document.querySelector("#resetContrast").addEventListener("click", function () {
 	//localStorage.clear();
+	let btn3 = document.querySelector(".cNumber");
+	let btn4 = document.querySelector(".cRange");
+	btn3.value = 1;
+	btn4.value = 1;
+
 	localStorage.setItem("init", "6");
 
 	localStorage.setItem("brightness-main", valueBritnessMain.value);
@@ -113,6 +122,11 @@ document.querySelector("#resetContrast").addEventListener("click", function () {
 
 document.querySelector("#resetInvert").addEventListener("click", function () {
 	//localStorage.clear();
+	let btn5 = document.querySelector(".iNumber");
+	let btn6 = document.querySelector(".iRange");
+	btn5.value = 0;
+	btn6.value = 0;
+
 	localStorage.setItem("init", "7");
 
 	localStorage.setItem("brightness-main", valueBritnessMain.value);

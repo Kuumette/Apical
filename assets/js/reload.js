@@ -60,13 +60,14 @@ async function reload(type, side = "main") {
 		//getItem(`invertUser-${side}`)
 		getItem(`invert-${side}`),
 		getItem(`reglage-${side}`)
+		//console.log("je load la 1er image")
 	);
 
 	//if (type === "lastImage" || type === "lastSubstractionImage") {
 	const viewCoords = loadCoords(tcs.img, side);
 	//}
 	/**
-	 * Ici, en plus de reload mon composant IMAGE
+	 * Ici, en plus de load mon composant IMAGE
 	 * je dois aussi ajouter les filtres
 	 */
 	if (
@@ -79,14 +80,14 @@ async function reload(type, side = "main") {
 			if (img.name === `img-${side}`) {
 				addFilter(
 					img,
-					getItem(`brightnessUser-${side}`),
-					//getItem(`brightness-${side}`),
-					//getItem(`contrast-${side}`),
-					getItem(`contrastUser-${side}`),
-					//getItem(`invert-${side}`),
-					getItem(`invertUser-${side}`)
-					//getItem(`brightnessUser-${side}`)
+					// getItem(`brightnessUser-${side}`),
+					// getItem(`invertUser-${side}`),
+					// getItem(`contrastUser-${side}`),
+					getItem(`brightness-${side}`),
+					getItem(`contrast-${side}`),
+					getItem(`invert-${side}`)
 				);
+				//console.log("load filtre");
 				//addCoord(img, getItem(`display-${side}`, "block"));
 			}
 		});
@@ -118,6 +119,7 @@ async function reload(type, side = "main") {
 					//getItem(`contrastUser-${side}`),
 					//getItem(`invertUser-${side}`)
 				);
+			//console.log("reload image + filtre");
 			loadCoords(tcs.img, side);
 		}, 6000);
 	}
