@@ -13,23 +13,12 @@ function init() {
 	localStorage.setItem("init", "1");
 	localStorage.setItem("display-main", "none");
 	localStorage.setItem("type-main", "lastImage");
-	INPUTRANGE.style.opacity = "0";
-	INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0)";
-	INPUTRANGECOLOR.style.border = "0px solid white";
+	// INPUTRANGE.style.opacity = "0";
+	// INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0)";
+	// INPUTRANGECOLOR.style.border = "0px solid white";
 }
 init();
 
-function resetB() {
-	localStorage.setItem("resetB", "5");
-
-	localStorage.setItem("brightness-main", "1");
-	localStorage.setItem("contrast-main", valueContrastMain.value);
-	localStorage.setItem("invert-main", valueInvertMain.value);
-
-	INPUTRANGE.style.opacity = "1";
-	INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0.712)";
-	INPUTRANGECOLOR.style.border = "2px solid white";
-}
 /** Permet d'avoir le localStorage plus rapidement */
 function getItem(item) {
 	return localStorage.getItem(item);
@@ -72,8 +61,13 @@ document.querySelector("#invertDefault").addEventListener("click", function () {
 document.querySelector("#user").addEventListener("click", function () {
 	localStorage.setItem("init", "4");
 	localStorage.setItem("brightness-main", valueBritnessMain.value);
+	localStorage.setItem("brightnessUser-main", valueBritnessMain.value);
+
 	localStorage.setItem("contrast-main", valueContrastMain.value);
+	localStorage.setItem("contrastUser-main", valueContrastMain.value);
+
 	localStorage.setItem("invert-main", valueInvertMain.value);
+	localStorage.setItem("invertUser-main", valueInvertMain.value);
 
 	INPUTRANGE.style.opacity = "1";
 	INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0.712)";
@@ -88,13 +82,16 @@ document
 		localStorage.setItem("init", "5");
 
 		localStorage.setItem("brightness-main", "1");
+		localStorage.setItem("brightnessUser-main", "1");
 		localStorage.setItem("contrast-main", valueContrastMain.value);
+		localStorage.setItem("contrastUser-main", valueContrastMain.value);
 		localStorage.setItem("invert-main", valueInvertMain.value);
+		localStorage.setItem("invertUser-main", valueInvertMain.value);
 
 		INPUTRANGE.style.opacity = "1";
 		INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0.712)";
 		INPUTRANGECOLOR.style.border = "2px solid white";
-		location.reload();
+		reload();
 	});
 
 document.querySelector("#resetContrast").addEventListener("click", function () {
@@ -102,13 +99,16 @@ document.querySelector("#resetContrast").addEventListener("click", function () {
 	localStorage.setItem("init", "6");
 
 	localStorage.setItem("brightness-main", valueBritnessMain.value);
+	localStorage.setItem("brightnessUser-main", valueBritnessMain.value);
 	localStorage.setItem("contrast-main", "1");
+	localStorage.setItem("contrastUser-main", "1");
 	localStorage.setItem("invert-main", valueInvertMain.value);
+	localStorage.setItem("invertUser-main", valueInvertMain.value);
 
 	INPUTRANGE.style.opacity = "1";
 	INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0.712)";
 	INPUTRANGECOLOR.style.border = "2px solid white";
-	location.reload();
+	reload();
 });
 
 document.querySelector("#resetInvert").addEventListener("click", function () {
@@ -116,11 +116,14 @@ document.querySelector("#resetInvert").addEventListener("click", function () {
 	localStorage.setItem("init", "7");
 
 	localStorage.setItem("brightness-main", valueBritnessMain.value);
+	localStorage.setItem("brightnessUser-main", valueBritnessMain.value);
 	localStorage.setItem("contrast-main", valueContrastMain.value);
+	localStorage.setItem("contrastUser-main", valueContrastMain.value);
 	localStorage.setItem("invert-main", "0");
+	localStorage.setItem("invertUser-main", "0");
 
 	INPUTRANGE.style.opacity = "1";
 	INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0.712)";
 	INPUTRANGECOLOR.style.border = "2px solid white";
-	location.reload();
+	reload();
 });

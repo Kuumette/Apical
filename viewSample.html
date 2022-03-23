@@ -74,7 +74,11 @@
 							<a href="#" id="menuDisplay">Display</a>
 							<ul class="sousMenuDisplay">
 								<li>
-									<a href="#" class="btnDisplay" id="default"
+									<a
+										href="#"
+										class="btnDisplay"
+										id="default"
+										data-reglage="default"
 										>Default</a
 									>
 								</li>
@@ -83,11 +87,16 @@
 										href="#"
 										class="btnDisplay"
 										id="invertDefault"
+										data-reglage="invertDefault"
 										>Invert</a
 									>
 								</li>
 								<li>
-									<a href="#" class="btnDisplay" id="user"
+									<a
+										href="#"
+										class="btnDisplay"
+										id="user"
+										data-reglage="user"
 										>User</a
 									>
 								</li>
@@ -111,6 +120,7 @@
 								max="5"
 								step="0.10"
 								class="rangeBrightness"
+								value="1"
 							/>
 							<input
 								type="number"
@@ -120,6 +130,7 @@
 								max="5"
 								step="0.10"
 								class="rangeBrightness"
+								value="1"
 							/>
 							<a href="#" id="resetBrightness"
 								><svg
@@ -152,6 +163,7 @@
 								max="5"
 								step="0.10"
 								class="rangeContrast"
+								value="1"
 							/>
 							<input
 								class="rangeContrast"
@@ -161,6 +173,7 @@
 								min="0"
 								max="5"
 								step="0.10"
+								value="1"
 							/>
 							<a href="#" id="resetContrast"
 								><svg
@@ -193,6 +206,7 @@
 								max="1"
 								step="0.10"
 								class="rangeInvert"
+								value="0"
 							/>
 							<input
 								class="rangeInvert"
@@ -202,6 +216,7 @@
 								min="0"
 								max="1"
 								step="0.10"
+								value="0"
 							/>
 							<a href="#" id="resetInvert"
 								><svg

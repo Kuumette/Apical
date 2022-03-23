@@ -53,10 +53,15 @@ async function reload(type, side = "main") {
 		getItem(`type-${side}`),
 		side,
 		displayImage,
+		//getItem(`brightnessUser-${side}`),
 		getItem(`brightness-${side}`),
+		//getItem(`contrastUser-${side}`),
 		getItem(`contrast-${side}`),
-		getItem(`invert-${side}`)
+		//getItem(`invertUser-${side}`)
+		getItem(`invert-${side}`),
+		getItem(`reglage-${side}`)
 	);
+
 	//if (type === "lastImage" || type === "lastSubstractionImage") {
 	const viewCoords = loadCoords(tcs.img, side);
 	//}
@@ -74,9 +79,13 @@ async function reload(type, side = "main") {
 			if (img.name === `img-${side}`) {
 				addFilter(
 					img,
-					getItem(`brightness-${side}`),
-					getItem(`contrast-${side}`),
-					getItem(`invert-${side}`)
+					getItem(`brightnessUser-${side}`),
+					//getItem(`brightness-${side}`),
+					//getItem(`contrast-${side}`),
+					getItem(`contrastUser-${side}`),
+					//getItem(`invert-${side}`),
+					getItem(`invertUser-${side}`)
+					//getItem(`brightnessUser-${side}`)
 				);
 				//addCoord(img, getItem(`display-${side}`, "block"));
 			}
@@ -104,9 +113,13 @@ async function reload(type, side = "main") {
 					getItem(`brightness-${side}`),
 					getItem(`contrast-${side}`),
 					getItem(`invert-${side}`)
+
+					//getItem(`brightnessUser-${side}`),
+					//getItem(`contrastUser-${side}`),
+					//getItem(`invertUser-${side}`)
 				);
 			loadCoords(tcs.img, side);
-		}, refresh);
+		}, 6000);
 	}
 }
 const SIDES = document.querySelectorAll(".side");
