@@ -21,11 +21,11 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 
 	// J'insere les information reçu depuis displayImage pour l'insérer dans le DOM
 	const infoImg = `
-  <p id="date">${displayImage[type].date}</p>
-  <p id="heure">${displayImage[type].heure}</p>
-  <p id="name">apicam</p>
-  `;
-
+	  <p id="date">${displayImage[type].date}</p>
+	  <p id="heure">${displayImage[type].heure}</p>
+	  <p id="name">apicam</p>
+	  `;
+	// const infoImg = "";
 	/** Si c'est lastImage ou lastSubstractionImage alors */
 	if (type === "lastImage" || type === "lastSubstractionImage") {
 		let tmp = new Date();
@@ -134,7 +134,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 		} else if (side === "leftSide") {
 			TOGGLE_COORDS_G.style.opacity = "0";
 			REGLAGE_GAUCHE.style.display = "block";
-			MENULETF.style.display = "block";
+			MENULEFT.style.display = "block";
 		} else if (side === "rightSide") {
 			TOGGLE_COORDS_D.style.opacity = "0";
 			REGLAGE_DROITE.style.display = "block";

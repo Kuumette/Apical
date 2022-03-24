@@ -4,11 +4,13 @@
  */
 // const INPUTRANGE = document.querySelector("#inputRange");
 const valueBritnessLeft = document.querySelector(".bLeft");
-const valueBritnessRight = document.querySelector(".bRight");
 const valueContrastLeft = document.querySelector(".cLeft");
-const valueContrastRight = document.querySelector(".cRight");
 const valueInvertLeft = document.querySelector(".iLeft");
+
+const valueBritnessRight = document.querySelector(".bRight");
+const valueContrastRight = document.querySelector(".cRight");
 const valueInvertRight = document.querySelector(".iRight");
+
 const displayRight = document.querySelector("#reglageDroite");
 const displayLeft = document.querySelector("#reglageGauche");
 
@@ -16,8 +18,41 @@ function init() {
 	localStorage.setItem("init", "1");
 	localStorage.setItem("display-leftSide", "none");
 	localStorage.setItem("display-rightSide", "none");
-	localStorage.setItem("type-leftSide", "lastImage");
-	localStorage.setItem("type-rightSide", "lastSubstractionImage");
+
+	if (
+		getItem("type-leftSide") === null &&
+		getItem("type-rightSide") === null
+	) {
+		localStorage.setItem("type-leftSide", "lastImage");
+		localStorage.setItem("type-rightSide", "lastSubstractionImage");
+	} else {
+		localStorage.setItem("type-leftSide", getItem("type-leftSide"));
+		localStorage.setItem("type-rightSide", getItem("type-rightSide"));
+	}
+
+	if (
+		(getItem("brightnessUser-leftSide") === null &&
+			getItem("contrastUser-leftSide") === null &&
+			getItem("invertUser-leftSide") === null) ||
+		(getItem("brightnessUser-leftSide") === 2.5 &&
+			getItem("contrastUser-leftSide") === 2.5 &&
+			getItem("invertUser-leftSide") === 2.5)
+	) {
+		localStorage.setItem("brightnessUser-leftSide", 1);
+		localStorage.setItem("contrastUser-leftSide", 1);
+		localStorage.setItem("invertUser-leftSide", 0);
+		localStorage.setItem("brightness-leftSide", 1);
+		localStorage.setItem("contrast-leftSide", 1);
+		localStorage.setItem("invert-leftSide", 0);
+	} else {
+		localStorage.setItem("brightness-leftSide", 1);
+		localStorage.setItem("contrast-leftSide", 1);
+		localStorage.setItem("invert-leftSide", 0);
+
+		// localStorage.setItem("brightness-rightSide", valueBritnessRight.value);
+		// localStorage.setItem("contrast-rightSide", valueContrastRight.value);
+		// localStorage.setItem("invert-rightSide", valueInvertRight.value);
+	}
 
 	displayRight.style.opacity = "0";
 	displayLeft.style.opacity = "0";
@@ -37,64 +72,111 @@ function addFilter(img, brightness, contrast, invert) {
 	img.style.filter = `brightness(${brightness}) contrast(${contrast}) invert(${invert})`;
 }
 
-document.querySelector("#default").addEventListener("click", function () {
-	console.log(setItem());
-	localStorage.setItem("default", "1");
+document.querySelector("#defaultLeft").addEventListener("click", function () {
+	localStorage.setItem("init", "2");
 	localStorage.setItem("brightness-leftSide", "1");
 	localStorage.setItem("contrast-leftSide", "1");
 	localStorage.setItem("invert-leftSide", "0");
 
-	localStorage.setItem("brightness-rightSide", valueBritnessRight.value);
-	localStorage.setItem("contrast-rightSide", valueContrastRight.value);
-	localStorage.setItem("invert-rightSide", valueInvertRight.value);
+	// localStorage.setItem("type-leftSide", getItem("type-leftSide"));
+	// localStorage.setItem("type-rightSide", getItem("type-rightSide"));
+	// localStorage.setItem("brightness-rightSide", valueBritnessRight.value);
+	// localStorage.setItem("contrast-rightSide", valueContrastRight.value);
+	// localStorage.setItem("invert-rightSide", valueInvertRight.value);
 	displayLeft.style.opacity = "0";
 
-	reload();
+	SIDES.forEach((side) => {
+		if (side.id === "leftSide") {
+			reload(getItem("type-leftSide"), side.id);
+		} else {
+			reload(getItem("type-rightSide"), side.id);
+		}
+	});
 });
 document.querySelector("#defaultRight").addEventListener("click", function () {
-	localStorage.setItem("defaultRight", "1");
+	localStorage.setItem("init", "3");
 	localStorage.setItem("brightness-rightSide", "1");
 	localStorage.setItem("contrast-rightSide", "1");
 	localStorage.setItem("invert-rightSide", "0");
 	displayRight.style.opacity = "0";
 
-	reload();
+	SIDES.forEach((side) => {
+		if (side.id === "leftSide") {
+			reload(getItem("type-leftSide"), side.id);
+		} else {
+			reload(getItem("type-rightSide"), side.id);
+		}
+	});
 });
 
-document.querySelector("#invertDefault").addEventListener("click", function () {
-	localStorage.setItem("invertDefault", "1");
-	localStorage.setItem("brightness-leftSide", "1");
-	localStorage.setItem("contrast-leftSide", "1");
-	localStorage.setItem("invert-leftSide", "1");
-	displayLeft.style.opacity = "0";
+document
+	.querySelector("#invertDefaultLeft")
+	.addEventListener("click", function () {
+		localStorage.setItem("init", "4");
+		localStorage.setItem("brightness-leftSide", "1");
+		localStorage.setItem("contrast-leftSide", "1");
+		localStorage.setItem("invert-leftSide", "1");
+		displayLeft.style.opacity = "0";
 
-	reload();
-});
+		SIDES.forEach((side) => {
+			if (side.id === "leftSide") {
+				reload(getItem("type-leftSide"), side.id);
+			} else {
+				reload(getItem("type-rightSide"), side.id);
+			}
+		});
+	});
 document
 	.querySelector("#invertDefaultRight")
 	.addEventListener("click", function () {
-		localStorage.setItem("invertDefaultRight", "1");
+		localStorage.setItem("init", "5");
 		localStorage.setItem("brightness-rightSide", "1");
 		localStorage.setItem("contrast-rightSide", "1");
 		localStorage.setItem("invert-rightSide", "1");
 		displayRight.style.opacity = "0";
-		location.reload();
+
+		SIDES.forEach((side) => {
+			if (side.id === "leftSide") {
+				reload(getItem("type-leftSide"), side.id);
+			} else {
+				reload(getItem("type-rightSide"), side.id);
+			}
+		});
 	});
 
-document.querySelector("#user").addEventListener("click", function () {
-	localStorage.setItem("user", "1");
+document.querySelector("#userLeft").addEventListener("click", function () {
+	localStorage.setItem("init", "6");
 	localStorage.setItem("brightness-leftSide", valueBritnessLeft.value);
+	localStorage.setItem("brightnessUser-leftSide", valueBritnessLeft.value);
 	localStorage.setItem("contrast-leftSide", valueContrastLeft.value);
+	localStorage.setItem("contrastUser-leftSide", valueContrastLeft.value);
 	localStorage.setItem("invert-leftSide", valueInvertLeft.value);
+	localStorage.setItem("invertUser-leftSide", valueInvertLeft.value);
 	displayLeft.style.opacity = "1";
 
-	reload();
+	SIDES.forEach((side) => {
+		if (side.id === "leftSide") {
+			reload(getItem("type-leftSide"), side.id);
+		} else {
+			reload(getItem("type-rightSide"), side.id);
+		}
+	});
 });
 document.querySelector("#userRight").addEventListener("click", function () {
-	localStorage.setItem("userRight", "1");
+	localStorage.setItem("init", "7");
 	localStorage.setItem("brightness-rightSide", valueBritnessRight.value);
+	localStorage.setItem("brightnessUser-rightSide", valueBritnessRight.value);
 	localStorage.setItem("contrast-rightSide", valueContrastRight.value);
+	localStorage.setItem("contrastUser-rightSide", valueContrastRight.value);
 	localStorage.setItem("invert-rightSide", valueInvertRight.value);
+	localStorage.setItem("invertUser-rightSide", valueInvertRight.value);
 	displayRight.style.opacity = "1";
-	reload();
+
+	SIDES.forEach((side) => {
+		if (side.id === "leftSide") {
+			reload(getItem("type-leftSide"), side.id);
+		} else {
+			reload(getItem("type-rightSide"), side.id);
+		}
+	});
 });

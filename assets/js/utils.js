@@ -11,8 +11,36 @@ const valueInvertMain = document.querySelector(".rangeInvert");
 
 function init() {
 	localStorage.setItem("init", "1");
+
+	/** J'initialise mon button checkbox à none */
 	localStorage.setItem("display-main", "none");
-	//localStorage.setItem("type-main", "lastImage");
+
+	/** Je verifie si mon image et === null alors */
+	if (getItem("type-main") === null) {
+		/** j'affiche la lastImage */
+		localStorage.setItem("type-main", "lastImage");
+	} else {
+		/** Sinon j'affiche la dernier image/video enregistré dans mon localStorage */
+		localStorage.setItem("type-main", getItem("type-main"));
+	}
+
+	/** je verifie si brightnessUser contrastUser et invertUser sont === null alors */
+	if (
+		getItem("brightnessUser-main") === null &&
+		getItem("contrastUser-main") === null &&
+		getItem("invertUser-main") === null
+	) {
+		/** j'initialise au valeur par default */
+		localStorage.setItem("brightnessUser-main", 1);
+		localStorage.setItem("contrastUser-main", 1);
+		localStorage.setItem("invertUser-main", 0);
+	} else {
+		/** Sinon je recupere mais valeur enregistré dans mon localStorage */
+		localStorage.setItem("brightness-main", valueBritnessMain.value);
+		localStorage.setItem("contrast-main", valueContrastMain.value);
+		localStorage.setItem("invert-main", valueInvertMain.value);
+	}
+	/** Je fais en sorte que mes input brightness contrast et invert sois pas visible */
 	INPUTRANGE.style.opacity = "0";
 	INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0)";
 	INPUTRANGECOLOR.style.border = "0px solid white";
@@ -23,6 +51,7 @@ function getItem(item) {
 	return localStorage.getItem(item);
 }
 
+/** Permet de set mon localStorage */
 function setItem(item, value) {
 	return localStorage.setItem(item, value);
 }
@@ -32,6 +61,7 @@ function addFilter(img, brightness, contrast, invert) {
 	img.style.filter = `brightness(${brightness}) contrast(${contrast}) invert(${invert})`;
 }
 
+/** Au click je passe en vue default (brightness contrast et invert au valeur par default) */
 document.querySelector("#default").addEventListener("click", function () {
 	localStorage.setItem("init", "2");
 
@@ -39,26 +69,40 @@ document.querySelector("#default").addEventListener("click", function () {
 	localStorage.setItem("contrast-main", "1");
 	localStorage.setItem("invert-main", "0");
 
+	/** Je fais en sorte que mes input brightness contrast et invert sois pas visible */
 	INPUTRANGE.style.opacity = "0";
 	INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0)";
 	INPUTRANGECOLOR.style.border = "0px solid white";
 	reload();
 });
 
+/** Au click je passe en vue invertDefault (brightness et contrast au valeur par default et invert à 1) */
 document.querySelector("#invertDefault").addEventListener("click", function () {
 	localStorage.setItem("init", "3");
+
 	localStorage.setItem("brightness-main", "1");
 	localStorage.setItem("contrast-main", "1");
 	localStorage.setItem("invert-main", "1");
 
+	/** Je fais en sorte que mes input brightness contrast et invert sois pas visible */
 	INPUTRANGE.style.opacity = "0";
 	INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0)";
 	INPUTRANGECOLOR.style.border = "0px solid white";
 	reload();
 });
 
+/** Au click je passe en vue user, ou je set de nouvelle informations du localStorage avec comme valeur les valeur choisi pas l'utilisateur */
 document.querySelector("#user").addEventListener("click", function () {
+	let btn1 = document.querySelector(".bNumber");
+	let btn3 = document.querySelector(".cNumber");
+	let btn5 = document.querySelector(".iNumber");
+
+	btn1.value = valueBritnessMain.value;
+	btn3.value = valueContrastMain.value;
+	btn5.value = valueInvertMain.value;
+
 	localStorage.setItem("init", "4");
+
 	localStorage.setItem("brightness-main", valueBritnessMain.value);
 	localStorage.setItem("brightnessUser-main", valueBritnessMain.value);
 
@@ -71,6 +115,7 @@ document.querySelector("#user").addEventListener("click", function () {
 	INPUTRANGE.style.opacity = "1";
 	INPUTRANGECOLOR.style.backgroundColor = "rgba(0, 0, 0, 0.712)";
 	INPUTRANGECOLOR.style.border = "2px solid white";
+	console.log("user");
 	reload();
 });
 

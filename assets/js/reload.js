@@ -105,6 +105,7 @@ async function reload(type, side = "main") {
 			let refreshEnabled = document.querySelector(
 				`#${side} #checkbox-${side}`
 			);
+
 			if (!refreshEnabled.checked) clearInterval(refreshTime);
 			else
 				loadView(
@@ -121,7 +122,7 @@ async function reload(type, side = "main") {
 				);
 			//console.log("reload image + filtre");
 			loadCoords(tcs.img, side);
-		}, 6000);
+		}, refresh);
 	}
 }
 const SIDES = document.querySelectorAll(".side");
@@ -137,8 +138,6 @@ SIDES.forEach((side) => {
 		reload(getItem("type-rightSide"), side.id);
 	}
 });
-
-function reloadReglage() {}
 
 // let refreshTime;
 // const reload = (type, side = "main") => {

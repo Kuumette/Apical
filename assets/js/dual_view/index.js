@@ -4,19 +4,20 @@
 
 const LEFT_BUTTONS = document.querySelectorAll("#leftSide button");
 const RIGHT_BUTTONS = document.querySelectorAll("#rightSide button");
-
+const LEFT_REGLAGE = document.querySelectorAll("#leftSide a");
+console.log(LEFT_REGLAGE);
 LEFT_BUTTONS.forEach((button) => {
-  button.addEventListener("click", () => {
-    const type = button.dataset.type;
-    localStorage.setItem("type-leftSide", type);
-    reload(type, "leftSide");
-  });
+	button.addEventListener("click", () => {
+		const type = button.dataset.type;
+		localStorage.setItem("type-leftSide", type);
+		reload(type, "leftSide");
+	});
 });
 
 RIGHT_BUTTONS.forEach((button) => {
-  button.addEventListener("click", () => {
-    const type = button.dataset.type;
-    localStorage.setItem("type-rightSide", type);
-    reload(type, "rightSide");
-  });
+	button.addEventListener("click", () => {
+		const type = button.dataset.type;
+		localStorage.setItem("type-rightSide", type);
+		reload(type, "rightSide");
+	});
 });
