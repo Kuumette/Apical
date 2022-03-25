@@ -10,6 +10,9 @@ const NAV_D = document.getElementById("rightNav");
 const TOOGLE_G = document.getElementById("d2");
 const TOOGLE_D = document.getElementById("toogle_d");
 
+const DISPLAYLEFT = document.getElementById("menuLeft");
+const DISPLAYRIGHT = document.getElementById("menuRight");
+
 function resetTemps() {
 	document.querySelector(".delai").style.display = "none";
 	clearInterval(temps);
@@ -24,6 +27,8 @@ function resetTemps() {
 
 	TOOGLE_G.style.opacity = "1";
 	TOOGLE_D.style.opacity = "1";
+	DISPLAYLEFT.style.opacity = "1";
+	DISPLAYRIGHT.style.opacity = "1";
 }
 
 window.onload = resetTemps;
@@ -45,4 +50,6 @@ function startTemps() {
 
 	TOOGLE_G.style.opacity = "0";
 	TOOGLE_D.style.opacity = "0";
+	DISPLAYLEFT.style.opacity = "0";
+	DISPLAYRIGHT.style.opacity = "0";
 }

@@ -11,12 +11,12 @@ const valueInvertMain = document.querySelector(".rangeInvert");
 
 function init() {
 	localStorage.setItem("init", "1");
-
+	console.log("init");
 	/** J'initialise mon button checkbox à none */
 	localStorage.setItem("display-main", "none");
 
 	/** Je verifie si mon image et === null alors */
-	if (getItem("type-main") === null) {
+	if (getItem("type-main") === null || getItem("type-main") != "lastImage") {
 		/** j'affiche la lastImage */
 		localStorage.setItem("type-main", "lastImage");
 	} else {

@@ -20,8 +20,8 @@ let refreshTime;
 async function reload(type, side = "main") {
 	/** Je fetch les information dont j'ai besoins */
 	const response = await fetch(
-		//"https://live.neos360.com/eso/paranal/apicam/assets/config/config.json"
-		"http://127.0.0.1:5502/assets/config/config.json"
+		"https://live.neos360.com/eso/paranal/apicam/assets/config/config.json"
+		//"http://127.0.0.1:5502/assets/config/config.json"
 		//"https://live.neos360.com/apical/test/apicam/assets/config/config.json"
 	);
 

@@ -105,10 +105,7 @@ label {
 #img {
 	border-radius: 100%;
 }
-#imgPanorama {
-	width: 80%;
-	margin-top: 15%;
-}
+
 body {
 	background-color: black;
 	width: 100%;
@@ -213,6 +210,10 @@ p {
 	#imgAttenuation {
 		max-width: 100%;
 	}
+	#imgPanorama {
+		width: 80%;
+		margin-top: 5%;
+	}
 	#date {
 		margin-top: 7%;
 		margin-left: -30%;
@@ -278,6 +279,10 @@ p {
 	#imgAttenuation {
 		max-width: 95%;
 	}
+	#imgPanorama {
+		width: 80%;
+		margin-top: 5%;
+	}
 	#date {
 		margin-top: 7%;
 		margin-left: -30%;
@@ -341,6 +346,10 @@ p {
 	#img,
 	#imgAttenuation {
 		max-width: 70%;
+	}
+	#imgPanorama {
+		width: 80%;
+		margin-top: -4%;
 	}
 	#date {
 		margin-top: 4%;
@@ -406,6 +415,10 @@ p {
 		max-width: 60%;
 		/* border: 1px red solid; */
 	}
+	#imgPanorama {
+		width: 80%;
+		margin-top: -8%;
+	}
 	#date {
 		margin-top: 3%;
 		margin-left: -10%;
@@ -469,6 +482,10 @@ p {
 	#img,
 	#imgAttenuation {
 		max-width: 60%;
+	}
+	#imgPanorama {
+		width: 80%;
+		margin-top: -12%;
 	}
 	#date {
 		margin-top: 2%;
@@ -534,6 +551,10 @@ p {
 	#imgAttenuation {
 		max-width: 55%;
 	}
+	#imgPanorama {
+		width: 80%;
+		margin-top: -15%;
+	}
 	#date {
 		margin-top: 2%;
 		margin-left: -5%;
@@ -596,6 +617,10 @@ p {
 	#img,
 	#imgAttenuation {
 		max-width: 65%;
+	}
+	#imgPanorama {
+		width: 80%;
+		margin-top: -15%;
 	}
 	#date {
 		margin-top: 2%;
@@ -662,6 +687,10 @@ p {
 	#imgAttenuation {
 		max-width: 55%;
 	}
+	#imgPanorama {
+		width: 80%;
+		margin-top: -15%;
+	}
 	#date {
 		margin-top: 2%;
 		margin-left: -0%;
@@ -723,6 +752,10 @@ p {
 	#img,
 	#imgAttenuation {
 		max-width: 50%;
+	}
+	#imgPanorama {
+		width: 80%;
+		margin-top: -20%;
 	}
 	#date {
 		margin-top: 2%;

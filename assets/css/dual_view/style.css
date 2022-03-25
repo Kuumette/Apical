@@ -10,14 +10,18 @@ html {
 	font-size: 18px;
 	position: relative;
 	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.5);
+	border: 2px solid white;
+	padding: 2%;
+	text-align: center;
 }
 #footerGauche {
-	position: relative;
-	z-index: 5;
+	position: absolute;
+	z-index: 99;
 }
 #footerDroite {
 	position: relative;
-	z-index: 5;
+	z-index: 98;
 }
 #infoImg {
 	width: 70%;
@@ -30,20 +34,18 @@ html {
 	position: relative;
 	z-index: 2;
 }
-#contrast {
-	margin-right: 1.9%;
-}
+
 #lastGauche {
 	display: block;
 	font-size: 18px;
-	position: relative;
+	position: absolute;
 	z-index: 50;
 }
 #lastDroite {
 	display: block;
 	font-size: 18px;
-	position: relative;
-	z-index: 51;
+	position: absolute !important;
+	z-index: 50;
 }
 #zoom {
 	display: block;
@@ -58,21 +60,26 @@ html {
 span {
 	color: #f0f0f0;
 }
-#const {
-	margin-left: 1.8%;
-}
-#autoGauche {
-	display: block;
-	font-size: 18px;
-	position: relative;
-	z-index: 2;
-}
 
-#auto_droite {
+#autoGauche {
+	opacity: 0;
 	display: block;
 	font-size: 18px;
 	position: relative;
 	z-index: 2;
+	width: 0%;
+	left: 0%;
+	margin-top: 0.5%;
+}
+#auto_droite {
+	opacity: 0;
+	display: block;
+	font-size: 18px;
+	position: relative;
+	z-index: 2;
+	width: 0%;
+	left: -110%;
+	margin-top: 0.5%;
 }
 
 .nav {
@@ -81,13 +88,6 @@ span {
 	z-index: 2;
 	display: flex;
 	position: relative;
-	margin-left: 20%;
-	margin-top: 0%;
-	align-self: flex-end;
-}
-
-nav {
-	width: 12%;
 }
 p {
 	color: #f0f0f0;
@@ -107,10 +107,10 @@ label {
 	color: #f0f0f0;
 }
 #img {
-	border-radius: 0%;
+	border-radius: 100%;
 }
 #img2 {
-	border-radius: 0%;
+	border-radius: 100%;
 }
 #overlay {
 	border-radius: 50%;
@@ -128,6 +128,7 @@ label {
 	width: 100%;
 	height: 100%;
 }
+
 body {
 	background-color: black;
 	width: 100%;
@@ -150,68 +151,72 @@ body {
 	text-align: left;
 	color: #f0f0f0;
 }
-#overlayUT4,
-#overlayUT3,
-#overlayUT2,
-#overlayUT1 {
-	font-size: 1.3em;
-	color: green;
-	font-weight: bold;
-}
+
 p {
 	color: #f0f0f0;
 }
+#menuLeft,
+#menuRight {
+	position: absolute;
+	z-index: 56;
+}
+small {
+	opacity: 0;
+}
+svg {
+	color: #f0f0f0;
+}
+
 @media only screen and (max-width: 699px) and (min-width: 400px) {
 	#lastGauche {
 		width: 47.5%;
-		top: 0%;
-		left: 49.7%;
+		top: 1%;
+		left: 50%;
 	}
 	#lastDroite {
 		width: 47.5%;
-		top: 0%;
-		left: 51.5%;
+		top: 75%;
+		left: 50%;
 	}
-	#autoGauche {
-		width: 46.5%;
-		left: 49%;
-		margin-top: 0.5%;
+
+	#nav1,
+	#navDroite {
+		width: 40%;
+		margin-right: -65%;
+		margin-top: -10%;
 	}
-	#auto_droite {
-		width: 50%;
-		left: 47%;
-		margin-top: 0.5%;
-	}
-	#leftNav {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: -4%;
-	}
-	#rightNav {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: 2%;
+	#menuLeft,
+	#menuRight {
+		margin-top: -5%;
+		width: 40%;
+		margin-left: -15%;
 	}
 	#date {
-		margin-top: -2%;
+		margin-top: -14%;
 		margin-left: 5%;
 	}
 	#heure {
-		margin-top: -2%;
+		margin-top: -10%;
 		margin-left: 5%;
 	}
 	#name {
-		margin-top: -2%;
+		margin-top: -6%;
 		margin-left: 5%;
 	}
 	.reglage {
-		width: 100%;
+		width: 90%;
 		top: -5%;
+		left: 0%;
+	}
+	.reglageDroite {
+		width: 90%;
+		top: -0%;
 		left: 0%;
 	}
 	#img,
 	#img2,
-	#imgAttenuation {
+	#imgAttenuation,
+	#imgPanorama {
 		max-width: 99%;
 		margin-left: 0%;
 		margin-top: -15%;
@@ -222,15 +227,17 @@ p {
 		margin-left: 0%;
 	}
 	#footerGauche {
-		width: 80%;
-		margin-top: -126%;
+		width: 56%;
+		margin-top: -122%;
+		margin-left: 20%;
 	}
 	#footerDroite {
-		width: 80%;
-		margin-left: 0%;
-		margin-top: 105%;
+		width: 56%;
+		margin-left: 20%;
+		margin-top: -20.5%;
 	}
 }
+
 @media only screen and (max-width: 899px) and (min-width: 700px) {
 	.video-js {
 		width: 100%;
@@ -238,57 +245,56 @@ p {
 
 	#lastGauche {
 		width: 47.5%;
-		top: 0%;
-		left: 49.7%;
+		top: 1%;
+		left: 50%;
 	}
 	#lastDroite {
 		width: 47.5%;
-		top: 0%;
-		left: 51.5%;
+		top: 90%;
+		left: 50%;
 	}
-	#autoGauche {
-		width: 46.5%;
-		left: 49%;
-		margin-top: 0.5%;
+
+	#nav1,
+	#navDroite {
+		width: 40%;
+		margin-right: -80%;
+		margin-top: -10%;
 	}
-	#auto_droite {
-		width: 50%;
-		left: 47%;
-		margin-top: 0.5%;
-	}
-	#leftNav {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: -4%;
-	}
-	#rightNav {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: -0%;
+	#menuLeft,
+	#menuRight {
+		margin-top: -5%;
+		width: 40%;
+		margin-left: -8%;
 	}
 	#date {
-		margin-top: -8%;
+		margin-top: -12%;
 		margin-left: 5%;
 	}
 	#heure {
-		margin-top: -5%;
+		margin-top: -9%;
 		margin-left: 5%;
 	}
 	#name {
-		margin-top: -2%;
+		margin-top: -6%;
 		margin-left: 5%;
 	}
 	.reglage {
-		width: 50%;
+		width: 90%;
 		top: -5%;
+		left: 0%;
+	}
+	.reglageDroite {
+		width: 90%;
+		top: -0%;
 		left: 0%;
 	}
 	#img,
 	#img2,
-	#imgAttenuation {
+	#imgAttenuation,
+	#imgPanorama {
 		max-width: 99%;
 		margin-left: 0%;
-		margin-top: -15%;
+		margin-top: -12%;
 	}
 	#overlay {
 		max-width: 99%;
@@ -296,75 +302,70 @@ p {
 		margin-left: 0%;
 	}
 	#footerGauche {
-		width: 80%;
-		margin-top: -116.5%;
+		width: 45%;
+		margin-top: -122%;
+		margin-left: 28%;
 	}
 	#footerDroite {
-		width: 80%;
-		margin-left: 0%;
-		margin-top: 100%;
+		width: 45%;
+		margin-left: 28%;
+		margin-top: -19%;
 	}
 }
-
+/* Terminer */
 @media only screen and (max-width: 1100px) and (min-width: 899px) {
 	.video-js {
 		width: 100%;
 	}
 	#lastGauche {
 		width: 47.5%;
-		top: 0%;
-		left: 49.7%;
+		top: 1%;
+		left: 40%;
 	}
 	#lastDroite {
 		width: 47.5%;
-		top: 0%;
-		left: 51.5%;
+		top: 90%;
+		left: 40%;
 	}
-	#autoGauche {
-		width: 46.5%;
-		left: 49%;
-		margin-top: 0.5%;
-	}
-	#auto_droite {
-		width: 50%;
-		left: 47%;
-		margin-top: 0.5%;
-	}
-	#nav1 {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: -3%;
-	}
+
+	#nav1,
 	#navDroite {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: -3%;
+		width: 40%;
+		margin-right: -75%;
+		margin-top: -10%;
+	}
+	#menuLeft,
+	#menuRight {
+		margin-top: -5%;
+		width: 40%;
+		margin-left: -0%;
 	}
 	#date {
-		margin-top: -8%;
+		margin-top: -10%;
 		margin-left: 15%;
 	}
 	#heure {
-		margin-top: -5%;
+		margin-top: -7%;
 		margin-left: 15%;
 	}
 	#name {
-		margin-top: -2%;
+		margin-top: -4%;
 		margin-left: 15%;
 	}
 	.reglage {
-		width: 50%;
+		width: 90%;
 		top: -5%;
 		left: 0%;
 	}
 	.reglageDroite {
-		width: 50%;
-		top: -5%;
+		width: 90%;
+		top: -0%;
 		left: 0%;
 	}
 	#img,
 	#img2,
-	#imgAttenuation {
+	#imgAttenuation,
+	#imgPanorama {
 		max-width: 80%;
 		margin-left: 10%;
 		margin-top: -10%;
@@ -375,15 +376,17 @@ p {
 		margin-left: 10%;
 	}
 	#footerGauche {
-		width: 80%;
-		margin-top: -92%;
+		width: 34.5%;
+		margin-top: -95%;
+		margin-left: 34%;
 	}
 	#footerDroite {
-		width: 80%;
-		margin-left: 0%;
-		margin-top: 80%;
+		width: 35%;
+		margin-left: 35%;
+		margin-top: -13.5%;
 	}
 }
+/* Terminer */
 @media only screen and (max-width: 1300px) and (min-width: 1099px) {
 	.video-js {
 		width: 100%;
@@ -391,33 +394,26 @@ p {
 
 	#lastGauche {
 		width: 47.5%;
-		top: 0%;
-		left: 50.5%;
+		top: 4%;
+		left: 50%;
 	}
 	#lastDroite {
 		width: 47.5%;
-		top: 0%;
-		left: 52%;
+		top: 132%;
+		left: 50%;
 	}
-	#autoGauche {
-		width: 46.5%;
-		left: 49%;
-		margin-top: 0.5%;
-	}
-	#auto_droite {
-		width: 50%;
-		left: 47%;
-		margin-top: 0.5%;
-	}
-	#nav1 {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: 1%;
-	}
+
+	#nav1,
 	#navDroite {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: 1%;
+		width: 40%;
+		margin-right: -90%;
+		margin-top: -10%;
+	}
+	#menuLeft,
+	#menuRight {
+		margin-top: -5%;
+		width: 40%;
+		margin-left: -3%;
 	}
 	#date {
 		margin-top: -8%;
@@ -432,21 +428,22 @@ p {
 		margin-left: 5%;
 	}
 	.reglage {
-		width: 100%;
+		width: 90%;
 		top: -5%;
 		left: 0%;
 	}
 	.reglageDroite {
-		width: 100%;
-		top: -5%;
+		width: 90%;
+		top: -0%;
 		left: 0%;
 	}
 	#img,
 	#img2,
-	#imgAttenuation {
+	#imgAttenuation,
+	#imgPanorama {
 		max-width: 100%;
 		margin-left: 0%;
-		margin-top: -13%;
+		margin-top: -7%;
 	}
 	#overlay {
 		max-width: 100%;
@@ -455,21 +452,16 @@ p {
 	}
 	#footerGauche {
 		width: 30%;
-		margin-top: -5%;
+		margin-top: -111%;
+		margin-left: 34%;
 	}
 	#footerDroite {
 		width: 30%;
-		margin-left: 50%;
-		margin-top: -3%;
-	}
-	#contrastFormGauche {
-		margin-left: 3.5%;
-	}
-	#contrastFormDroite {
-		margin-left: 3.5%;
+		margin-left: 35%;
+		margin-top: -10%;
 	}
 }
-
+/* Terminer */
 @media only screen and (max-width: 1500px) and (min-width: 1299px) {
 	.video-js {
 		width: 100%;
@@ -477,62 +469,56 @@ p {
 
 	#lastGauche {
 		width: 47.5%;
-		top: 0%;
-		left: 50.5%;
+		top: 1%;
+		left: -0%;
 	}
 	#lastDroite {
 		width: 47.5%;
-		top: 0%;
-		left: 52%;
+		top: 1%;
+		left: 50%;
 	}
-	#autoGauche {
-		width: 46.5%;
-		left: 49%;
-		margin-top: 0.5%;
-	}
-	#auto_droite {
-		width: 50%;
-		left: 47%;
-		margin-top: 0.5%;
-	}
-	#nav1 {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: -0%;
-	}
+
+	#nav1,
 	#navDroite {
 		width: 50%;
-		margin-left: 20%;
-		margin-top: -0%;
+		margin-right: -80%;
+		margin-top: -8%;
+	}
+	#menuLeft,
+	#menuRight {
+		margin-top: -2%;
+		width: 40%;
+		margin-left: -3%;
 	}
 	#date {
-		margin-top: -8%;
+		margin-top: -12%;
 		margin-left: 5%;
 	}
 	#heure {
-		margin-top: -5%;
+		margin-top: -9%;
 		margin-left: 5%;
 	}
 	#name {
-		margin-top: -2%;
+		margin-top: -6%;
 		margin-left: 5%;
 	}
 	.reglage {
-		width: 100%;
+		width: 90%;
 		top: -5%;
 		left: 0%;
 	}
 	.reglageDroite {
-		width: 100%;
-		top: -5%;
+		width: 50%;
+		top: -0%;
 		left: 0%;
 	}
 	#img,
 	#img2,
-	#imgAttenuation {
+	#imgAttenuation,
+	#imgPanorama {
 		max-width: 100%;
 		margin-left: 0%;
-		margin-top: -15%;
+		margin-top: -10%;
 	}
 	#overlay {
 		max-width: 100%;
@@ -540,155 +526,133 @@ p {
 		margin-left: 0%;
 	}
 	#footerGauche {
-		width: 30%;
-		margin-top: -6%;
+		width: 23.5%;
+		margin-top: -10%;
+		margin-left: 13%;
 	}
 	#footerDroite {
-		width: 30%;
-		margin-left: 50%;
-		margin-top: -3.5%;
-	}
-	#contrastFormGauche {
-		margin-left: 2.3%;
-	}
-	#contrastFormDroite {
-		margin-left: 2.3%;
+		width: 23.5%;
+		margin-left: 64%;
+		margin-top: -10%;
 	}
 }
-
+/* Terminer */
 @media only screen and (max-width: 1700px) and (min-width: 1499px) {
 	.video-js {
 		width: 90%;
 	}
 	#lastGauche {
 		width: 47.5%;
-		top: 0%;
-		left: 50%;
+		top: 1%;
+		left: -2%;
 	}
 	#lastDroite {
 		width: 47.5%;
-		top: 0%;
-		left: 51.5%;
+		top: 1%;
+		left: 48%;
 	}
-	#autoGauche {
-		width: 46.5%;
-		left: 49%;
-		margin-top: 0.5%;
-	}
-	#auto_droite {
-		width: 50%;
-		left: 47%;
-		margin-top: 0.5%;
-	}
-	#nav1 {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: -5%;
-	}
+	#nav1,
 	#navDroite {
 		width: 50%;
-		margin-left: 20%;
+		margin-right: -85%;
 		margin-top: -5%;
+	}
+	#menuLeft,
+	#menuRight {
+		margin-top: -1.2%;
+		width: 40%;
+		margin-left: -3%;
 	}
 	#date {
-		margin-top: -8%;
-		margin-left: 5%;
+		margin-top: -12%;
+		margin-left: 9%;
 	}
 	#heure {
-		margin-top: -5%;
-		margin-left: 5%;
+		margin-top: -9%;
+		margin-left: 9%;
 	}
 	#name {
-		margin-top: -2%;
-		margin-left: 5%;
+		margin-top: -6%;
+		margin-left: 9%;
 	}
 	.reglage {
-		width: 100%;
+		width: 90%;
 		top: -5%;
 		left: 0%;
 	}
 	.reglageDroite {
-		width: 100%;
+		width: 90%;
 		top: -5%;
 		left: 0%;
 	}
 	#img,
 	#img2,
-	#imgAttenuation {
+	#imgAttenuation,
+	#imgPanorama {
 		max-width: 90%;
 		margin-left: 5%;
 		margin-top: -13%;
 	}
+
 	#overlay {
 		max-width: 90%;
 		margin-top: -13%;
 		margin-left: 5%;
 	}
 	#footerGauche {
-		width: 30%;
-		margin-top: -5%;
+		width: 20.5%;
+		margin-left: 14%;
+		margin-top: -9%;
 	}
 	#footerDroite {
-		width: 30%;
-		margin-left: 50%;
-		margin-top: -3%;
-	}
-	#contrastFormGauche {
-		margin-left: 2%;
-	}
-	#contrastFormDroite {
-		margin-left: 2%;
+		width: 20.5%;
+		margin-left: 64%;
+		margin-top: -9%;
 	}
 }
+/* Terminer */
 @media only screen and (max-width: 1900px) and (min-width: 1699px) {
 	.video-js {
 		width: 85%;
 	}
 	#lastGauche {
 		width: 47.5%;
-		top: 0%;
-		left: 50%;
+		top: 4%;
+		left: -4%;
 	}
 	#lastDroite {
 		width: 47.5%;
-		top: 0%;
-		left: 51.5%;
+		top: 4%;
+		left: 46%;
 	}
-	#autoGauche {
-		width: 46.5%;
-		left: 49%;
-		margin-top: 0.5%;
-	}
-	#auto_droite {
-		width: 50%;
-		left: 47%;
-		margin-top: 0.5%;
-	}
-	#nav1 {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: -5%;
-	}
+
+	#nav1,
 	#navDroite {
 		width: 50%;
-		margin-left: 20%;
+		margin-right: -80%;
 		margin-top: -5%;
+	}
+	#menuLeft,
+	#menuRight {
+		margin-top: -1.2%;
+		width: 40%;
+		margin-left: -3%;
 	}
 	#date {
 		margin-top: -8%;
-		margin-left: 5%;
+		margin-left: 9%;
 	}
 	#heure {
 		margin-top: -5%;
-		margin-left: 5%;
+		margin-left: 9%;
 	}
 	#name {
 		margin-top: -2%;
-		margin-left: 5%;
+		margin-left: 9%;
 	}
 	.reglage {
-		width: 50%;
-		top: -0%;
+		width: 90%;
+		top: -5%;
 		left: 0%;
 	}
 	.reglageDroite {
@@ -698,81 +662,70 @@ p {
 	}
 	#img,
 	#img2,
-	#imgAttenuation {
+	#imgAttenuation,
+	#imgPanorama {
 		max-width: 85%;
 		margin-left: 5%;
 		margin-top: -5.5%;
 	}
+
 	#overlay {
 		max-width: 85%;
 		margin-top: -5.5%;
 		margin-left: 5%;
 	}
 	#footerGauche {
-		width: 30%;
-		margin-top: -4%;
+		width: 18%;
+		margin-top: -8%;
+		margin-left: 14%;
 	}
 	#footerDroite {
-		width: 30%;
-		margin-left: 50%;
-		margin-top: -2.7%;
-	}
-	#contrastFormGauche {
-		margin-left: 4%;
-	}
-	#contrastFormDroite {
-		margin-left: 4%;
+		width: 18%;
+		margin-left: 65%;
+		margin-top: -8%;
 	}
 }
+/* Terminer */
 @media only screen and (max-width: 2200px) and (min-width: 1899px) {
 	.video-js {
 		width: 90%;
 	}
 
 	#lastGauche {
-		width: 47.5%;
-		top: 0%;
-		left: 49.5%;
+		width: 9%;
+		top: 1%;
+		left: 37%;
 	}
 	#lastDroite {
-		width: 47.5%;
-		top: 0%;
-		left: 51%;
+		width: 9%;
+		top: 1%;
+		left: 87%;
 	}
-	#autoGauche {
-		width: 46.5%;
-		left: 49%;
-		margin-top: 0.5%;
-	}
-	#auto_droite {
-		width: 50%;
-		left: 47%;
-		margin-top: 0.5%;
-	}
-	#nav1 {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: -5%;
-	}
+	#nav1,
 	#navDroite {
-		width: 50%;
-		margin-left: 20%;
-		margin-top: -5%;
+		width: 40%;
+		margin-right: -76%;
+		margin-top: -8.5%;
+	}
+	#menuLeft,
+	#menuRight {
+		margin-top: -2%;
+		width: 40%;
 	}
 	#date {
-		margin-top: -7%;
-		margin-left: 5%;
+		margin-top: -11%;
+		margin-left: 8%;
 	}
 	#heure {
-		margin-top: -5%;
-		margin-left: 5%;
+		margin-top: -8%;
+		margin-left: 8%;
 	}
 	#name {
-		margin-top: -3%;
-		margin-left: 5%;
+		margin-top: -5%;
+		margin-left: 8%;
 	}
 	.reglage {
-		width: 50%;
+		width: 90%;
 		top: -5%;
 		left: 0%;
 	}
@@ -783,65 +736,54 @@ p {
 	}
 	#img,
 	#img2,
-	#imgAttenuation {
+	#imgAttenuation,
+	#imgPanorama {
 		max-width: 90%;
 		margin-left: 5%;
-		margin-top: -10%;
+		margin-top: -5%;
 	}
+
 	#overlay {
 		max-width: 90%;
 		margin-top: -10%;
 		margin-left: 5%;
 	}
 	#footerGauche {
-		width: 30%;
-		margin-top: -4%;
+		width: 16.5%;
+		margin-top: -7%;
+		left: 16%;
 	}
 	#footerDroite {
-		width: 30%;
-		margin-left: 50%;
-		margin-top: -2.7%;
-	}
-	#contrastFormGauche {
-		margin-left: 3.5%;
-	}
-	#contrastFormDroite {
-		margin-left: 3.5%;
+		width: 16.5%;
+		left: 67%;
+		margin-top: -7%;
 	}
 }
+/* Terminer */
 @media only screen and (max-width: 5000px) and (min-width: 2199px) {
 	.video-js {
 		width: 99%;
 	}
 	#lastGauche {
-		width: 47.5%;
-		top: 0%;
-		left: 49%;
+		width: 9%;
+		top: 1%;
+		left: 37%;
 	}
 	#lastDroite {
-		width: 47.5%;
-		top: 0%;
-		left: 50.5%;
+		width: 9%;
+		top: 1%;
+		left: 87%;
 	}
-	#autoGauche {
-		width: 46.5%;
-		left: 49%;
-		margin-top: 0.5%;
-	}
-	#auto_droite {
-		width: 50%;
-		left: 47%;
-		margin-top: 0.5%;
-	}
-	#nav1 {
-		width: 50%;
-		margin-left: 30%;
-		margin-top: -0%;
-	}
+	#nav1,
 	#navDroite {
-		width: 50%;
-		margin-left: 30%;
-		margin-top: -0%;
+		width: 30%;
+		margin-right: -90%;
+		margin-top: -8.5%;
+	}
+	#menuLeft,
+	#menuRight {
+		margin-top: -2%;
+		width: 40%;
 	}
 	#date {
 		margin-top: -7%;
@@ -856,19 +798,20 @@ p {
 		margin-left: 5%;
 	}
 	.reglage {
-		width: 50%;
+		width: 77%;
 		top: -5%;
 		left: 0%;
 	}
 	.reglageDroite {
-		width: 50%;
-		top: -5%;
+		width: 77%;
+		top: -0%;
 		left: 0%;
 	}
 	#img,
 	#img2,
-	#imgAttenuation {
-		max-width: 99%;
+	#imgAttenuation,
+	#imgPanorama {
+		max-width: 90%;
 		margin-left: 0%;
 		margin-top: -10%;
 	}
@@ -879,18 +822,13 @@ p {
 		margin-left: 0%;
 	}
 	#footerGauche {
-		width: 30%;
-		margin-top: -2%;
+		width: 16.5%;
+		margin-top: -4%;
+		left: 16%;
 	}
 	#footerDroite {
-		width: 30%;
-		margin-left: 50%;
-		margin-top: -2.2%;
-	}
-	#contrastFormGauche {
-		margin-left: 3%;
-	}
-	#contrastFormDroite {
-		margin-left: 3%;
+		width: 16.5%;
+		left: 67%;
+		margin-top: -4%;
 	}
 }

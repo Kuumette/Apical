@@ -106,7 +106,7 @@
 					id="leftNav"
 					class="d-flex flex-row-reverse bd-highlight nav"
 				>
-					<nav>
+					<nav id="nav1">
 						<ul>
 							<li class="menu-deroulant">
 								<a href="#" id="menuB">Choice of view</a>
@@ -252,7 +252,7 @@
 					id="rightNav"
 					class="d-flex flex-row-reverse bd-highlight nav"
 				>
-					<nav>
+					<nav id="navDroite">
 						<ul>
 							<li class="menu-deroulant">
 								<a href="#" id="menuA">Choice of view</a>
@@ -322,11 +322,11 @@
 			<div class="reglage" id="reglageGauche">
 				<div>
 					<div id="brightnessFormGauche">
-						<span id="brightness"> Brightness</span>
+						<span id="brightness">Brightness<small>i</small></span>
 						<input
 							type="range"
 							name="amountRange"
-							class="rangeBrightness bLeft"
+							class="rangeBrightness bLeft bLRange"
 							id="leftSide"
 							min="0"
 							max="5"
@@ -334,21 +334,38 @@
 						/>
 						<input
 							type="number"
-							class="rangeBrightness"
+							class="rangeBrightness bLNumber"
 							id="leftSide"
 							min="0"
 							max="5"
 							step="0.10"
 						/>
+						<a href="#" id="resetBrightnessLeft"
+							><svg
+								xmlns="./ressources/arrow-clockwise.svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-arrow-clockwise"
+								viewBox="0 0 16 16"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+								/>
+								<path
+									d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+								/></svg
+						></a>
 					</div>
 				</div>
 				<div>
 					<div id="contrastFormGauche">
-						<span id="const"> Contrast</span>
+						<span id="const">Contrast<small>----</small></span>
 						<input
 							type="range"
 							name="amountRange"
-							class="rangeContrast cLeft"
+							class="rangeContrast cLeft cLRange"
 							id="leftSide"
 							min="0"
 							max="5"
@@ -356,19 +373,36 @@
 						/>
 						<input
 							type="number"
-							class="rangeContrast"
+							class="rangeContrast cLNumber"
 							id="leftSide"
 							min="0"
 							max="5"
 							step="0.10"
 						/>
+						<a href="#" id="resetContrastLeft"
+							><svg
+								xmlns="./ressources/arrow-clockwise.svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-arrow-clockwise"
+								viewBox="0 0 16 16"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+								/>
+								<path
+									d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+								/></svg
+						></a>
 					</div>
 					<div id="invertFormGauche">
-						<span id="invert"> Invert</span>
+						<span id="invert">Invert<small>-------||</small></span>
 						<input
 							type="range"
 							name="amountRange"
-							class="rangeInvert iLeft"
+							class="rangeInvert iLeft iLRange"
 							id="leftSide"
 							min="0"
 							max="1"
@@ -376,12 +410,29 @@
 						/>
 						<input
 							type="number"
-							class="rangeInvert"
+							class="rangeInvert iLNumber"
 							id="leftSide"
 							min="0"
 							max="1"
 							step="0.10"
 						/>
+						<a href="#" id="resetInvertLeft"
+							><svg
+								xmlns="./ressources/arrow-clockwise.svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-arrow-clockwise"
+								viewBox="0 0 16 16"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+								/>
+								<path
+									d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+								/></svg
+						></a>
 					</div>
 				</div>
 			</div>
@@ -391,11 +442,11 @@
 			<div class="reglage" id="reglageDroite">
 				<div>
 					<div id="brightnessFormDroite">
-						<span id="brightness"> Brightness</span>
+						<span id="brightness">Brightness<small>i</small></span>
 						<input
 							type="range"
 							name="amountRange"
-							class="rangeBrightness bRight"
+							class="rangeBrightness bRight bRRange"
 							id="rightSide"
 							min="0"
 							max="5"
@@ -403,21 +454,38 @@
 						/>
 						<input
 							type="number"
-							class="rangeBrightness"
+							class="rangeBrightness bRNumber"
 							id="rightSide"
 							min="0"
 							max="5"
 							step="0.10"
 						/>
+						<a href="#" id="resetBrightnessRight"
+							><svg
+								xmlns="./ressources/arrow-clockwise.svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-arrow-clockwise"
+								viewBox="0 0 16 16"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+								/>
+								<path
+									d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+								/></svg
+						></a>
 					</div>
 				</div>
 				<div>
 					<div id="contrastFormDroite">
-						<span id="const"> Contrast</span>
+						<span id="const">Contrast<small>----</small></span>
 						<input
 							type="range"
 							name="amountRange"
-							class="rangeContrast cRight"
+							class="rangeContrast cRight cRRange"
 							id="rightSide"
 							min="0"
 							max="5"
@@ -425,19 +493,36 @@
 						/>
 						<input
 							type="number"
-							class="rangeContrast"
+							class="rangeContrast cRNumber"
 							id="rightSide"
 							min="0"
 							max="5"
 							step="0.10"
 						/>
+						<a href="#" id="resetContrastRight"
+							><svg
+								xmlns="./ressources/arrow-clockwise.svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-arrow-clockwise"
+								viewBox="0 0 16 16"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+								/>
+								<path
+									d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+								/></svg
+						></a>
 					</div>
 					<div id="invertFormDroite">
-						<span id="invert"> Invert</span>
+						<span id="invert">Invert<small>-------||</small></span>
 						<input
 							type="range"
 							name="amountRange"
-							class="rangeInvert iRight"
+							class="rangeInvert iRight iRRange"
 							id="rightSide"
 							min="0"
 							max="1"
@@ -445,12 +530,29 @@
 						/>
 						<input
 							type="number"
-							class="rangeInvert"
+							class="rangeInvert iRNumber"
 							id="rightSide"
 							min="0"
 							max="1"
 							step="0.10"
 						/>
+						<a href="#" id="resetInvertRight"
+							><svg
+								xmlns="./ressources/arrow-clockwise.svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-arrow-clockwise"
+								viewBox="0 0 16 16"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+								/>
+								<path
+									d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+								/></svg
+						></a>
 					</div>
 				</div>
 			</div>
