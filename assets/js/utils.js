@@ -4,7 +4,6 @@
  */
 const INPUTRANGE = document.querySelector("#inputRange");
 const INPUTRANGECOLOR = document.querySelector(".reglage");
-
 const valueBritnessMain = document.querySelector(".rangeBrightness");
 const valueContrastMain = document.querySelector(".rangeContrast");
 const valueInvertMain = document.querySelector(".rangeInvert");

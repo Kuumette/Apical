@@ -17,7 +17,6 @@ function resetTemps() {
 	display1.style.opacity = "1";
 	menu.style.opacity = "1";
 }
-
 window.onload = resetTemps;
 window.ontouchstart = resetTemps;
 window.onclick = resetTemps;

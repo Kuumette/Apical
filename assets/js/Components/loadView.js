@@ -12,6 +12,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 	const TOGGLE_COORDS_G = document.querySelector("#lastGauche");
 	const TOGGLE_COORDS_D = document.querySelector("#lastDroite");
 	const REGLAGE_GAUCHE = document.querySelector("#footerGauche");
+	const WARNING = document.querySelector("#warning");
 	const REGLAGE_DROITE = document.querySelector("#footerDroite");
 	const MENU = document.querySelector("#menu");
 	const MENULEFT = document.querySelector("#menuLeft");
@@ -20,11 +21,13 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 	let html = "";
 
 	// J'insere les information reçu depuis displayImage pour l'insérer dans le DOM
+
 	const infoImg = `
 	  <p id="date">${displayImage[type].date}</p>
 	  <p id="heure">${displayImage[type].heure}</p>
 	  <p id="name">apicam</p>
 	  `;
+
 	// const infoImg = "";
 	/** Si c'est lastImage ou lastSubstractionImage alors */
 	if (type === "lastImage" || type === "lastSubstractionImage") {
@@ -142,5 +145,13 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 		}
 	}
 
+	let confHeure = document.querySelector("#heure");
+	//console.log(displayImage[type].heure);
+	if (displayImage[type].heure !== confHeure.innerHTML) {
+		p = `
+		<p>Attention image pas à jour</p>
+		`;
+		WARNING.innerHTML = p;
+	}
 	CONTENT.innerHTML = html;
 }

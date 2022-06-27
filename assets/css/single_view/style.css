@@ -183,7 +183,6 @@ p {
 	#invert {
 		margin-left: 7.8%;
 		margin-top: 10%;
-		border: 1px solid red;
 	}
 	#overlay {
 		max-width: 100%;
@@ -202,7 +201,6 @@ p {
 	#menu {
 		margin-top: 0%;
 		left: -8%;
-		border: 1px solid red;
 	}
 }
 @media only screen and (max-width: 699px) and (min-width: 500px) {
@@ -609,7 +607,7 @@ p {
 		left: 42%;
 	}
 	#menu {
-		margin-top: 6%;
+		margin-top: 5.2%;
 		left: 17.5%;
 	}
 }
@@ -673,7 +671,7 @@ p {
 		/* border: 1px red solid; */
 	}
 	#menu {
-		margin-top: 5.5%;
+		margin-top: 3.5%;
 		left: 12%;
 	}
 	.reglage {
@@ -740,18 +738,18 @@ p {
 		width: 55%;
 	}
 	.reglage {
-		top: 82%;
+		top: 79%;
 		left: 42%;
 	}
 	#menu {
-		margin-top: 5.8%;
+		margin-top: 2.8%;
 		left: 19%;
 	}
 }
 @media only screen and (max-width: 6000px) and (min-width: 2199px) {
 	#img,
 	#imgAttenuation {
-		max-width: 50%;
+		max-width: 40%;
 	}
 	#imgPanorama {
 		width: 80%;
@@ -802,8 +800,8 @@ p {
 		margin-left: 0%;
 	}
 	.reglage {
-		top: 70%;
-		left: 23%;
+		top: 78%;
+		left: 44%;
 	}
 	#infoImg {
 		left: 23%;
@@ -812,11 +810,7 @@ p {
 		width: 50%;
 	}
 	#menu {
-		margin-top: 3%;
+		margin-top: 2%;
 		left: 22%;
-	}
-	.reglage {
-		top: 79%;
-		left: 44%;
 	}
 }
