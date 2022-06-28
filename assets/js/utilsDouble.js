@@ -99,11 +99,6 @@ document.querySelector("#defaultLeft").addEventListener("click", function () {
 	localStorage.setItem("contrast-leftSide", "1");
 	localStorage.setItem("invert-leftSide", "0");
 
-	// localStorage.setItem("type-leftSide", getItem("type-leftSide"));
-	// localStorage.setItem("type-rightSide", getItem("type-rightSide"));
-	// localStorage.setItem("brightness-rightSide", valueBritnessRight.value);
-	// localStorage.setItem("contrast-rightSide", valueContrastRight.value);
-	// localStorage.setItem("invert-rightSide", valueInvertRight.value);
 	displayLeft.style.opacity = "0";
 
 	SIDES.forEach((side) => {

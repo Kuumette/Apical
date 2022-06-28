@@ -13,6 +13,13 @@ html {
 	position: relative;
 	z-index: 8;
 }
+#warning {
+	width: 100%;
+	position: fixed;
+	z-index: 56;
+	text-align: center;
+	margin: auto;
+}
 
 svg {
 	color: #f0f0f0;
@@ -60,13 +67,7 @@ span {
 	position: fixed;
 	z-index: 2;
 }
-/* #nav {
-	display: block;
-	width: 50%;
-	font-size: 18px;
-	position: absolute;
-	z-index: 2;
-} */
+
 nav {
 	position: fixed;
 	width: 12%;
@@ -138,9 +139,7 @@ body {
 p {
 	color: #f0f0f0;
 }
-/* #img {
-	filter: invert(1) !important;
-} */
+
 @media only screen and (max-width: 499px) and (min-width: 250px) {
 	#img,
 	#imgAttenuation {
@@ -148,15 +147,15 @@ p {
 		margin-top: 20%;
 	}
 	#date {
-		margin-top: 7.5%;
+		margin-top: 10%;
 		margin-left: -30%;
 	}
 	#heure {
-		margin-top: 12%;
+		margin-top: 15%;
 		margin-left: -30%;
 	}
 	#name {
-		margin-top: 16%;
+		margin-top: 20%;
 		margin-left: -30%;
 	}
 	nav {
@@ -175,13 +174,13 @@ p {
 		margin-top: 1%;
 	}
 	#const {
-		margin-left: 5.8%;
+		margin-left: 2%;
 	}
 	#brightness {
 		margin-left: 2%;
 	}
 	#invert {
-		margin-left: 7.8%;
+		margin-left: 2%;
 		margin-top: 10%;
 	}
 	#overlay {
@@ -190,7 +189,10 @@ p {
 		margin-top: 20%;
 	}
 	.reglage {
-		top: 70%;
+		top: 80%;
+		width: 60%;
+		text-align: center;
+		left: 20%;
 	}
 	#infoImg {
 		left: 25%;
@@ -199,10 +201,11 @@ p {
 		width: 80%;
 	}
 	#menu {
-		margin-top: 0%;
-		left: -8%;
+		margin-top: -12%;
+		left: -12%;
 	}
 }
+/* OK */
 @media only screen and (max-width: 699px) and (min-width: 500px) {
 	#img,
 	#imgAttenuation {
@@ -231,8 +234,8 @@ p {
 	}
 	#last {
 		width: 129.5%;
-		left: -35%;
-		margin-top: 1%;
+		left: -30%;
+		margin-top: 6%;
 	}
 	#auto {
 		width: 120%;
@@ -272,6 +275,7 @@ p {
 		left: 28%;
 	}
 }
+/* OK */
 @media only screen and (max-width: 899px) and (min-width: 700px) {
 	#img,
 	#imgAttenuation {
@@ -301,7 +305,7 @@ p {
 	#last {
 		width: 129.5%;
 		left: -35%;
-		margin-top: 1%;
+		margin-top: 6%;
 	}
 	#auto {
 		width: 120%;
@@ -339,7 +343,7 @@ p {
 		left: 33%;
 	}
 }
-/* Pour ordinateurs portables */
+/* OK */
 @media only screen and (max-width: 1100px) and (min-width: 899px) {
 	#img,
 	#imgAttenuation {
@@ -364,12 +368,12 @@ p {
 	nav {
 		width: 28%;
 		top: 92%;
-		left: 60%;
+		left: 64%;
 	}
 	#last {
 		width: 117.2%;
-		right: 17%;
-		margin-top: 1%;
+		right: 15%;
+		margin-top: 3.5%;
 	}
 	#auto {
 		width: 108%;
@@ -400,18 +404,18 @@ p {
 	}
 	#menu {
 		margin-top: 9%;
-		left: 8%;
+		left: 3%;
 	}
 	.reglage {
 		top: 82%;
 		left: 36%;
 	}
 }
+/* OK */
 @media only screen and (max-width: 1300px) and (min-width: 1099px) {
 	#img,
 	#imgAttenuation {
-		max-width: 60%;
-		/* border: 1px red solid; */
+		max-width: 70%;
 	}
 	#imgPanorama {
 		width: 80%;
@@ -432,12 +436,12 @@ p {
 	nav {
 		width: 23.5%;
 		top: 95%;
-		left: 60%;
+		left: 62%;
 	}
 	#last {
 		width: 117%;
-		right: 22%;
-		margin-top: 1%;
+		right: 19%;
+		margin-top: 3%;
 	}
 	#auto {
 		width: 108%;
@@ -455,7 +459,7 @@ p {
 		margin-top: 10%;
 	}
 	#overlay {
-		max-width: 60%;
+		max-width: 70%;
 		margin-left: 0%;
 		margin-top: 0%;
 	}
@@ -468,14 +472,14 @@ p {
 	}
 	#menu {
 		margin-top: 8%;
-		left: 13%;
+		left: 11%;
 	}
 	.reglage {
 		top: 82%;
 		left: 38%;
 	}
 }
-/* Pour les grands écrans */
+/* OK */
 @media only screen and (max-width: 1500px) and (min-width: 1299px) {
 	#img,
 	#imgAttenuation {
@@ -505,7 +509,7 @@ p {
 	#last {
 		width: 110.9%;
 		right: 22%;
-		margin-top: 1%;
+		margin-top: 2%;
 	}
 	#auto {
 		width: 102%;
@@ -543,7 +547,7 @@ p {
 		left: 15%;
 	}
 }
-
+/* OK */
 @media only screen and (max-width: 1700px) and (min-width: 1499px) {
 	#img,
 	#imgAttenuation {
@@ -573,7 +577,7 @@ p {
 	#last {
 		width: 110.8%;
 		right: 20%;
-		margin-top: 1%;
+		margin-top: 2%;
 	}
 	#auto {
 		width: 102%;
@@ -611,10 +615,11 @@ p {
 		left: 17.5%;
 	}
 }
+/* OK */
 @media only screen and (max-width: 1900px) and (min-width: 1699px) {
 	#img,
 	#imgAttenuation {
-		max-width: 65%;
+		max-width: 60%;
 	}
 	#imgPanorama {
 		width: 80%;
@@ -640,7 +645,7 @@ p {
 	#last {
 		width: 103.7%;
 		left: -20%;
-		margin-top: 3%;
+		margin-top: 2%;
 	}
 	#auto {
 		width: 95%;
@@ -658,7 +663,7 @@ p {
 		margin-top: 10%;
 	}
 	#overlay {
-		max-width: 65%;
+		max-width: 60%;
 		margin-left: 0%;
 		/* margin-top: 2%; */
 	}
@@ -671,7 +676,7 @@ p {
 		/* border: 1px red solid; */
 	}
 	#menu {
-		margin-top: 3.5%;
+		margin-top: 4.5%;
 		left: 12%;
 	}
 	.reglage {
@@ -679,7 +684,7 @@ p {
 		left: 42%;
 	}
 }
-/* Pour mon ecran à la maison */
+/* OK */
 @media only screen and (max-width: 2200px) and (min-width: 1899px) {
 	#img,
 	#imgAttenuation {
@@ -742,10 +747,11 @@ p {
 		left: 42%;
 	}
 	#menu {
-		margin-top: 2.8%;
+		margin-top: 4%;
 		left: 19%;
 	}
 }
+/* OK */
 @media only screen and (max-width: 6000px) and (min-width: 2199px) {
 	#img,
 	#imgAttenuation {
@@ -754,6 +760,9 @@ p {
 	#imgPanorama {
 		width: 80%;
 		margin-top: -20%;
+	}
+	#overlay {
+		max-width: 40%;
 	}
 	#date {
 		margin-top: 2%;
@@ -769,7 +778,7 @@ p {
 	}
 	nav {
 		width: 16%;
-		top: 94%;
+		top: 91.5%;
 		left: 66%;
 	}
 	#last {
@@ -785,11 +794,7 @@ p {
 	#const {
 		margin-left: 1.8%;
 	}
-	#overlay {
-		max-width: 50%;
-		margin-left: 0%;
-		margin-top: 0%;
-	}
+
 	#const {
 		margin-left: 0%;
 	}

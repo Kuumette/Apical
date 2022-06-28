@@ -26,18 +26,24 @@ function dateDiff(date1, date2) {
 	return diff;
 }
 const miseAJour = document.querySelector("#warning");
-let dte = lastModified("ressources/panorama1.jpg");
+let dte = lastModified("ressources/lastImage.jpg");
 let h = new Date();
-
+date1 = new Date(dte);
+date2 = new Date();
+diff = dateDiff(date1, date2);
+mj = `
+	<p id="mj">derniere mise à jour depuis : ${diff.day}d ${diff.hour}h ${diff.min}m ${diff.sec}s</p>
+	`;
+miseAJour.innerHTML = mj;
 function myTimer() {
 	date1 = new Date(dte);
 	date2 = new Date();
 	diff = dateDiff(date1, date2);
 
 	mj = `
-	<p id="mj">derniere mise à jour depuis : ${diff.day} jours ${diff.hour} heures ${diff.min} minutes ${diff.sec} secondes</p>
+	<p id="mj">derniere mise à jour depuis : ${diff.day}d ${diff.hour}h ${diff.min}m ${diff.sec}s</p>
 	`;
 	miseAJour.innerHTML = mj;
 }
 
-setInterval(myTimer, 100);
+setInterval(myTimer, 20000);

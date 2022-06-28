@@ -12,7 +12,6 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 	const TOGGLE_COORDS_G = document.querySelector("#lastGauche");
 	const TOGGLE_COORDS_D = document.querySelector("#lastDroite");
 	const REGLAGE_GAUCHE = document.querySelector("#footerGauche");
-	const WARNING = document.querySelector("#warning");
 	const REGLAGE_DROITE = document.querySelector("#footerDroite");
 	const MENU = document.querySelector("#menu");
 	const MENULEFT = document.querySelector("#menuLeft");
@@ -29,6 +28,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 	  <p id="name">apicam</p>
 	  `;
 
+	//console.log(infoImg);
 	// const infoImg = "";
 	/** Si c'est lastImage ou lastSubstractionImage alors */
 	if (type === "lastImage" || type === "lastSubstractionImage") {
@@ -43,6 +43,8 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 		// Les informations sont necessaire que pour les images
 
 		INFO_IMG.innerHTML = infoImg;
+		INFO_IMG.style.opacity = "1";
+
 		if (side === "main") {
 			if (type === "lastImage" || type === "lastSubstractionImage") {
 				TOGGLE_COORDS.style.opacity = "1";
@@ -105,6 +107,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 		// Les informations sont necessaire que pour les images
 
 		INFO_IMG.innerHTML = infoImg;
+		INFO_IMG.style.opacity = "1";
 		if (side === "main") {
 			if (type === "attenuation") {
 				REGLAGE.style.display = "none";
@@ -132,6 +135,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 		// Les informations sont necessaire que pour les images
 
 		INFO_IMG.innerHTML = infoImg;
+		INFO_IMG.style.opacity = "1";
 		if (side === "main") {
 			TOGGLE_COORDS.style.opacity = "0";
 			REGLAGE.style.display = "block";
@@ -147,13 +151,5 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 		}
 	}
 
-	let confHeure = document.querySelector("#heure");
-	//console.log(displayImage[type].heure);
-	if (displayImage[type].heure !== confHeure.innerHTML) {
-		p = `
-		<p>Attention image pas à jour</p>
-		`;
-		WARNING.innerHTML = p;
-	}
 	CONTENT.innerHTML = html;
 }
