@@ -18,6 +18,7 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 	const MENULEFT = document.querySelector("#menuLeft");
 	const MENURIGHT = document.querySelector("#menuRight");
 	const REGLAGE = document.querySelector(".reglage");
+
 	let html = "";
 
 	// J'insere les information reçu depuis displayImage pour l'insérer dans le DOM
@@ -77,7 +78,8 @@ function loadView(type, side, displayImage, brightness, contrast, invert) {
 		`;
 
 		// j'efface les informations pour les vidéos
-		INFO_IMG.innerHTML = "";
+		INFO_IMG.innerHTML = infoImg;
+		INFO_IMG.style.opacity = "0";
 		if (side === "main") {
 			TOGGLE_COORDS.style.opacity = "0";
 			REGLAGE.style.display = "none";
